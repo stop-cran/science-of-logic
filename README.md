@@ -2,7 +2,7 @@
 
 A five-part synopsis of G. W. F. Hegel's philosophy with primary attention to his method of investigation and its contribution to the scientific paradigm. The synopsis is organized as a single dialectical circle: each installment grows out of the contradictions of the preceding one, and the final installment closes back upon the first.
 
-## Contents
+## Section I — The Method and Its Place
 
 1. **[From School-Logic to Dialectic](synopsis/01-from-school-logic-to-dialectic.md)** — The contradiction of traditional logic; the historical-logical itinerary from pre-logical consciousness through old metaphysics, empiricism, and critical philosophy to the speculative standpoint.
 
@@ -13,6 +13,10 @@ A five-part synopsis of G. W. F. Hegel's philosophy with primary attention to hi
 4. **[From Method to System](synopsis/04-from-method-to-system.md)** — The architectonic of the *Encyclopaedia* (Logic, Nature, Spirit); the circle of circles; the resolution of the One and the Many; the relation of philosophy to the special sciences.
 
 5. **[The Afterlife of Dialectic](synopsis/05-the-afterlife-of-dialectic.md)** — Marx and Engels; Darwin and evolutionary biology; systems theory and complexity; quantum mechanics; the long quarrel with the analytic-empiricist tradition; what remains as living truth, and what open questions remain.
+
+## Section II — The Logic: A First Traversal of the Circle
+
+6. **[The Logic — Orientation](synopsis/06-logic-orientation.md)** — What the *Logic* is and is not; how the categories were already at work in language and labor before logic became their explicit science (Spinoza's *Tractatus de Intellectus Emendatione*); the finitude of any exposition (including Hegel's own); the three spheres and their three modes of transition (*passing-over*, *shining-into*, *developing-out-of*); what this first traversal will and will not do.
 
 ## How to Read
 
