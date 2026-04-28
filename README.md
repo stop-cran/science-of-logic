@@ -22,6 +22,8 @@ A synopsis of G. W. F. Hegel's philosophy with primary attention to his method o
 
 8. **[The Doctrine of Essence](synopsis/08-doctrine-of-essence.md)** — Reflection (identity, difference, contradiction, ground), Appearance (existence, the world of appearance and its law, the essential relations of whole/parts, force/expression, inner/outer), Actuality (modality, substance, causality, reciprocity); the rational/actual distinction; the difficult passage from substance to the Concept; the Doctrine of Essence as the sphere in which mature theoretical science operates.
 
+9. **[The Doctrine of the Concept](synopsis/09-doctrine-of-the-concept.md)** — Subjectivity (concept as universal/particular/singular, the four kinds of judgment, the syllogism as the form of rationality), Objectivity (mechanism, chemism, the rehabilitation of internal teleology), the Idea (life, theoretical and practical cognition, the Absolute Idea); the closure of the Logic's circle and its free release into Nature; concept-formation as the proper task of theory and the unity of theoretical and practical knowing.
+
 ## How to Read
 
 Installments are best read in order, as each presupposes its predecessors. Section I (synopses 01–05) is a self-contained circle on the method and its place. Section II (synopses 06 onward) is a self-contained circle through the *Logic* itself. Either section can be read on its own; together they form a larger circle.
