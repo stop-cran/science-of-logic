@@ -1,6 +1,6 @@
 # Hegel's Method and the Scientific Paradigm — A Synopsis
 
-A five-part synopsis of G. W. F. Hegel's philosophy with primary attention to his method of investigation and its contribution to the scientific paradigm. The synopsis is organized as a single dialectical circle: each installment grows out of the contradictions of the preceding one, and the final installment closes back upon the first.
+A synopsis of G. W. F. Hegel's philosophy with primary attention to his method of investigation and its contribution to the scientific paradigm. The synopsis is organized as a single dialectical circle: each installment grows out of the contradictions of the preceding one, and each section closes back upon itself. **Section I** establishes the method and its historical place; **Section II** is a first traversal of the *Logic* at the level of its bigger sub-spheres; subsequent sections will descend into finer detail.
 
 ## Section I — The Method and Its Place
 
@@ -20,6 +20,8 @@ A five-part synopsis of G. W. F. Hegel's philosophy with primary attention to hi
 
 7. **[The Doctrine of Being](synopsis/07-doctrine-of-being.md)** — Quality, Quantity, Measure: from the immediacy of qualitative determination, through the indifferent determinacy of quantity, to their unity in measure; the transformation of quantity into quality at nodal points (Mendeleev's table, phase transitions, critical thresholds); the dissolution of measure into the measureless and the passage of Being into Essence.
 
+8. **[The Doctrine of Essence](synopsis/08-doctrine-of-essence.md)** — Reflection (identity, difference, contradiction, ground), Appearance (existence, the world of appearance and its law, the essential relations of whole/parts, force/expression, inner/outer), Actuality (modality, substance, causality, reciprocity); the rational/actual distinction; the difficult passage from substance to the Concept; the Doctrine of Essence as the sphere in which mature theoretical science operates.
+
 ## How to Read
 
-The five installments are best read in order, as each presupposes its predecessor. They may also be read as five entries into a single circle — any one of them, taken seriously, leads to all the others.
+Installments are best read in order, as each presupposes its predecessors. Section I (synopses 01–05) is a self-contained circle on the method and its place. Section II (synopses 06 onward) is a self-contained circle through the *Logic* itself. Either section can be read on its own; together they form a larger circle.
