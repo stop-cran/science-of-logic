@@ -16,7 +16,9 @@ A five-part synopsis of G. W. F. Hegel's philosophy with primary attention to hi
 
 ## Section II — The Logic: A First Traversal of the Circle
 
-6. **[The Logic — Orientation](synopsis/06-logic-orientation.md)** — What the *Logic* is and is not; how the categories were already at work in language and labor before logic became their explicit science (Spinoza's *Tractatus de Intellectus Emendatione*); the finitude of any exposition (including Hegel's own); the three spheres and their three modes of transition (*passing-over*, *shining-into*, *developing-out-of*); what this first traversal will and will not do.
+6. **[The Logic — Orientation](synopsis/06-logic-orientation.md)** — What the *Logic* is and is not; how the categories were already at work in language and labor before logic became their explicit science (Spinoza's *Tractatus de Intellectus Emendatione*, Lenin's *Philosophical Notebooks*); the finitude of any exposition (including Hegel's own); the three spheres and their three modes of transition (*passing-over*, *shining-into*, *developing-out-of*); what this first traversal will and will not do.
+
+7. **[The Doctrine of Being](synopsis/07-doctrine-of-being.md)** — Quality, Quantity, Measure: from the immediacy of qualitative determination, through the indifferent determinacy of quantity, to their unity in measure; the transformation of quantity into quality at nodal points (Mendeleev's table, phase transitions, critical thresholds); the dissolution of measure into the measureless and the passage of Being into Essence.
 
 ## How to Read
 
