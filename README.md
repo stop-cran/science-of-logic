@@ -27,3 +27,9 @@ A synopsis of G. W. F. Hegel's philosophy with primary attention to his method o
 ## How to Read
 
 Installments are best read in order, as each presupposes its predecessors. Section I (synopses 01–05) is a self-contained circle on the method and its place. Section II (synopses 06 onward) is a self-contained circle through the *Logic* itself. Either section can be read on its own; together they form a larger circle.
+
+## News & Notes
+
+Shorter, occasional pieces that take a present-day case and read it through the categorial vocabulary the synopsis develops. Meant to be congenial entry points and conversation starters; readers are warmly invited to push back, to bring their own cases, and to argue these out — including in dialogue with Copilot, the AI co-author of the synopsis itself.
+
+- **[Extracting the Concept, Not the Common Part](news/2026-04-28-extracting-the-concept.md)** *(2026-04-28)* — Why "find the shared code and pull it out" so often produces helpers nobody loves, and why the right move is usually to find the *concept* whose particular cases the existing pieces are. Worked software examples (taxable transaction, resilience policy, the cautionary timestamp case), with the distinction between abstract and concrete universal as the underlying logic, and a working three-question test for whether you have a concept.
