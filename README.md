@@ -1,6 +1,6 @@
 # Hegel's Method and the Scientific Paradigm — A Synopsis
 
-A synopsis of G. W. F. Hegel's philosophy with primary attention to his method of investigation and its contribution to the scientific paradigm. The synopsis is organized as a single dialectical circle: each installment grows out of the contradictions of the preceding one, and each section closes back upon itself. **Section I** establishes the method and its historical place; **Section II** is a first traversal of the *Logic* at the level of its bigger sub-spheres; subsequent sections will descend into finer detail.
+A synopsis of G. W. F. Hegel's philosophy with primary attention to his method of investigation and its contribution to the scientific paradigm. The synopsis is organized as a single dialectical circle: each installment grows out of the contradictions of the preceding one, and each section closes back upon itself. **Section I** establishes the method and its historical place; **Section II** is a first traversal of the *Logic* at the level of its bigger sub-spheres; **Section III** re-traverses the same circle at the resolution of the individual moves, redeeming Section II's compressions and unfolding the categories step by step.
 
 ## Section I — The Method and Its Place
 
@@ -24,9 +24,15 @@ A synopsis of G. W. F. Hegel's philosophy with primary attention to his method o
 
 9. **[The Doctrine of the Concept](synopsis/09-doctrine-of-the-concept.md)** — Subjectivity (concept as universal/particular/singular, the four kinds of judgment, the syllogism as the form of rationality), Objectivity (mechanism, chemism, the rehabilitation of internal teleology), the Idea (life, theoretical and practical cognition, the Absolute Idea); the closure of the Logic's circle and its free release into Nature; concept-formation as the proper task of theory and the unity of theoretical and practical knowing.
 
+## Section III — The Close Reading
+
+Section II gave the bird's-eye picture of the *Logic*'s circle. Section III re-traverses the same circle at the resolution of the individual moves, unfolding the categories Section II compressed and exhibiting the immanent necessity of each step. The aim is not encyclopedic completeness but the experience of the method at full depth: every "must" earned, every transition watched, every common misunderstanding anticipated where it tends to arise.
+
+10. **[From Pure Being to Determinate Being](synopsis/10-from-pure-being-to-determinate-being.md)** — A close reading of the opening of the *Logic*: why pure Being is the right beginning (and what the standpoint costs); the immanent identity of Being and Nothing, with the standard contemporary objections answered inline; Becoming and its two moments (coming-to-be, ceasing-to-be); the *vanishing of the vanishing* and the emergence of *Dasein*; why the abstract *Dasein* genuinely **is** — why it carries internalized negation and plays on its own field rather than collapsing into pure Being all over again.
+
 ## How to Read
 
-Installments are best read in order, as each presupposes its predecessors. Section I (synopses 01–05) is a self-contained circle on the method and its place. Section II (synopses 06 onward) is a self-contained circle through the *Logic* itself. Either section can be read on its own; together they form a larger circle.
+Installments are best read in order, as each presupposes its predecessors. Section I (synopses 01–05) is a self-contained circle on the method and its place. Section II (synopses 06–09) is a self-contained circle through the *Logic* itself. Section III (synopsis 10 onward) re-traverses the *Logic* at finer resolution. Each section can be read on its own; together they form a larger circle.
 
 ## News & Notes
 
