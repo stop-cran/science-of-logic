@@ -30,6 +30,8 @@ Section II gave the bird's-eye picture of the *Logic*'s circle. Section III re-t
 
 10. **[From Pure Being to Determinate Being](synopsis/10-from-pure-being-to-determinate-being.md)** — A close reading of the opening of the *Logic*: why pure Being is the right beginning (and what the standpoint costs); the immanent identity of Being and Nothing, with the standard contemporary objections answered inline; Becoming and its two moments (coming-to-be, ceasing-to-be); the *vanishing of the vanishing* and the emergence of *Dasein*; why the abstract *Dasein* genuinely **is** — why it carries internalized negation and plays on its own field rather than collapsing into pure Being all over again.
 
+11. **[Quality, Something, and Other](synopsis/11-quality-something-and-other.md)** — The first internal articulation of *Dasein*: **Reality** and **Negation** as the two sides of its determinacy; their unity as **Quality**; the standard contemporary misreadings of "negation" answered inline (representational, logical-positivist, mere-difference); the move to **Something** (*Etwas*) as the first negation of the negation and the first self-related determinate; why every Something is constitutively related to an **Other**, and the contradiction this generates that will drive the next move.
+
 ## How to Read
 
 Installments are best read in order, as each presupposes its predecessors. Section I (synopses 01–05) is a self-contained circle on the method and its place. Section II (synopses 06–09) is a self-contained circle through the *Logic* itself. Section III (synopsis 10 onward) re-traverses the *Logic* at finer resolution. Each section can be read on its own; together they form a larger circle.
