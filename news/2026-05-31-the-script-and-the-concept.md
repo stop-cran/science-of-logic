@@ -32,7 +32,7 @@ Between Chemism and the Idea stands [**Teleology**](../synopsis/09-doctrine-of-t
 
 - The **End** is the purpose the skill holds: this deploy must be atomic, must roll back on failure, must never half-apply.
 - The **Means** is the script — a mechanical object deliberately *interposed* between the purpose and the world.
-- The realized End is what comes back when the script has run and the purpose is satisfied in the world.
+- The realized End is what comes back when the script has run and the purpose is satisfied in the world — and, in the moment that closes the loop, it is *fed back* to re-confirm or revise the End itself. That feedback is the teleological syllogism returning into itself; a pattern that never feeds the realized End back has only the first two terms, not the closure.
 
 Hegel's name for the inner trick of this structure is the **cunning of reason** (*List der Vernunft*): the purpose does not grind itself directly against the world; it *inserts a tool* between itself and the object, lets the tool wear itself out against the material — break, drift, throw errors — **while the purpose itself is preserved and comes through intact.** This is exactly what a well-built skill does with its script. The script takes the beating from reality; the invariant survives the beating and is what *judges* and *repairs* the script afterward.
 
@@ -45,6 +45,24 @@ And it explains the **cost** that careful practitioners of this pattern keep rep
 
 ---
 
+## What Mechanism predicts will go wrong
+
+Reading the script as a mechanical object is not flattery; it is a hazard list. Hegel's mechanical object has exact defects, and each one names a failure mode practitioners already fear.
+
+1. **The illusion of autonomy.** A mechanical object *looks* self-subsistent but is wholly determined from outside — by its inputs, its environment, and the spec. The extracted script "runs on its own," and that apparent self-standing is precisely the Mechanism illusion; treating it as genuinely self-grounding is the error Mechanism *is*.
+
+2. **No End within it.** The object carries no purpose of its own, so it cannot judge whether it *should* run, or whether what it produced is good. This is exactly why the script's own exit code must never be the oracle of success.
+
+3. **No inwardness, no memory.** The mechanical object retains nothing; it will not grow wiser by failing. The intelligence has to live in the End — the spec learns, the script does not.
+
+4. **Indifference to appropriateness.** It runs the same on whatever arrives. The precondition gate — *should this run at all?* — must be owned by the spec, outside the artifact.
+
+5. **No commitment to its own side-effects — and this defect bites first.** The object treats its process as repeatable and history-indifferent, but real side-effects are not: a half-applied deploy *changes the world*. So atomicity, rollback, and idempotence are not properties the artifact will hold for you; they must be *imposed* from the End and re-imposed at every change. There is even a predictable *direction* to the failure: of the invariants an extracted artifact can silently lose, the **irreversible-side-effect** ones go first and go quietly — because they govern the *failure path* that a successful run never exercises, so the artifact can satisfy every observed execution while having quietly dropped them. The operating consequence is concrete: after any change to an extracted artifact, **re-verify the side-effect invariants (rollback, idempotence) first.**
+
+And because the live system *resists* — Hegel's action and reaction — the clean transmission the script assumes never quite holds; the End must expect to be pushed back on, and to re-subordinate its Means each time it is.
+
+---
+
 ## The Idea — but only when the purpose becomes immanent
 
 Now the destination. Is the rejoined whole — script-owned-and-corrected-by-spec — an **Idea**? Yes, but with a discrimination that is the whole point.
@@ -54,6 +72,8 @@ Realized teleology where the End is *finite and external* — a tool used to get
 The whole thing tips into the [**Idea**](../synopsis/09-doctrine-of-the-concept.md#iv-the-idea) only when the purpose stops being an external result and becomes **immanent — a self-purpose** (*Selbstzweck*): when what is maintained is not a single deploy but *the standing practice that owns, grows, and self-corrects its own scripts*. The qualification matters: merely *repeating* an external purpose is still external teleology, only iterated. Immanence arrives only when the practice itself becomes the end it serves — when keeping the loop alive and adequate *is* the purpose, the way an organism's purpose is simply to go on being that organism. That is the form of [**Life**](../synopsis/09-doctrine-of-the-concept.md#life) (a thing that maintains itself through exchange with its environment) and of [**Cognition**](../synopsis/09-doctrine-of-the-concept.md#cognition) in its two moments — *theoretical*, keeping the script true to the world it acts on, and *practical*, bending the world to the invariant. A skill that merely emits a script is finite teleology. A skill that has become a self-reproducing loop — ship, observe the drift, fold the lesson back into both the script and its own grounding — *that* has the form of the Idea.
 
 So the obvious reading's "and the whole is an Idea" is true at one level and premature at another, and the gap between the two levels is the practically important thing: **a single instance of the pattern is finite teleology; the pattern recognized and maintained as a self-correcting discipline is the Idea.**
+
+This also exposes the *opposite* failure to the drifting Means. The Means slipping its End is only one way the bond breaks; the other is the **End itself decaying back into Mechanism** — a spec that is recited but no longer re-grounded, a checklist of invariants no one still *means*, dead spec-side mechanism. A fossilized End cannot judge or repair anything; it is just another indifferent object sitting beside the script. The spec stays an End only as long as it stays alive — understood, re-grounded, and willing to be revised by what the realized End feeds back.
 
 ---
 
