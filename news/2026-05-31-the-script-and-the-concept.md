@@ -20,7 +20,7 @@ The thesis is easiest to see against the two errors that flank it. They are oppo
 
 The first error is to *never* consolidate. You keep the whole practice soft: each time the deploy is needed, you prompt an agent, it reads a prose description, it improvises the steps, it mostly works. As a way to *discover* what the procedure even is, this is exactly right — and we will see in a moment that it is the necessary first stage. The mistake is treating the prototype as the destination.
 
-Prose is the wrong long-term home for a deterministic procedure. Prose drifts; an agent re-reads it and improvises differently; the eight-thousandth retelling is not the first. Nothing crystallizes, nothing accumulates, every run re-derives what the last run already knew. This is **immediacy that never settles** — pure flux, a Becoming that refuses to deposit any Being. Its truth is *agility* and keeping judgment in the loop. Its error is that it produces no object, no consolidated core, nothing a team can rely on or build on.
+Prose is the wrong long-term home for a deterministic procedure. Prose drifts; an agent re-reads it and improvises differently; the eight-thousandth retelling is not the first. Nothing crystallizes, nothing accumulates, every run re-derives what the last run already knew. This is **immediacy that never settles** — pure flux, a Becoming that refuses to settle into any *determinate being* (Dasein). Its truth is *agility* and keeping judgment in the loop. Its error is that it produces no object, no consolidated core, nothing a team can rely on or build on.
 
 ### Over-consolidating: aiming for total mechanical automation
 
@@ -38,7 +38,7 @@ A total automation walks away from a thing with all five of these defects and no
 
 ### The common diagnosis
 
-Both errors mistake a *moment* for the *whole*. Vibe-coding freezes at the first moment — soft, fluid, unconsolidated — and never passes over into an object. Total automation freezes at a later moment — hard, consolidated — and severs it from the soft judgment that grounds it. The truth is neither moment alone but their **connected movement**. That is the take.
+Both errors mistake a *moment* for the *whole* — and, importantly, they are not two symmetric poles with a tidy mean between them. They are the *same* movement arrested at different points. Vibe-coding stops it too early, at the first fluid moment, so it never passes over into an object at all. Total automation lets the movement reach the object and then stops it *there*, severing the consolidated core from the soft judgment that grounds it and that should go on revising it. Only the first stretch is genuinely *traversed* in what follows — the prototype's own instability is what drives extraction; over-consolidation is simply that one living movement halted one step too late. The truth is neither moment alone but their **connected movement kept going**. That is the take.
 
 ---
 
@@ -46,7 +46,7 @@ Both errors mistake a *moment* for the *whole*. Vibe-coding freezes at the first
 
 The resolution is to **retain the mechanism as an essential part, but keep it evolvable through the soft skill that owns it.** The hard core really does become a rigid, deterministic object — and that rigidity is its *virtue*, the whole reason to extract it. What stays alive is not the object's insides but the **bond**: the skill can revise, replace, or regrow the script, because the spec learns and the script does not. *Evolvability lives in the End, never in the mechanism.* That is how "an evolvable mechanism" stops being a contradiction in terms.
 
-Read as a development, the practice climbs a short ladder, and the categories of the *Logic* are simply its rungs:
+Read as a development, the practice climbs a short ladder whose rungs *resonate* with the categories of the *Logic* — used here as a local analogy, not as a claim that a prose prototype literally *is* the subjective Concept, nor that this short climb reproduces the Logic's full arc from Being through Essence to the Concept. With that caveat, the rungs are:
 
 1. **Prose prototype.** The agent runs the procedure from a prose description in the skill. This is the right *first* form — immediate, flexible, good for finding out what the procedure even is. A good prototype, not yet good automation.
 
@@ -86,7 +86,7 @@ Three questions to ask before pulling a deterministic core out of a skill (or a 
 
 ## Coda: code is finite, methodology is not
 
-There is a reason to care about all this beyond any one deploy. **Projects come and go.** The script you extracted is bound to its project; when the project ends, the code dies with it — a finite existence, tied to its conditions, gone when they change. But the *experience*, once crystallized into a general methodology, outlives every project it was learned in. It is the concrete universal that persists through the coming-and-going of its instances — a longer-living truth than any working code.
+There is a reason to care about all this beyond any one deploy. **Projects come and go.** The script you extracted is bound to its project; when the project ends, the code dies with it — a finite existence, tied to its conditions, gone when they change. But the *experience*, once crystallized into a general methodology, outlives every project it was learned in. It is the concrete universal that persists through the coming-and-going of its instances — and it persists not because it happens to last longer in time, but because it is *self-grounding* where a particular existence is merely conditioned. Its endurance is a *consequence* of its universality, not the measure of it; it is a longer-living truth than any working code because it is a *truer* one.
 
 And notice the recursion: the *most extracted* thing — the methodology that owns and grows the skills that own and grow the scripts — is the *most durable*, precisely because it is the concept and not the code. That is the same lesson as the [companion note](2026-04-28-extracting-the-concept.md): what is worth extracting is never the merely common procedure but the concept whose cases the procedures are. Working code is the most visible thing you produce and the first to perish. The methodology is the least visible and the last.
 
