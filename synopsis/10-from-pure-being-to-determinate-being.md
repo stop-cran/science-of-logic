@@ -135,7 +135,7 @@ This is also what distinguishes Section III's mode of presentation from Section 
 
 ## VIII. What Comes Next
 
-We have arrived at *Dasein* as the first concrete category. *Dasein* is, but it is also already differentiated into an internal field — Quality, Reality, Negation — which the next installment must develop. The same kind of close reading will continue: each internal determination of *Dasein* will be shown to be both indispensable and unable, taken in isolation, to stand. From their tensions will emerge the further categories — *Something* and *Other*, being-in-itself and being-for-other, finitude — and from finitude in turn the move to infinity, which closes the first major sub-circle of the Doctrine of Being.
+We have arrived at *Dasein* as the first concrete category. *Dasein* is, but it is also already differentiated into an internal field — Quality, Reality, Negation — which the next installment must develop. The same kind of close reading will continue: each internal determination of *Dasein* will be shown to be both indispensable and unable, taken in isolation, to stand. From their tensions will emerge the further categories — *Something* and *Other*, being-in-itself and being-for-other, finitude — and from finitude in turn the move to infinity, which closes the first major movement of Quality.
 
 The reader who has followed this installment carefully has already, in microcosm, learned the discipline that Section III is meant to cultivate: hold the determination strictly; watch it negate itself; identify what its self-negation cannot cancel; let that residue be the next determination. From now on, the same exercise will be repeated at every level. The categories grow in concreteness; the discipline does not change.
 

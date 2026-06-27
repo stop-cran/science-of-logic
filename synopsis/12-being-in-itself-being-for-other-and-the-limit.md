@@ -104,7 +104,7 @@ This is **Finitude** (*Endlichkeit*).
 
 A finite Something is a Something whose Limit, taken seriously, is its end — not as a contingent fact that might or might not happen, but as something internal to what it is. Finitude is the Something's Limit *recognized as constitutive of the Something's very being*. Once recognized this way, the finite Something is no longer the static unity we started with; it carries its own perishing within it.
 
-The next installment will develop this in full: the structure of finitude proper, the categories of *limit* and *ought* (*Schranke* and *Sollen*) as further articulations of finitude's internal contradiction, the way finitude immanently passes over into infinity, and the difference between *spurious* infinity (the endless repetition of finite-after-finite) and *true* infinity (the infinity that includes finitude as a moment of itself rather than excluding it). That arc — from finitude through spurious infinity to true infinity — closes the first major sub-circle of the Doctrine of Being. It is also the point at which, for the first time in the *Logic*, a determination is shown to be **infinite** — and the contemporary reader is most often startled by what "infinite" means at this stage of the exposition. The next installment will address that directly.
+The next installment will develop this in full: the structure of finitude proper, the categories of *limit* and *ought* (*Schranke* and *Sollen*) as further articulations of finitude's internal contradiction, the way finitude immanently passes over into infinity, and the difference between *spurious* infinity (the endless repetition of finite-after-finite) and *true* infinity (the infinity that includes finitude as a moment of itself rather than excluding it). That arc — from finitude through spurious infinity to true infinity — closes the first major movement of Quality. It is also the point at which, for the first time in the *Logic*, a determination is shown to be **infinite** — and the contemporary reader is most often startled by what "infinite" means at this stage of the exposition. The next installment will address that directly.
 
 ## VII. Method Observations at This Step
 
@@ -124,7 +124,7 @@ The next installment will develop:
 - **Spurious infinity** — the endless succession of finite-after-finite, the "bad infinity" of the understanding, and why it is not yet what Hegel means by *the* infinite.
 - **True infinity** — the infinity that does not stand against the finite (which would make it itself a finite, since "infinity-vs-finitude" is a relation between two determinations and so a finite structure) but contains finitude as one of its own moments. This is one of the most original determinations in Hegel's *Logic* and one of the most commonly misread.
 
-With true infinity, the first sub-circle of the Doctrine of Being closes. The path from there opens into **Being-for-self** (*Fürsichsein*) — the determination in which the Something has fully internalized its Other and stands as one — and from there to the dialectic of the **One and the Many**, which prepares the passage from Quality into Quantity.
+With true infinity, the first major movement of Quality closes. The path from there opens into **Being-for-self** (*Fürsichsein*) — the determination in which the Something has fully internalized its Other and stands as one — and from there to the dialectic of the **One and the Many**, which prepares the passage from Quality into Quantity.
 
 ---
 

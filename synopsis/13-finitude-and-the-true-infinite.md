@@ -1,6 +1,6 @@
 # Finitude and the True Infinite
 
-*The fourth installment of Section III — a close reading of the passage that closes the first sub-circle of the Doctrine of Being: the **finite** as the Something whose non-being is its own nature; the development of the Limit into **Restriction** (*Schranke*) and the **Ought** (*Sollen*); the immanent contradiction by which the finite passes into the **infinite**; the **spurious infinity** of the understanding (the endless progress, the "beyond") and why it is secretly finite; and the **true infinity** that holds finitude as one of its own moments — Hegel's most original and most misread determination, and the threshold of Being-for-self.*
+*The fourth installment of Section III — a close reading of the passage that closes the first major movement of Quality: the **finite** as the Something whose non-being is its own nature; the development of the Limit into **Restriction** (*Schranke*) and the **Ought** (*Sollen*); the immanent contradiction by which the finite passes into the **infinite**; the **spurious infinity** of the understanding (the endless progress, the "beyond") and why it is secretly finite; and the **true infinity** that holds finitude as one of its own moments — Hegel's most original and most misread determination, and the threshold of Being-for-self.*
 
 ---
 
@@ -8,7 +8,7 @@
 
 The previous installment ended with the **Limit** (*Grenze*) and named its contradiction precisely. The Limit is the determinacy shared between Something and Other; it is at once that *by which* the Something is the determinate it is, and that *at which* the Something stops being itself and the Other begins. The Limit is therefore the Something's own — and yet it is the point of the Something's non-being. A determinacy that is both the being and the non-being of what it determines cannot stand still. We left the Limit poised to turn inward, to become a determination not of the relation between Something and Other but *of the Something itself*. That inward turn is **Finitude**.
 
-It is worth marking, before we begin, that this installment carries the first sub-circle of the *Logic* to its close. From pure Being we reached *Dasein*; from *Dasein*, Quality, Something, and Other; from Something-and-Other, the two sides and the Limit. Finitude is where the accumulated determinacy of "the Something with a Limit" is pressed for its full meaning — and the pressing carries us, by an immanent necessity we will watch step by step, all the way to the **infinite**, and through the infinite back to a deepened, self-enclosed being that will be the next sphere's beginning.
+It is worth marking, before we begin, that this installment carries the first major movement of Quality to its close. From pure Being we reached *Dasein*; from *Dasein*, Quality, Something, and Other; from Something-and-Other, the two sides and the Limit. Finitude is where the accumulated determinacy of "the Something with a Limit" is pressed for its full meaning — and the pressing carries us, by an immanent necessity we will watch step by step, all the way to the **infinite**, and through the infinite back to a deepened, self-enclosed being — Being-for-self — in which Quality completes itself and passes over into Quantity.
 
 ## II. The Finite — Where Non-Being Is the Nature of the Thing
 
