@@ -21,6 +21,11 @@ sibling repository **nauka-logiki** and must mirror this one.
 The author reviews each piece before authorizing the next — **never batch ahead** without a
 check-in.
 
+**Review process.** Authors self-check and reviewers critique against `REVIEW.md` (the checklist,
+severity rubric, and critique loop). Run the mechanical gate before submitting:
+`npx -y -p markdown-it@14 node tools/check-synopsis.js`. The `synopsis-reviewer` custom agent in
+`.github/agents/` encodes the review-only reviewer role.
+
 ## Handling review feedback
 
 Apply genuine fixes (idiom, grammar, precision, consistency), but **hold** suggestions that
