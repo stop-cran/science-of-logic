@@ -35,7 +35,7 @@ rationale**. Principled, reasoned holds are preferred over blanket acceptance.
 - **Section skeleton**: `## I.`–`## IX.` Roman-numeral sections, then `## Coda`. Recurring
   sections include *Three Misreadings, Answered Directly*, *What the Method Did Here —
   Observations*, and *What Comes Next*.
-- **Math**: italic plain text (e.g. *y = x²*, *a · b = k*, *s ∝ t²*, *ℏ*) — **not** LaTeX
+- **Math**: italic plain text (e.g. *y = x²*, *a · b = k*, *s ∝ t²*, *h*) — **not** LaTeX
   `$…$`.
 - **Cross-references**: cite earlier installments as `§13`, `§16`, etc.
 - Keep the dense, weighty register; do not loosen it for readability unless a sentence is
