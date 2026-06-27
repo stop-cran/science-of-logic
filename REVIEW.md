@@ -23,7 +23,8 @@ Gemini) over a piece's review life. Observed division of labour: a **cross-model
 and grammar errors a same-model pass tends to *rationalize away*; a **same-model regression** pass
 catches consistency drift introduced by the previous round's own edits. Run reviewers at high/xhigh
 reasoning with long context (the full installment + every cross-referenced sibling + both READMEs at
-once — that is what surfaces retrofit ripples).
+once — that is what surfaces retrofit ripples). Enforce routing operationally where the interface
+supports it (e.g. Copilot CLI `/subagents` and `/model`); otherwise treat rotation as a manual discipline.
 
 ## How to review (discipline)
 
@@ -95,4 +96,4 @@ terms, `(*German*)` glosses, `§NN` cross-references, italic-plain math.
 2. **Verified ✓** — the gates and spot-checks you actually ran.
 3. **Findings** — grouped by severity, each marked *fix* or *hold (rationale)*.
 4. **Questions** — design/judgment calls for the author.
-5. **Offer** to apply the agreed fixes.
+5. **Handoff** — the author applies the agreed fixes; offer to re-review the next iteration.
