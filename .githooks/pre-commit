@@ -1,0 +1,4 @@
+#!/bin/sh
+# Pre-commit gate: house-style + canon checks for synopsis installments.
+# Enable once per clone with:  git config core.hooksPath .githooks
+exec npx -y -p markdown-it@14 node tools/check-synopsis.js

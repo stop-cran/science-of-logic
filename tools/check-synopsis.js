@@ -30,10 +30,32 @@ if (!dir) {
 const readmePath = path.join(repo, 'README.md');
 const readme = fs.existsSync(readmePath) ? fs.readFileSync(readmePath, 'utf8') : '';
 
+// Canon denylist: locked-terminology violations as mechanical gates. Optional file; each rule is
+// { "pattern": "<regex>", "flags": "<opt>", "message": "<why + fix>" }.
+const denyPath = path.join(repo, 'tools', 'canon-denylist.json');
+let denyRules = [];
+if (fs.existsSync(denyPath)) {
+  try {
+    denyRules = JSON.parse(fs.readFileSync(denyPath, 'utf8'))
+      .map(r => ({ re: new RegExp(r.pattern, r.flags || ''), message: r.message }));
+  } catch (e) {
+    console.error('canon-denylist.json could not be parsed:', e.message);
+    process.exit(1);
+  }
+}
+
 const files = fs.readdirSync(dir).filter(f => /^\d+.*\.md$/.test(f)).sort();
 
 let failures = 0;
 const fail = (file, msg) => { console.log(`  ✗ ${file}: ${msg}`); failures++; };
+
+// Scan a source string line-by-line against the canon denylist; report under `label`.
+const scanCanon = (label, text) => {
+  const lines = text.split(/\r?\n/);
+  for (const rule of denyRules) {
+    lines.forEach((ln, i) => { if (rule.re.test(ln)) fail(label, `canon: ${rule.message} — line ${i + 1}`); });
+  }
+};
 
 for (const f of files) {
   const nn = parseInt(f, 10);
@@ -75,7 +97,13 @@ for (const f of files) {
   if (readme && !readme.includes(f)) {
     fail(f, 'no README entry links this file');
   }
+
+  // 5. Canon denylist (locked-terminology violations).
+  scanCanon(f, src);
 }
+
+// The README is held to the canon denylist too.
+if (readme) scanCanon('README.md', readme);
 
 console.log(`\nabstract check: ${md ? 'markdown-it (precise)' : 'SKIPPED — markdown-it not resolvable (install it, or run beside the science-of-logic repo)'}`);
 if (failures) {

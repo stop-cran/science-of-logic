@@ -12,10 +12,18 @@ Run it every round.
 3. **Author** applies genuine fixes *with judgment*, **holds** the rest *with explicit rationale*,
    propagates any canon change to earlier installments, re-runs the checker, and **verifies**.
 4. Repeat until a round is **clean**: no Blocker / High / Medium findings and all mechanical
-   gates green.
+   gates green. **Stop condition:** once a round yields only **Low / Optional single-word polish**,
+   the piece is *settled* — don't spin further rounds chasing taste (diminishing returns).
 5. Author authorizes → translate in **nauka-logiki** → run the same loop there.
 
 Never batch ahead of the author's authorization.
+
+**Rotate reviewer models across rounds.** Use at least two *different vendors* (e.g. Claude + GPT +
+Gemini) over a piece's review life. Observed division of labour: a **cross-model** pass catches canon
+and grammar errors a same-model pass tends to *rationalize away*; a **same-model regression** pass
+catches consistency drift introduced by the previous round's own edits. Run reviewers at high/xhigh
+reasoning with long context (the full installment + every cross-referenced sibling + both READMEs at
+once — that is what surfaces retrofit ripples).
 
 ## How to review (discipline)
 
@@ -42,8 +50,12 @@ For every Section III installment (NN ≥ 10) it checks:
 - Section skeleton present: `## I.` … and a `## Coda`.
 - **No LaTeX math** (`$…$`, `\(…\)`) — math is italic-plain.
 - A **README entry** links the file.
+- **Canon denylist** — locked-terminology violations in `tools/canon-denylist.json` fail
+  mechanically (e.g. a stray `ℏ`); the installments **and** the README are scanned.
 
-Don't eyeball anything the script can prove.
+Don't eyeball anything the script can prove. Wire it to run automatically with a pre-commit hook —
+`git config core.hooksPath .githooks` (the committed `.githooks/pre-commit` runs the checker) — or as
+a Copilot CLI hook.
 
 ## 2 — Consistency & canon propagation
 
