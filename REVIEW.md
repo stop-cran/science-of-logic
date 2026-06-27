@@ -26,6 +26,12 @@ reasoning with long context (the full installment + every cross-referenced sibli
 once — that is what surfaces retrofit ripples). Enforce routing operationally where the interface
 supports it (e.g. Copilot CLI `/subagents` and `/model`); otherwise treat rotation as a manual discipline.
 
+**Reviewer ≠ author model — hard invariant.** The reviewer's model must differ from the model the
+installment was *drafted* with; otherwise it is a same-model pass and forfeits the cross-model catch.
+Routing is committed per repo in `.github/copilot/settings.json` under `subagents.agents.<name>`
+(here: `synopsis-reviewer` → a non-author vendor at `xhigh` + `long_context`). If you switch the
+author's vendor with `/model`, rotate the reviewer's `model` so the two never coincide.
+
 ## How to review (discipline)
 
 - Review the **current** file, not a remembered one. Prefer a **word-diff against the

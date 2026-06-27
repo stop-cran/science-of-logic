@@ -81,9 +81,25 @@ for (const f of files) {
       }
     }
 
-    // 2. Section skeleton: "## I." present and a Coda/Кода present.
+    // 2. Section skeleton: Roman-numeral headings form a contiguous run I, II, …, N (no gaps,
+    //    no repeats, in order) — N varies per installment — followed by a Coda/Кода.
     const heads = src.match(/^##\s+.*$/gm) || [];
-    if (!heads.some(h => /^##\s+I\.\s/.test(h))) fail(f, 'missing "## I." section');
+    const romanToInt = (r) => {
+      const v = { I: 1, V: 5, X: 10 };
+      let n = 0, prev = 0;
+      for (let i = r.length - 1; i >= 0; i--) {
+        const d = v[r[i]];
+        if (!d) return NaN;
+        if (d < prev) n -= d; else { n += d; prev = d; }
+      }
+      return n;
+    };
+    const romans = heads.map(h => (h.match(/^##\s+([IVX]+)\.\s/) || [])[1]).filter(Boolean);
+    if (!romans.length) {
+      fail(f, 'no "## I." … roman-numeral sections found');
+    } else if (!romans.map(romanToInt).every((n, i) => n === i + 1)) {
+      fail(f, `roman sections not a contiguous I..N run (got ${romans.join(', ')})`);
+    }
     if (!heads.some(h => /^##\s+(Coda|Кода)\s*$/.test(h))) fail(f, 'missing "## Coda"/"## Кода"');
   }
 
