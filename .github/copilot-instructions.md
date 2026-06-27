@@ -23,8 +23,9 @@ check-in.
 
 **Review process.** Authors self-check and reviewers critique against `REVIEW.md` (the checklist,
 severity rubric, and critique loop). Run the mechanical gate before submitting:
-`npx -y -p markdown-it@14 node tools/check-synopsis.js`. The `synopsis-reviewer` custom agent in
-`.github/agents/` encodes the review-only reviewer role.
+`npx -y -p markdown-it@14 node tools/check-synopsis.js`. The `synopsis-reviewer-claude` and
+`synopsis-reviewer-gpt` custom agents in
+`.github/agents/` encode the review-only reviewer role (a two-vendor pair).
 
 ## Handling review feedback
 

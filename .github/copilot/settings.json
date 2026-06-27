@@ -1,7 +1,12 @@
 {
   "subagents": {
     "agents": {
-      "synopsis-reviewer": {
+      "synopsis-reviewer-claude": {
+        "model": "claude-opus-4.8",
+        "effortLevel": "xhigh",
+        "contextTier": "long_context"
+      },
+      "synopsis-reviewer-gpt": {
         "model": "gpt-5.5",
         "effortLevel": "xhigh",
         "contextTier": "long_context"

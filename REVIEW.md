@@ -1,7 +1,8 @@
 # Review checklist & critique loop — *science-of-logic*
 
 Operational companion to `.github/copilot-instructions.md`. **Single source of truth** for two
-roles: the **author** self-checking *before submitting*, and the **`synopsis-reviewer`** agent.
+roles: the **author** self-checking *before submitting*, and the **`synopsis-reviewer-claude`** +
+**`synopsis-reviewer-gpt`** agents (a two-vendor review pair).
 Run it every round.
 
 ## The critique loop
@@ -26,11 +27,15 @@ reasoning with long context (the full installment + every cross-referenced sibli
 once — that is what surfaces retrofit ripples). Enforce routing operationally where the interface
 supports it (e.g. Copilot CLI `/subagents` and `/model`); otherwise treat rotation as a manual discipline.
 
-**Reviewer ≠ author model — hard invariant.** The reviewer's model must differ from the model the
-installment was *drafted* with; otherwise it is a same-model pass and forfeits the cross-model catch.
-Routing is committed per repo in `.github/copilot/settings.json` under `subagents.agents.<name>`
-(here: `synopsis-reviewer` → a non-author vendor at `xhigh` + `long_context`). If you switch the
-author's vendor with `/model`, rotate the reviewer's `model` so the two never coincide.
+**Reviewer ≠ author model — hard invariant.** A reviewer's model must differ from the model the
+installment was *drafted* with; otherwise that pass is a same-model read and forfeits the cross-model
+catch. Routing is committed per repo in `.github/copilot/settings.json` under `subagents.agents.<name>`:
+**two** reviewers, each pinned to a different vendor — `synopsis-reviewer-claude` (Opus) and
+`synopsis-reviewer-gpt` (GPT-5.5), both at `xhigh` + `long_context`. They divide labour — Claude tends
+to catch structure, canon propagation, and regression drift; GPT tends to catch idiom and
+precision/quality — so run **both** on an installment's first review (a parallel breadth pass), then a
+single-vendor **regression** pass after the author's edits, until the round is clean. If you switch the
+author's vendor with `/model`, rotate so the author never coincides with a reviewer.
 
 ## How to review (discipline)
 
