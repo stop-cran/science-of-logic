@@ -38,7 +38,8 @@ rationale**. Principled, reasoned holds are preferred over blanket acceptance.
 - **Abstract**: the paragraph directly under the `#` title is wrapped in a **single `*…*`
   italic span**, with `**bold**` key terms and `(*German*)` glosses nested inside it.
   (Verify it renders as one `<em>` span before committing.)
-- **Section skeleton**: `## I.`–`## IX.` Roman-numeral sections, then `## Coda`. Recurring
+- **Section skeleton**: `## I.`–`## N` contiguous Roman-numeral sections (N varies per installment),
+  then `## Coda`. Recurring
   sections include *Three Misreadings, Answered Directly*, *What the Method Did Here —
   Observations*, and *What Comes Next*.
 - **Math**: italic plain text (e.g. *y = x²*, *a · b = k*, *s ∝ t²*, *h*) — **not** LaTeX

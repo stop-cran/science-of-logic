@@ -27,15 +27,18 @@ reasoning with long context (the full installment + every cross-referenced sibli
 once — that is what surfaces retrofit ripples). Enforce routing operationally where the interface
 supports it (e.g. Copilot CLI `/subagents` and `/model`); otherwise treat rotation as a manual discipline.
 
-**Reviewer ≠ author model — hard invariant.** A reviewer's model must differ from the model the
-installment was *drafted* with; otherwise that pass is a same-model read and forfeits the cross-model
-catch. Routing is committed per repo in `.github/copilot/settings.json` under `subagents.agents.<name>`:
-**two** reviewers, each pinned to a different vendor — `synopsis-reviewer-claude` (Opus) and
-`synopsis-reviewer-gpt` (GPT-5.5), both at `xhigh` + `long_context`. They divide labour — Claude tends
-to catch structure, canon propagation, and regression drift; GPT tends to catch idiom and
-precision/quality — so run **both** on an installment's first review (a parallel breadth pass), then a
-single-vendor **regression** pass after the author's edits, until the round is clean. If you switch the
-author's vendor with `/model`, rotate so the author never coincides with a reviewer.
+**At least one reviewer ≠ author model.** On a first-review breadth pass, at least one reviewer must
+differ from the model the installment was *drafted* with; a same-vendor reviewer still earns its keep
+as a **regression / supplemental** pass (it catches drift the previous round's own edits introduced).
+The committed Claude + GPT pair guarantees this for any GPT-, Claude-, or Gemini-authored draft:
+whichever vendor the author used, at least one of the two reviewers differs. Routing is the **single
+source of truth** in `.github/copilot/settings.json` under `subagents.agents.<name>` —
+`synopsis-reviewer-claude` (Opus) and `synopsis-reviewer-gpt` (GPT-5.5), both at `xhigh` +
+`long_context`. They divide labour — Claude tends to catch structure, canon propagation, and regression
+drift; GPT tends to catch idiom and precision/quality — so run **both** on first review (a parallel
+breadth pass), then a single-vendor **regression** pass after the author's edits, until the round is
+clean. Add a Gemini-pinned third agent for a tie-breaker / a guaranteed cross-model pass even when the
+author is on GPT or Claude.
 
 ## How to review (discipline)
 
