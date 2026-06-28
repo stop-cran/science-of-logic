@@ -47,6 +47,12 @@ author is on GPT or Claude.
   nothing is judged from a stale snapshot. (This bit us once: a "deviation" note was raised
   against EN text that had already been changed.)
 - After the author applies fixes, **re-read** the changed spans and **verify** — don't assume.
+- When introducing a **new rendering of a recurring phrase**, check how the **settled siblings**
+  already render it (the mirror of retrofit-ripple): e.g. "the claim is categorial" was settled as
+  «утверждение … категориальное» in §18, so §19 had to match it, not invent «притязание».
+- An optional **cold / no-context reviewer pass** (a reviewer given only the installment, no project
+  framing) is worth running once per piece: it reliably catches scholarly-provenance slips, over-reach,
+  and false friends that the project-anchored reviewers read past.
 - Tier every finding by severity; mark each a **fix** or a **hold (rationale)**.
 - You are **review-only**: report; the author edits.
 
