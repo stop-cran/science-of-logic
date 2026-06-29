@@ -8,7 +8,7 @@
 
 Where the Doctrine of Being was the sphere of immediacy — its categories standing seemingly self-contained, vanishing into one another by *passing-over* — the Doctrine of Essence is the sphere of **mediation**. Here it has become explicit that no determination stands in its own right; each is what it is only through its relation to its other. The mode of transition is *shining-into* (*Scheinen*): each category does not pass over and disappear, but **shines** into its other and is reflected back. The two are no longer adjacent; they constitute each other reciprocally.
 
-The German *Schein* is the master-word of this sphere. It means at once "shine," "show," "semblance," and "appearance." A *Schein* is not a sham (though it can be); it is an inner that lights up in an outer. The sun *scheint* — it shines — and what it shines forth is itself; and the play of *Schein* between essence and what manifests it is the rhythm of every category in this sphere.
+The German *Schein* is the master-word of this sphere. It means at once "shine," "show," "semblance," and "illusory being." A *Schein* is not a sham (though it can be); it is an inner that lights up in an outer. The sun *scheint* — it shines — and what it shines forth is itself; and the play of *Schein* between essence and what manifests it is the rhythm of every category in this sphere.
 
 The Doctrine of Essence divides into three sub-spheres:
 
@@ -22,7 +22,7 @@ The arc is: from essence taken purely in itself, through essence appearing in it
 
 ### The starting point
 
-Essence begins where Being ended. The categories of Being passed over and disappeared; what *did not* disappear was the **negativity** that drove the passing-over — the inner mediation that was always at work behind the surface of immediacy. Essence is this inner mediation taken as a positive determination in its own right. It is "the past — but past timelessly — being," in Hegel's beautiful phrase: what is left when the immediacy of being has been negated, but as the deeper structure that was always sustaining the appearance.
+Essence begins where Being ended. The categories of Being passed over and disappeared; what *did not* disappear was the **negativity** that drove the passing-over — the inner mediation that was always at work behind the surface of immediacy. Essence is this inner mediation taken as a positive determination in its own right. It is "the past — but timelessly past — being," in Hegel's beautiful phrase: what is left when the immediacy of being has been negated, but as the deeper structure that was always sustaining the appearance.
 
 Essence first treats the world of being as **mere show** (*Schein*) — as something inessential, unreal, behind which the truth lies. But essence cannot stop there. The show is **essence's own show**; the appearances are not foreign to essence but the very form in which essence is. With this recognition, *Schein* is no longer mere semblance but the **reflection** of essence in itself. Essence is the activity of reflecting itself — distinguishing itself from itself in order to be itself.
 
