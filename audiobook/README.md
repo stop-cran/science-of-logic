@@ -10,8 +10,8 @@ installment.
 
 ## How it works
 
-1. **`clean_text.py`** — strips Markdown (emphasis, headings, bullets, links,
-   rules) and spells out symbols that would otherwise be vocalized: `§NN`
+1. **`clean_text.py`** — strips Markdown (emphasis, headings, bullets, links, rules, and
+   whole tables) and spells out symbols that would otherwise be vocalized: `§NN`
    -> "section NN", `§17–§20` -> "section 17 to 20", parenthetical Roman
    numerals `(VIII)` -> "part 8", and plain-text math (`A = A` -> "A equals A",
    `+A`/`−A` -> "plus A"/"minus A"). Returns title/paragraph segments.

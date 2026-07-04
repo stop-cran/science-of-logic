@@ -55,6 +55,36 @@ _ROMAN_PREFIX_RE = re.compile(r"^[IVXLCDM]+\.\s+", re.IGNORECASE)
 _LINK_RE = re.compile(r"\[([^\]]+)\]\([^)]*\)")
 _IMG_RE = re.compile(r"!\[([^\]]*)\]\([^)]*\)")
 _PAREN_ROMAN_RE = re.compile(r"\(([IVXLCDM]+)\)")
+_TABLE_SEP_RE = re.compile(r"[\s:|-]+")
+
+
+def _strip_table_blocks(md: str) -> str:
+    """Remove GitHub-Markdown table blocks.
+
+    Tables in the synopsis are visual recap summaries whose content is already
+    covered in prose; read aloud as pipe-delimited text they are useless (and
+    the TTS backend rejects the pipe-dense alignment row). A table is detected by
+    its separator row (``|---|---|``) plus the contiguous pipe-containing lines
+    around it. No prose line in this corpus uses ``|``, so this is lossless.
+    """
+    lines = md.split("\n")
+    drop = [False] * len(lines)
+    for i, line in enumerate(lines):
+        is_sep = "|" in line and "---" in line and bool(_TABLE_SEP_RE.fullmatch(line.strip()))
+        if not is_sep:
+            continue
+        drop[i] = True
+        for j in range(i - 1, -1, -1):
+            if "|" in lines[j] and lines[j].strip():
+                drop[j] = True
+            else:
+                break
+        for j in range(i + 1, len(lines)):
+            if "|" in lines[j] and lines[j].strip():
+                drop[j] = True
+            else:
+                break
+    return "\n".join(line for k, line in enumerate(lines) if not drop[k])
 
 
 def _spell_paren_roman(match: re.Match) -> str:
@@ -96,6 +126,7 @@ def _clean_heading(text: str) -> str:
 
 def parse_markdown(md: str) -> list[Segment]:
     """Parse synopsis Markdown into an ordered list of narration segments."""
+    md = _strip_table_blocks(md)
     segments: list[Segment] = []
     buffer: list[str] = []
 

@@ -19,7 +19,9 @@ AI Speech (Foundry Tools).
 ## What it does
 
 - Cleans synopsis Markdown for narration (`clean_text.py`): strips emphasis, headings,
-  bullets, links, and rules; spells out symbols a TTS engine would mangle — `§NN` →
+  bullets, links, rules, and **whole Markdown tables** (visual recap summaries that read
+  terribly aloud and whose content is already in the prose); spells out symbols a TTS engine
+  would mangle — `§NN` →
   "section NN", `§17–§20` → "section 17 to 20", parenthetical Roman numerals `(VIII)` →
   "part 8", plain-text math (`A = A` → "A equals A", `+A`/`−A` → "plus A"/"minus A",
   `T² ∝ r³` → "T squared is proportional to r cubed", `→` → "to").
@@ -44,6 +46,9 @@ AI Speech (Foundry Tools).
 - Does **not** produce the Russian (nauka-logiki) audiobook. English only for now; the RU
   corpus would need `xml:lang="ru-RU"` and a Russian voice (e.g. `ru-RU-Lev:MAI-Voice-2`)
   plus a Cyrillic-aware cleaner review.
+- Does **not** narrate Markdown tables — they are recap summaries, read poorly aloud, and
+  the pipe-dense alignment row makes the backend return 502; `clean_text.py` drops them
+  (lossless here, since no prose line uses `|`).
 - Does **not** narrate essays (`essays/`) — only README + `synopsis/NN-*.md`.
 - Does **not** use SSML expressive styles, multi-speaker, or voice-prompting/cloning.
 - Does **not** deduce pronunciation of German glosses, `dx/dy`-style slashes, or unusual
@@ -97,6 +102,10 @@ Other en-US voices: `en-US-Olivia` (F), `en-US-Harper` (F), `en-US-Grant` (M),
   gateway blip, sometimes lasting tens of seconds. The script retries with jittered backoff
   (up to 8 attempts, ~2.5 min). If a whole file still fails, just re-run `--all` — it
   resumes and retries only the missing files.
+- **Repeated 502 on the *same* chunk every run** (not a random blip) — a content trigger,
+  not infra. The known case is a **Markdown table**: the pipe-dense alignment row makes the
+  backend 502. `clean_text.py` already strips tables; if a new construct trips it, inspect
+  the chunk (`--dry-run` transcript) and add a targeted cleaner rule.
 - **400 on a specific chunk** — likely malformed SSML or an over-limit chunk; check the
   `--dry-run` transcript (`out/<stem>.txt`) for that file and any new unhandled symbol.
 - **Robotic pacing / wrong intonation** — a paragraph was split badly; confirm chunks split
