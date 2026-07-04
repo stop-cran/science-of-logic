@@ -40,8 +40,24 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 SYNOPSIS_DIR = REPO_ROOT / "synopsis"
 README = REPO_ROOT / "README.md"
 
-DEFAULT_ENDPOINT = "https://romanko-exp.cognitiveservices.azure.com/tts/cognitiveservices/v1"
-ENDPOINT = os.environ.get("SOL_TTS_ENDPOINT", DEFAULT_ENDPOINT)
+# The TTS endpoint is user/resource-specific (a fork will use a different Azure
+# AI Foundry resource), so it is never hardcoded. It is resolved, in order, from
+# an explicit URL, an explicit resource name, $SOL_TTS_ENDPOINT, or
+# $SOL_TTS_RESOURCE. See .github/skills/synopsis-audiobook/SKILL.md.
+ENDPOINT_TEMPLATE = "https://{resource}.cognitiveservices.azure.com/tts/cognitiveservices/v1"
+
+
+def resolve_endpoint(resource: str | None = None, endpoint: str | None = None) -> str | None:
+    endpoint = endpoint or os.environ.get("SOL_TTS_ENDPOINT")
+    if endpoint:
+        return endpoint
+    resource = resource or os.environ.get("SOL_TTS_RESOURCE")
+    if resource:
+        return ENDPOINT_TEMPLATE.format(resource=resource)
+    return None
+
+
+ENDPOINT = resolve_endpoint()
 VOICE = os.environ.get("SOL_TTS_VOICE", "en-US-Ethan:MAI-Voice-2")
 SCOPE = "https://cognitiveservices.azure.com/.default"
 
@@ -261,23 +277,34 @@ def main() -> int:
     parser.add_argument("--all", action="store_true", help="README (prose) + all installments")
     parser.add_argument("--out-dir", default=str(Path(__file__).resolve().parent / "out"))
     parser.add_argument("--voice", default=VOICE)
+    parser.add_argument("--resource", default=None, help="Foundry custom-domain resource name (e.g. romanko-exp); or set $SOL_TTS_RESOURCE")
+    parser.add_argument("--endpoint", default=None, help="full TTS endpoint URL; or set $SOL_TTS_ENDPOINT")
     parser.add_argument("--rate", default=None, help='prosody rate, e.g. "-5%%" or "0.95"')
     parser.add_argument("--dry-run", action="store_true", help="clean+chunk only; write .txt, no API calls")
     parser.add_argument("--limit-chunks", type=int, default=None, help="synthesize only the first N chunks (smoke test)")
     parser.add_argument("--force", action="store_true", help="re-render even if the output MP3 already exists")
     args = parser.parse_args()
 
+    global ENDPOINT
+    ENDPOINT = resolve_endpoint(args.resource, args.endpoint)
     out_dir = Path(args.out_dir)
     jobs = resolve_inputs(args)
 
     if args.dry_run:
-        print(f"Dry run — {len(jobs)} file(s), endpoint {ENDPOINT}, voice {args.voice}")
+        print(f"Dry run — {len(jobs)} file(s), endpoint {ENDPOINT or '(unset — set SOL_TTS_RESOURCE for a real run)'}, voice {args.voice}")
         for md_path, _, prose in jobs:
             if not md_path.exists():
                 print(f"  MISSING: {md_path}")
                 continue
             dry_run_file(md_path, out_dir, prose)
         return 0
+
+    if not ENDPOINT:
+        parser.error(
+            "No TTS endpoint configured. Set the environment variable SOL_TTS_RESOURCE to your "
+            "Azure AI Foundry custom-domain name (e.g. 'romanko-exp'), or SOL_TTS_ENDPOINT to the "
+            "full URL, or pass --resource/--endpoint. See .github/skills/synopsis-audiobook/SKILL.md."
+        )
 
     get_token = make_token_provider()
     print(f"Synthesizing {len(jobs)} file(s) with {args.voice}\n  endpoint {ENDPOINT}")

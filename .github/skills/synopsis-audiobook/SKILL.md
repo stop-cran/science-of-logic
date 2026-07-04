@@ -16,15 +16,26 @@ synopsis Markdown into a seamless MP3 audiobook — one file for the README and 
 Section III installment — using the **MAI-Voice-2** neural TTS model served through Azure
 AI Speech (Foundry Tools).
 
+## Endpoint / resource is user-specific — never hardcode it
+
+The Azure AI Foundry resource behind the TTS endpoint **depends on the user**: a fork will
+use a different resource. So the code no longer bakes in any resource name. Resolve it from
+(in order) `--endpoint`, `--resource`, `$SOL_TTS_ENDPOINT` (full URL), or `$SOL_TTS_RESOURCE`
+(just the custom-domain name, from which the URL
+`https://{resource}.cognitiveservices.azure.com/tts/cognitiveservices/v1` is built).
+
+The current user's resource is recorded in **Copilot user memory** (subject: *Azure TTS /
+MAI-Voice-2*) — recall it from there rather than assuming a value; if memory is unavailable,
+ask the user for their Foundry resource name.
+
 ## What it does
 
 - Cleans synopsis Markdown for narration (`clean_text.py`): strips emphasis, headings,
   bullets, links, rules, and **whole Markdown tables** (visual recap summaries that read
   terribly aloud and whose content is already in the prose); spells out symbols a TTS engine
-  would mangle — `§NN` →
-  "section NN", `§17–§20` → "section 17 to 20", parenthetical Roman numerals `(VIII)` →
-  "part 8", plain-text math (`A = A` → "A equals A", `+A`/`−A` → "plus A"/"minus A",
-  `T² ∝ r³` → "T squared is proportional to r cubed", `→` → "to").
+  would mangle — `§NN` → "section NN", `§17–§20` → "section 17 to 20", parenthetical Roman
+  numerals `(VIII)` → "part 8", plain-text math (`A = A` → "A equals A", `+A`/`−A` →
+  "plus A"/"minus A", `T² ∝ r³` → "T squared is proportional to r cubed", `→` → "to").
 - Chunks text (`chunk_text.py`) to stay under the endpoint's 2,000-char / 10-min limit,
   splitting **only at sentence boundaries** (never mid-sentence) and keeping whole
   paragraphs together when they fit; each chunk carries a structural pause hint.
@@ -40,6 +51,7 @@ AI Speech (Foundry Tools).
 
 ## What it does NOT do
 
+- Does **not** hardcode the endpoint/resource — it is user-specific (see above).
 - Does **not** commit audio. `out/`, `*.mp3`, `*.wav`, and dry-run `*.txt` are git-ignored;
   only the scripts are versioned. Never `git add` rendered audio.
 - Does **not** use API keys. Auth is AAD only (your `az login`). No secrets are stored.
@@ -62,32 +74,38 @@ From `audiobook/` (Windows PowerShell):
 ```powershell
 pip install -r requirements.txt          # azure-identity, requests, imageio-ffmpeg
 az login                                  # need "Cognitive Services Speech User" on the resource
+$env:SOL_TTS_RESOURCE = "<your-foundry-resource-name>"   # e.g. the value from user memory
 
 python synthesize.py --dry-run --all      # inspect prepared text (writes out/*.txt), no API calls
 python synthesize.py ../synopsis/21-*.md --limit-chunks 2   # smoke test one file
 python synthesize.py --all                # README (prose) + installments 01..21 -> out/*.mp3
 ```
 
-Outputs: `out/00-readme.mp3`, `out/01-….mp3`, … `out/21-….mp3`.
-Re-running `--all` **resumes** (skips existing MP3s); add `--force` to re-render.
+`--dry-run` needs no endpoint. A real run needs `SOL_TTS_RESOURCE`/`SOL_TTS_ENDPOINT` (or
+`--resource`/`--endpoint`) or it exits with guidance. Outputs: `out/00-readme.mp3`,
+`out/01-….mp3`, … `out/21-….mp3`. Re-running `--all` **resumes** (skips existing MP3s); add
+`--force` to re-render.
 
 ## Configuration
 
-| Variable / flag              | Default                                                                     |
-| ---------------------------- | --------------------------------------------------------------------------- |
-| `SOL_TTS_ENDPOINT`           | `https://romanko-exp.cognitiveservices.azure.com/tts/cognitiveservices/v1`  |
-| `SOL_TTS_VOICE` / `--voice`  | `en-US-Ethan:MAI-Voice-2`                                                   |
-| `--rate`                     | (unset); e.g. `-5%` or `0.95` to slow delivery                              |
-| `--out-dir`                  | `audiobook/out`                                                             |
-| `--limit-chunks N`           | smoke-test only the first N chunks                                          |
-| `--force`                    | re-render even if the MP3 exists                                            |
+| Variable / flag                 | Meaning                                                                   |
+| ------------------------------- | ------------------------------------------------------------------------- |
+| `SOL_TTS_RESOURCE` / `--resource` | Foundry custom-domain name (e.g. `romanko-exp`); URL is built from it   |
+| `SOL_TTS_ENDPOINT` / `--endpoint` | Full TTS endpoint URL (overrides `--resource`)                          |
+| `SOL_TTS_VOICE` / `--voice`     | `en-US-Ethan:MAI-Voice-2` (default)                                       |
+| `--rate`                        | (unset); e.g. `-5%` or `0.95` to slow delivery                            |
+| `--out-dir`                     | `audiobook/out`                                                           |
+| `--limit-chunks N`              | smoke-test only the first N chunks                                        |
+| `--force`                       | re-render even if the MP3 exists                                          |
 
 Other en-US voices: `en-US-Olivia` (F), `en-US-Harper` (F), `en-US-Grant` (M),
-`en-US-Iris` (F), `en-US-Jasper` (M). The endpoint is a custom-domain Azure AI Services
-(Foundry) resource; AAD token scope is `https://cognitiveservices.azure.com/.default`.
+`en-US-Iris` (F), `en-US-Jasper` (M). The resource must be a **custom-domain** Azure AI
+Services (Foundry) resource; AAD token scope is `https://cognitiveservices.azure.com/.default`.
 
 ## Troubleshooting
 
+- **`No TTS endpoint configured`** — set `$env:SOL_TTS_RESOURCE` to your Foundry
+  custom-domain name (recall it from user memory) or `$env:SOL_TTS_ENDPOINT` to the full URL.
 - **`AzureCliCredential … Failed to invoke the Azure CLI` / timeout** — the default 10 s
   subprocess timeout expires when `az` is cold on Windows. The script already sets
   `process_timeout=30`; if it still fails, run `az account get-access-token --resource
@@ -131,9 +149,9 @@ Other en-US voices: `en-US-Olivia` (F), `en-US-Harper` (F), `en-US-Grant` (M),
 
 ## Key facts / constraints
 
-- Endpoint: `…cognitiveservices.azure.com/tts/cognitiveservices/v1`; SSML `Content-Type
-  application/ssml+xml`; MP3 via `X-Microsoft-OutputFormat`. PCM used internally
-  (`riff-24khz-16bit-mono-pcm`) for gapless stitching.
+- Endpoint shape: `https://{resource}.cognitiveservices.azure.com/tts/cognitiveservices/v1`;
+  SSML `Content-Type application/ssml+xml`; MP3 via `X-Microsoft-OutputFormat`. PCM used
+  internally (`riff-24khz-16bit-mono-pcm`) for gapless stitching.
 - Hard limits: **2,000 characters and 10 minutes of audio per request** → chunking is
   mandatory (budget 1,800 chars).
-- The full synopsis is ~22 files / ~1,300 chunks / ~3.7 h of audio.
+- The full synopsis is ~22 files / ~1,300 chunks / ~10 h of audio.

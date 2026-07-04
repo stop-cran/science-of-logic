@@ -29,10 +29,13 @@ installment.
 ```powershell
 pip install -r requirements.txt
 az login   # your account needs the "Cognitive Services Speech User" role on the resource
+$env:SOL_TTS_RESOURCE = "<your-foundry-resource-name>"   # user-specific; not baked into the repo
 ```
 
 Authentication is **AAD only** (no keys). Token scope
-`https://cognitiveservices.azure.com/.default`.
+`https://cognitiveservices.azure.com/.default`. The Foundry resource/endpoint is
+**user-specific** (a fork uses a different resource), so it is never hardcoded — set
+`SOL_TTS_RESOURCE` (custom-domain name) or `SOL_TTS_ENDPOINT` (full URL).
 
 ## Usage
 
@@ -53,13 +56,19 @@ Outputs: `out/00-readme.mp3`, `out/01-from-school-logic-to-dialectic.mp3`, ...
 
 | Variable / flag        | Default                                                              |
 | ---------------------- | ------------------------------------------------------------------- |
-| `SOL_TTS_ENDPOINT`     | `https://romanko-exp.cognitiveservices.azure.com/tts/cognitiveservices/v1` |
+| `SOL_TTS_RESOURCE` / `--resource` | Foundry custom-domain name; endpoint URL is built from it (required for a real run) |
+| `SOL_TTS_ENDPOINT` / `--endpoint` | Full TTS endpoint URL (overrides `--resource`)          |
 | `SOL_TTS_VOICE` / `--voice` | `en-US-Ethan:MAI-Voice-2`                                      |
 | `--rate`               | (unset) e.g. `-5%` or `0.95` to slow the delivery                   |
 | `--out-dir`            | `audiobook/out`                                                     |
 
 Other MAI-Voice-2 en-US voices: `en-US-Olivia` (F), `en-US-Harper` (F),
 `en-US-Grant` (M), `en-US-Iris` (F), `en-US-Jasper` (M).
+
+An agent playbook for this pipeline (what it does / does not do, troubleshooting,
+future-improvement guidelines) lives at
+`.github/skills/synopsis-audiobook/SKILL.md` and is auto-discovered by Copilot CLI when
+working in this repo.
 
 ## Notes
 
