@@ -248,7 +248,9 @@ def synthesize_file(
 def dry_run_file(md_path: Path, out_path: Path, prose_only: bool) -> None:
     chunks = load_chunks(md_path, prose_only)
     total_chars = sum(len(c.text) for c in chunks)
-    est_minutes = total_chars / 15.0 / 150.0  # ~15 chars/word, ~150 wpm
+    # Rough planning estimate, calibrated from the measured full-corpus render
+    # (~783 narrated characters per minute of audio at this voice and pacing).
+    est_minutes = total_chars / 783.0
     out_path.parent.mkdir(parents=True, exist_ok=True)
     txt_path = out_path.with_suffix(".txt")
     with txt_path.open("w", encoding="utf-8") as handle:

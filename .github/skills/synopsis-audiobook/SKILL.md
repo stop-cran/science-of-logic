@@ -154,4 +154,4 @@ Services (Foundry) resource; AAD token scope is `https://cognitiveservices.azure
   internally (`riff-24khz-16bit-mono-pcm`) for gapless stitching.
 - Hard limits: **2,000 characters and 10 minutes of audio per request** → chunking is
   mandatory (budget 1,800 chars).
-- The full synopsis is ~22 files / ~1,300 chunks / ~10 h of audio.
+- The full synopsis is ~22 files / ~1,230 chunks / ~10 h of audio.
