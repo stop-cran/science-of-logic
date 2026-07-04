@@ -255,6 +255,7 @@ def main() -> int:
     parser.add_argument("--rate", default=None, help='prosody rate, e.g. "-5%%" or "0.95"')
     parser.add_argument("--dry-run", action="store_true", help="clean+chunk only; write .txt, no API calls")
     parser.add_argument("--limit-chunks", type=int, default=None, help="synthesize only the first N chunks (smoke test)")
+    parser.add_argument("--force", action="store_true", help="re-render even if the output MP3 already exists")
     args = parser.parse_args()
 
     out_dir = Path(args.out_dir)
@@ -271,16 +272,29 @@ def main() -> int:
 
     get_token = make_token_provider()
     print(f"Synthesizing {len(jobs)} file(s) with {args.voice}\n  endpoint {ENDPOINT}")
+    failures: list[str] = []
     for md_path, out_path, prose in jobs:
         if not md_path.exists():
             print(f"  MISSING: {md_path}")
             continue
+        if out_path.exists() and not args.force and not args.limit_chunks:
+            print(f"  skip (exists): {out_path.name}")
+            continue
         print(f"  {md_path.name} -> {out_path.name}")
-        seconds = synthesize_file(
-            md_path, out_path, get_token, args.voice, args.rate,
-            prose_only=prose, limit_chunks=args.limit_chunks,
-        )
-        print(f"  done: {out_path.name} ({seconds / 60:.1f} min)")
+        try:
+            seconds = synthesize_file(
+                md_path, out_path, get_token, args.voice, args.rate,
+                prose_only=prose, limit_chunks=args.limit_chunks,
+            )
+            print(f"  done: {out_path.name} ({seconds / 60:.1f} min)")
+        except Exception as exc:  # keep going; report at the end
+            failures.append(f"{md_path.name}: {exc}")
+            print(f"  FAILED: {md_path.name}: {exc}")
+    if failures:
+        print(f"\n{len(failures)} file(s) failed:")
+        for line in failures:
+            print(f"  {line}")
+        return 1
     return 0
 
 
