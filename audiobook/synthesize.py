@@ -23,6 +23,7 @@ from __future__ import annotations
 import argparse
 import io
 import os
+import random
 import subprocess
 import sys
 import time
@@ -104,9 +105,15 @@ def synth_pcm(
     ssml: str,
     get_token,
     session: requests.Session,
-    max_retries: int = 6,
+    max_retries: int = 8,
 ) -> bytes:
-    """Synthesize one SSML chunk to raw PCM, with backoff on transient errors."""
+    """Synthesize one SSML chunk to raw PCM, with backoff on transient errors.
+
+    The MAI-Voice-2 preview endpoint occasionally returns transient 502/503
+    gateway errors ("upstream connect error … protocol error") for tens of
+    seconds, so retries use capped exponential backoff with jitter to ride out
+    a multi-minute blip rather than failing the whole file.
+    """
     headers = {
         "Content-Type": "application/ssml+xml",
         "X-Microsoft-OutputFormat": PCM_FORMAT,
@@ -115,22 +122,24 @@ def synth_pcm(
     body = ssml.encode("utf-8")
     for attempt in range(max_retries):
         headers["Authorization"] = "Bearer " + get_token()
+        transient = False
+        detail = ""
         try:
             resp = session.post(ENDPOINT, headers=headers, data=body, timeout=180)
         except requests.RequestException as exc:
-            if attempt == max_retries - 1:
-                raise
-            time.sleep(min(2 ** attempt, 30))
-            continue
-        if resp.status_code == 200:
-            return _pcm_from_wav(resp.content)
-        if resp.status_code in (429, 500, 502, 503, 504) and attempt < max_retries - 1:
-            wait = float(resp.headers.get("Retry-After", 2 ** attempt))
-            time.sleep(min(wait, 30))
-            continue
-        raise RuntimeError(
-            f"TTS request failed: {resp.status_code} {resp.text[:300]}"
-        )
+            transient, detail = True, f"network error: {exc}"
+        else:
+            if resp.status_code == 200:
+                return _pcm_from_wav(resp.content)
+            transient = resp.status_code in (408, 429, 500, 502, 503, 504)
+            detail = f"{resp.status_code} {resp.text[:300]}"
+            if not transient:
+                raise RuntimeError(f"TTS request failed: {detail}")
+            retry_after = resp.headers.get("Retry-After")
+        if attempt == max_retries - 1:
+            raise RuntimeError(f"TTS request failed after {max_retries} attempts: {detail}")
+        base = float(retry_after) if (not detail.startswith("network") and retry_after) else min(2 ** attempt, 45)
+        time.sleep(base * (0.8 + 0.4 * random.random()))
     raise RuntimeError("exhausted retries")
 
 
