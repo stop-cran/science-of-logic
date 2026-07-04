@@ -43,8 +43,24 @@ def _roman_to_int(s: str) -> int | None:
         val = _ROMAN_VALUES[ch]
         total += -val if val < prev else val
         prev = max(prev, val)
-    # Reject non-canonical forms (e.g. "IIII") by round-tripping.
-    return total if 1 <= total <= 39 else None
+    if not (1 <= total <= 39):
+        return None
+    # Reject non-canonical forms (e.g. "IIII", "IC") by round-tripping.
+    return total if _int_to_roman(total) == s else None
+
+
+def _int_to_roman(n: int) -> str:
+    numerals = [
+        (1000, "M"), (900, "CM"), (500, "D"), (400, "CD"), (100, "C"),
+        (90, "XC"), (50, "L"), (40, "XL"), (10, "X"), (9, "IX"),
+        (5, "V"), (4, "IV"), (1, "I"),
+    ]
+    out = []
+    for value, symbol in numerals:
+        while n >= value:
+            out.append(symbol)
+            n -= value
+    return "".join(out)
 
 
 _HEADING_RE = re.compile(r"^(#{1,6})\s+(.*\S)\s*$")

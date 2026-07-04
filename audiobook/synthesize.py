@@ -97,11 +97,11 @@ def make_token_provider():
 def build_ssml(text: str, voice: str, rate: str | None) -> str:
     inner = saxutils.escape(text)
     if rate:
-        inner = f'<prosody rate="{rate}">{inner}</prosody>'
+        inner = f"<prosody rate={saxutils.quoteattr(rate)}>{inner}</prosody>"
     return (
         '<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" '
         'xmlns:mstts="http://www.w3.org/2001/mstts" xml:lang="en-US">'
-        f'<voice name="{voice}">{inner}</voice></speak>'
+        f"<voice name={saxutils.quoteattr(voice)}>{inner}</voice></speak>"
     )
 
 
@@ -154,6 +154,9 @@ def synth_pcm(
             retry_after = resp.headers.get("Retry-After")
         if attempt == max_retries - 1:
             raise RuntimeError(f"TTS request failed after {max_retries} attempts: {detail}")
+        # `retry_after` is only assigned on the HTTP-response path; the
+        # `not detail.startswith("network")` guard must come first so we never
+        # read it on the network-exception path (where it is unset).
         base = float(retry_after) if (not detail.startswith("network") and retry_after) else min(2 ** attempt, 45)
         time.sleep(base * (0.8 + 0.4 * random.random()))
     raise RuntimeError("exhausted retries")
@@ -186,15 +189,21 @@ def _ffmpeg_exe() -> str:
 
 
 def encode_mp3(wav_bytes: bytes, out_path: Path, bitrate: str = "128k") -> None:
+    # Encode to a temp file and atomically rename on success, so an interrupted
+    # encode never leaves a truncated MP3 at the resumable output path (which the
+    # skip-if-exists resume logic would then treat as a completed file forever).
+    tmp_path = out_path.with_name(out_path.name + ".tmp")
     cmd = [
         _ffmpeg_exe(), "-y", "-hide_banner", "-loglevel", "error",
         "-f", "wav", "-i", "pipe:0",
         "-codec:a", "libmp3lame", "-b:a", bitrate,
-        str(out_path),
+        str(tmp_path),
     ]
     proc = subprocess.run(cmd, input=wav_bytes, capture_output=True)
     if proc.returncode != 0:
+        tmp_path.unlink(missing_ok=True)
         raise RuntimeError(f"ffmpeg failed: {proc.stderr.decode(errors='replace')[:400]}")
+    os.replace(tmp_path, out_path)
 
 
 # --- per-file driver --------------------------------------------------------
@@ -236,12 +245,12 @@ def synthesize_file(
     return _pcm_seconds(bytes(pcm))
 
 
-def dry_run_file(md_path: Path, out_dir: Path, prose_only: bool) -> None:
+def dry_run_file(md_path: Path, out_path: Path, prose_only: bool) -> None:
     chunks = load_chunks(md_path, prose_only)
     total_chars = sum(len(c.text) for c in chunks)
     est_minutes = total_chars / 15.0 / 150.0  # ~15 chars/word, ~150 wpm
-    out_dir.mkdir(parents=True, exist_ok=True)
-    txt_path = out_dir / (md_path.stem + ".txt")
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    txt_path = out_path.with_suffix(".txt")
     with txt_path.open("w", encoding="utf-8") as handle:
         for chunk in chunks:
             prefix = "## " if chunk.is_title else ""
@@ -279,7 +288,7 @@ def main() -> int:
     parser.add_argument("--voice", default=VOICE)
     parser.add_argument("--resource", default=None, help="Foundry custom-domain resource name (e.g. romanko-exp); or set $SOL_TTS_RESOURCE")
     parser.add_argument("--endpoint", default=None, help="full TTS endpoint URL; or set $SOL_TTS_ENDPOINT")
-    parser.add_argument("--rate", default=None, help='prosody rate, e.g. "-5%%" or "0.95"')
+    parser.add_argument("--rate", default=None, help='prosody rate; pass with = to avoid argparse, e.g. --rate=-5%% or --rate=0.95')
     parser.add_argument("--dry-run", action="store_true", help="clean+chunk only; write .txt, no API calls")
     parser.add_argument("--limit-chunks", type=int, default=None, help="synthesize only the first N chunks (smoke test)")
     parser.add_argument("--force", action="store_true", help="re-render even if the output MP3 already exists")
@@ -287,16 +296,15 @@ def main() -> int:
 
     global ENDPOINT
     ENDPOINT = resolve_endpoint(args.resource, args.endpoint)
-    out_dir = Path(args.out_dir)
     jobs = resolve_inputs(args)
 
     if args.dry_run:
         print(f"Dry run — {len(jobs)} file(s), endpoint {ENDPOINT or '(unset — set SOL_TTS_RESOURCE for a real run)'}, voice {args.voice}")
-        for md_path, _, prose in jobs:
+        for md_path, out_path, prose in jobs:
             if not md_path.exists():
                 print(f"  MISSING: {md_path}")
                 continue
-            dry_run_file(md_path, out_dir, prose)
+            dry_run_file(md_path, out_path, prose)
         return 0
 
     if not ENDPOINT:

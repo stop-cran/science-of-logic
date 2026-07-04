@@ -42,6 +42,16 @@ class Chunk:
     is_title: bool
 
 
+# A sentence boundary is whitespace after terminal punctuation, optionally
+# followed by a closing quote/paren/bracket. Python's re has no variable-width
+# lookbehind, so two fixed-width lookbehinds are alternated — this catches
+# boundaries like `..." But` where the char before the space is the quote, not
+# the period (a recurring pattern here: quoted objection followed by a rebuttal).
+_SENTENCE_END_RE = re.compile(
+    r"(?:(?<=[.!?])|(?<=[.!?][\"'\u2019\u201d)\]\u00bb]))\s+"
+)
+
+
 def _looks_like_nonfinal(fragment: str) -> bool:
     """True if ``fragment`` ends in a period that is not a sentence end."""
     if fragment.endswith(("!", "?")):
@@ -64,7 +74,7 @@ def _looks_like_nonfinal(fragment: str) -> bool:
 
 def split_sentences(text: str) -> list[str]:
     """Split text into sentences, rejoining abbreviation/initial false splits."""
-    fragments = re.split(r"(?<=[.!?])\s+", text.strip())
+    fragments = _SENTENCE_END_RE.split(text.strip())
     out: list[str] = []
     for frag in fragments:
         if not frag:

@@ -59,7 +59,7 @@ Outputs: `out/00-readme.mp3`, `out/01-from-school-logic-to-dialectic.mp3`, ...
 | `SOL_TTS_RESOURCE` / `--resource` | Foundry custom-domain name; endpoint URL is built from it (required for a real run) |
 | `SOL_TTS_ENDPOINT` / `--endpoint` | Full TTS endpoint URL (overrides `--resource`)          |
 | `SOL_TTS_VOICE` / `--voice` | `en-US-Ethan:MAI-Voice-2`                                      |
-| `--rate`               | (unset) e.g. `-5%` or `0.95` to slow the delivery                   |
+| `--rate`               | (unset) e.g. `--rate=-5%` or `--rate=0.95` to slow the delivery      |
 | `--out-dir`            | `audiobook/out`                                                     |
 
 Other MAI-Voice-2 en-US voices: `en-US-Olivia` (F), `en-US-Harper` (F),

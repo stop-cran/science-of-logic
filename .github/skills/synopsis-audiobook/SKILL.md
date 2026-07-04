@@ -93,7 +93,7 @@ python synthesize.py --all                # README (prose) + installments 01..21
 | `SOL_TTS_RESOURCE` / `--resource` | Foundry custom-domain name (e.g. `romanko-exp`); URL is built from it   |
 | `SOL_TTS_ENDPOINT` / `--endpoint` | Full TTS endpoint URL (overrides `--resource`)                          |
 | `SOL_TTS_VOICE` / `--voice`     | `en-US-Ethan:MAI-Voice-2` (default)                                       |
-| `--rate`                        | (unset); e.g. `-5%` or `0.95` to slow delivery                            |
+| `--rate`                        | (unset); e.g. `--rate=-5%` or `--rate=0.95` to slow delivery (use `=`: argparse rejects `--rate -5%` because `-5%` looks like a flag) |
 | `--out-dir`                     | `audiobook/out`                                                           |
 | `--limit-chunks N`              | smoke-test only the first N chunks                                        |
 | `--force`                       | re-render even if the MP3 exists                                          |
