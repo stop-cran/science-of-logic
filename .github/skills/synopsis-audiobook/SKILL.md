@@ -102,6 +102,29 @@ Other en-US voices: `en-US-Olivia` (F), `en-US-Harper` (F), `en-US-Grant` (M),
 `en-US-Iris` (F), `en-US-Jasper` (M). The resource must be a **custom-domain** Azure AI
 Services (Foundry) resource; AAD token scope is `https://cognitiveservices.azure.com/.default`.
 
+## Verifying a change (make the cheap checks run, every time)
+
+The corpus (22 files + README) **is the entire production distribution** — this is not a
+general Markdown-to-speech tool that must generalize to unknown inputs. So a full
+`--dry-run --all` is **exhaustive coverage, not a sample**: use it as the regression check.
+
+- **Full-corpus diff (nearly free, exhaustive).** After *any* `clean_text.py` /
+  `chunk_text.py` change, run `python synthesize.py --dry-run --all` and compare its printed
+  `Totals` and `Narration lint` lines to the anchor in *Key facts* below. An unexplained
+  delta means the change touched files you did not intend to — investigate before rendering.
+  (This is how the sentence-splitter fix was proven audio-safe: identical totals ⇒ no
+  boundary moved ⇒ the rendered MP3s stayed valid.)
+- **Live audits, not stale ones.** The `Narration lint` counts keep the one-time corpus
+  audits alive as new installments land: `stray-pipe = 0` guards the "no prose uses `|`"
+  assumption behind table-stripping, and the literal-`/` count guards the "`/` left
+  unhandled" decision. A jump in either after adding §22, §23, … flags a new construct to
+  handle in `clean_text.py` — nothing silently regresses.
+- **Listen — the one check no text or log can substitute.** Everything else here is
+  reachable by reasoning about code plus grep/dry-run, but prosody, pacing, and
+  mispronounced glosses are **audible-only** defects. Before considering a cleaner/chunker
+  change finished, actually render and **listen to at least one affected chunk** (synthesize
+  the one file, or `--limit-chunks`). No amount of static analysis closes this gap.
+
 ## Troubleshooting
 
 - **`No TTS endpoint configured`** — set `$env:SOL_TTS_RESOURCE` to your Foundry
@@ -154,4 +177,8 @@ Services (Foundry) resource; AAD token scope is `https://cognitiveservices.azure
   internally (`riff-24khz-16bit-mono-pcm`) for gapless stitching.
 - Hard limits: **2,000 characters and 10 minutes of audio per request** → chunking is
   mandatory (budget 1,800 chars).
-- The full synopsis is ~22 files / ~1,230 chunks / ~10 h of audio.
+- **Regression anchor (as of §21):** full `--dry-run --all` = **1,232 chunks, 478,268
+  narrated chars, ~10.2 h** audio; **narration lint = 0 stray pipes, 30 literal `/`**. These
+  are exact, and shift **only** when an installment is added or edited — a delta after a
+  *code* change (not a content change) is a regression. Update these numbers when the corpus
+  legitimately grows.

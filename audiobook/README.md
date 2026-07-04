@@ -76,3 +76,9 @@ working in this repo.
   retries with backoff on `429`/`5xx` and honors `Retry-After`.
 - The README audio narrates the prose only (title, intro, "How to Read") and
   skips the table-of-contents and essay lists.
+- **Verifying a cleaner/chunker change:** `--dry-run --all` prints grand-total
+  `Totals` and `Narration lint` lines — the corpus is the whole production
+  distribution, so this is an exhaustive regression check. Compare against the
+  anchor in `SKILL.md` (1,232 chunks / 478,268 chars / 0 pipes / 30 slashes as of
+  §21); an unexplained delta after a code change is a regression. Prosody and
+  pronunciation are audible-only — also render and **listen to one affected chunk**.

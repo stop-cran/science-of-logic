@@ -24,6 +24,7 @@ import argparse
 import io
 import os
 import random
+import re
 import subprocess
 import sys
 import time
@@ -245,7 +246,26 @@ def synthesize_file(
     return _pcm_seconds(bytes(pcm))
 
 
-def dry_run_file(md_path: Path, out_path: Path, prose_only: bool) -> None:
+# --- narration lint (keeps one-time corpus audits live as the corpus grows) --
+
+_SLASH_RE = re.compile(r"(?<=\w)/(?=\w)")
+
+
+def narration_lint(chunks) -> tuple[int, int]:
+    """Return (stray-pipe chunk count, literal-slash count) for narrated chunks.
+
+    A `|` surviving into a narrated chunk means a prose pipe slipped past
+    table-stripping (should be 0). A word/word `/` (e.g. dy/dx, whole/parts) is
+    vocalized literally as "slash". These counts anchor a regression trip-wire:
+    an unexplained delta vs the SKILL.md baseline means a corpus/code change
+    touched narration in a way that should be reviewed. Warnings, not failures.
+    """
+    pipes = sum(1 for c in chunks if "|" in c.text)
+    slashes = sum(len(_SLASH_RE.findall(c.text)) for c in chunks)
+    return pipes, slashes
+
+
+def dry_run_file(md_path: Path, out_path: Path, prose_only: bool) -> tuple[int, int, int, int]:
     chunks = load_chunks(md_path, prose_only)
     total_chars = sum(len(c.text) for c in chunks)
     # Rough planning estimate, calibrated from the measured full-corpus render
@@ -257,10 +277,14 @@ def dry_run_file(md_path: Path, out_path: Path, prose_only: bool) -> None:
         for chunk in chunks:
             prefix = "## " if chunk.is_title else ""
             handle.write(prefix + chunk.text + "\n\n")
+    pipes, slashes = narration_lint(chunks)
     print(
         f"  {md_path.name}: {len(chunks)} chunks, {total_chars} chars, "
         f"~{est_minutes:.1f} min  ->  {txt_path.name}"
     )
+    if pipes:
+        print(f"    WARN: {pipes} narrated chunk(s) contain a stray '|' (prose pipe / unstripped table)")
+    return len(chunks), total_chars, pipes, slashes
 
 
 # --- input selection --------------------------------------------------------
@@ -302,11 +326,31 @@ def main() -> int:
 
     if args.dry_run:
         print(f"Dry run — {len(jobs)} file(s), endpoint {ENDPOINT or '(unset — set SOL_TTS_RESOURCE for a real run)'}, voice {args.voice}")
+        n_files = t_chunks = t_chars = t_pipes = t_slashes = 0
         for md_path, out_path, prose in jobs:
             if not md_path.exists():
                 print(f"  MISSING: {md_path}")
                 continue
-            dry_run_file(md_path, out_path, prose)
+            nc, nch, npipe, nsl = dry_run_file(md_path, out_path, prose)
+            n_files += 1
+            t_chunks += nc
+            t_chars += nch
+            t_pipes += npipe
+            t_slashes += nsl
+        # Anchor + regression trip-wire. The corpus IS the entire production
+        # distribution, so these totals are exhaustive, not a sample. After any
+        # clean_text.py/chunk_text.py change, compare against the SKILL.md anchor:
+        # a delta for files you did not intend to touch is a regression.
+        print(
+            f"\nTotals: {n_files} files, {t_chunks} chunks, {t_chars} chars, ~{t_chars / 783 / 60:.1f} h audio"
+        )
+        print(
+            f"Narration lint: {t_pipes} stray-pipe chunk(s), {t_slashes} literal '/' (read as 'slash')"
+        )
+        print(
+            "Regression: compare the two lines above to the SKILL.md anchor; an unexplained "
+            "delta after a cleaner/chunker change means narration shifted for files you did not touch."
+        )
         return 0
 
     if not ENDPOINT:
