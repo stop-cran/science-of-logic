@@ -1,0 +1,11 @@
+# Generated audio — never commit rendered audiobook files.
+out/
+*.mp3
+*.wav
+*.txt
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
