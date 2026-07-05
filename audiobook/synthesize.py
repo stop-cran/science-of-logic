@@ -198,7 +198,7 @@ def encode_mp3(wav_bytes: bytes, out_path: Path, bitrate: str = "128k") -> None:
         _ffmpeg_exe(), "-y", "-hide_banner", "-loglevel", "error",
         "-f", "wav", "-i", "pipe:0",
         "-codec:a", "libmp3lame", "-b:a", bitrate,
-        str(tmp_path),
+        "-f", "mp3", str(tmp_path),
     ]
     proc = subprocess.run(cmd, input=wav_bytes, capture_output=True)
     if proc.returncode != 0:
