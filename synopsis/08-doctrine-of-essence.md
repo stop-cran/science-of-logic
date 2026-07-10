@@ -8,7 +8,7 @@
 
 Where the Doctrine of Being was the sphere of immediacy — its categories standing seemingly self-contained, vanishing into one another by *passing-over* — the Doctrine of Essence is the sphere of **mediation**. Here it has become explicit that no determination stands in its own right; each is what it is only through its relation to its other. The mode of transition is *shining-into* (*Scheinen*): each category does not pass over and disappear, but **shines** into its other and is reflected back. The two are no longer adjacent; they constitute each other reciprocally.
 
-The German *Schein* is the master-word of this sphere. It means at once "shine," "show," "semblance," and "illusory being." A *Schein* is not a sham (though it can be); it is an inner that lights up in an outer. The sun *scheint* — it shines — and what it shines forth is itself; and the play of *Schein* between essence and what manifests it is the rhythm of every category in this sphere.
+The German *Schein* is the master-word of this sphere. It means at once "shine," "show," "semblance," and "illusory being." A *Schein* is not a sham (though it can be); it is essence's own **shining** — a being that has no subsistence of its own but *is* only as sublated, essence reflecting within itself. The sun *scheint* — it shines — and at this stage what shines is not yet an outer that manifests an inner beyond it, but essence showing *within itself*; the play of *Schein* is the rhythm of every category in this sphere. (The richer structure of an inner that appears in an outer — *Erscheinung* — is a later determination; here we have only essence's immediate self-showing.)
 
 The Doctrine of Essence divides into three sub-spheres:
 
