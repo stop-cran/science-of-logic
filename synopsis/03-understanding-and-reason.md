@@ -38,7 +38,7 @@ The dialectical critique of the Understanding is not a critique of its work, but
 
 The dialectical moment is the discovery that the determinations of the Understanding, taken at their word, **cancel themselves**. This is not skepticism — skepticism stops at the cancellation and concludes that thought cannot reach truth. Dialectic recognizes the cancellation as the **immanent self-criticism of a finite determination** and reads it as a positive result: the indication that this determination is one-sided and points beyond itself.
 
-Examples are everywhere in the history of science.
+Examples are everywhere in the history of science — with the standing caveat that the Logic here locates a categorial *form*, while the sciences supply illustration, not derivation: the reading below points to structural kinship, not to a deduction of the physics from the category.
 
 - **The simple and the composite.** Atomism declares matter to consist of indivisible parts. Pursued, this generates contradiction: an indivisible *part* must still occupy space and so be divisible; or, if truly without parts, it is no longer matter. The dialectical result is that "simple" and "composite" cannot be absolutely opposed — actual matter is always the unity of both, which is what subsequent physics, with its fields and bound states and quantum non-separability, has had to learn the hard way.
 

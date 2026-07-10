@@ -106,7 +106,7 @@ This is the law that Engels later extracted as the **transformation of quantity 
 - Population thresholds in ecology, percolation thresholds in network science, tipping points in climate systems.
 - Historical and social thresholds: the slow accumulation of quantitative changes that suddenly tip a regime, a market, a society into a qualitatively new form.
 
-These are not distant analogies; they are instances of the same dialectical structure that the Doctrine of Measure articulates in pure form. The world *has* measures, and the measures are *nodal*: continuous quantitative variation produces discrete qualitative articulation.
+These are not distant analogies; they instantiate the same categorial form that the Doctrine of Measure articulates in pure form — the *Logic* locates the form, it does not deduce the physics. The world *has* measures, and the measures are *nodal*: continuous quantitative variation produces discrete qualitative articulation.
 
 ### Real measure and the system of measures
 
