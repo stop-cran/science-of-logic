@@ -78,12 +78,12 @@ $env:SOL_TTS_RESOURCE = "<your-foundry-resource-name>"   # e.g. the value from u
 
 python synthesize.py --dry-run --all      # inspect prepared text (writes out/*.txt), no API calls
 python synthesize.py ../synopsis/21-*.md --limit-chunks 2   # smoke test one file
-python synthesize.py --all                # README (prose) + installments 01..21 -> out/*.mp3
+python synthesize.py --all                # README (prose) + installments 01..NN -> out/*.mp3
 ```
 
 `--dry-run` needs no endpoint. A real run needs `SOL_TTS_RESOURCE`/`SOL_TTS_ENDPOINT` (or
 `--resource`/`--endpoint`) or it exits with guidance. Outputs: `out/00-readme.mp3`,
-`out/01-….mp3`, … `out/21-….mp3`. Re-running `--all` **resumes** (skips existing MP3s); add
+`out/01-….mp3`, … — one MP3 per installment. Re-running `--all` **resumes** (skips existing MP3s); add
 `--force` to re-render.
 
 ## Configuration
@@ -104,7 +104,7 @@ Services (Foundry) resource; AAD token scope is `https://cognitiveservices.azure
 
 ## Verifying a change (make the cheap checks run, every time)
 
-The corpus (22 files + README) **is the entire production distribution** — this is not a
+The corpus (every `synopsis/NN-*.md` + README) **is the entire production distribution** — this is not a
 general Markdown-to-speech tool that must generalize to unknown inputs. So a full
 `--dry-run --all` is **exhaustive coverage, not a sample**: use it as the regression check.
 
