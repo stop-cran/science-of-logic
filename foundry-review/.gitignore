@@ -1,0 +1,8 @@
+# Review outputs — never commit generated reviews.
+out/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
