@@ -177,8 +177,8 @@ general Markdown-to-speech tool that must generalize to unknown inputs. So a ful
   internally (`riff-24khz-16bit-mono-pcm`) for gapless stitching.
 - Hard limits: **2,000 characters and 10 minutes of audio per request** → chunking is
   mandatory (budget 1,800 chars).
-- **Regression anchor (as of §21):** full `--dry-run --all` = **1,232 chunks, 478,268
-  narrated chars, ~10.2 h** audio; **narration lint = 0 stray pipes, 30 literal `/`**. These
+- **Regression anchor (as of §24):** full `--dry-run --all` = **1,363 chunks, 562,355
+  narrated chars, ~12.0 h** audio; **narration lint = 0 stray pipes, 41 literal `/`**. These
   are exact, and shift **only** when an installment is added or edited — a delta after a
   *code* change (not a content change) is a regression. Update these numbers when the corpus
   legitimately grows.

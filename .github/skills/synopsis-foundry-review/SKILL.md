@@ -50,7 +50,7 @@ resource. `grok-4.3` and `DeepSeek-V4-Pro` are `GlobalStandard` (pay-per-token, 
 cost). Deploy once (Azure CLI), review as many times as you like, delete when done:
 
 ```powershell
-$rg = "rg-temp-infrastructure-dashboard"   # romanko-exp's resource group
+$rg = "rg-temp-infrastructure-dashboard"   # user-specific: romanko-exp's resource group (adjust for your resource; find it via `az cognitiveservices account list`)
 az cognitiveservices account deployment create --name romanko-exp --resource-group $rg `
     --deployment-name grok-4.3 --model-name grok-4.3 --model-version 1 --model-format xAI `
     --sku-name GlobalStandard --sku-capacity 200
@@ -106,7 +106,7 @@ per-turn tool trace on stderr.
   `POST {endpoint}/models/chat/completions` (Azure AI Model Inference API); executes each
   `read_file` / `grep` / `list_dir` / `run_gate` locally and feeds results back until the
   model stops calling tools and emits the review.
-- Retries transient `429/5xx` with jittered backoff; trims any leaked reasoning preamble down
+- Retries transient `429/5xx` with exponential backoff (no jitter); trims any leaked reasoning preamble down
   to the `Verdict` heading (`clean_final`).
 
 ## What it does NOT do
@@ -141,7 +141,7 @@ per-turn tool trace on stderr.
   the `--deployment-name` you created (case-sensitive), and the deployment must be
   `Succeeded`.
 - **Repeated 429 / very slow** — capacity too low; redeploy at `--sku-capacity 200`. The
-  script backs off up to ~8 attempts, but 1 000 TPM cannot fit an installment.
+  script backs off up to 6 attempts (exponential, no jitter), but 1 000 TPM cannot fit an installment.
 - **401 / 403** — your identity lacks **Cognitive Services User** on the resource, or `az
   login` is stale.
 - **`AzureCliCredential … timeout`** — warm the CLI once with
