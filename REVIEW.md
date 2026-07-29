@@ -33,7 +33,7 @@ as a **regression / supplemental** pass (it catches drift the previous round's o
 The committed Claude + GPT pair guarantees this for any GPT-, Claude-, or Gemini-authored draft:
 whichever vendor the author used, at least one of the two reviewers differs. Routing is the **single
 source of truth** in `.github/copilot/settings.json` under `subagents.agents.<name>` —
-`synopsis-reviewer-claude` (Opus) and `synopsis-reviewer-gpt` (GPT-5.5), both at `xhigh` +
+`synopsis-reviewer-claude` (Claude Opus 5) and `synopsis-reviewer-gpt` (GPT-5.6 Sol), both at `xhigh` +
 `long_context`. They divide labour — Claude tends to catch structure, canon propagation, and regression
 drift; GPT tends to catch idiom and precision/quality — so run **both** on first review (a parallel
 breadth pass), then a single-vendor **regression** pass after the author's edits, until the round is
