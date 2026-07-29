@@ -67,7 +67,7 @@ The third observation is that **each determination of reflection is double, and 
 With the determinations of reflection resolved into their unity, essence has reached its first genuine mediation, and the sphere can develop it:
 
 - **§22 — Ground**: **ground and grounded**, and why each requires the other; the splitting of ground into **form** and **matter**, form and **content**; the **formal**, **real**, and **complete** grounds, and how ground-relation slides toward triviality (the "dormitive virtue" that grounds sleep by a power-to-sleep); the accumulation of **conditions**; and the passage by which, when the conditions are complete, the grounded steps forth immediately as **Existence** (*Existenz*) — essence's first move out of pure inwardness toward **Appearance**.
-- **Beyond**: **Appearance** (*Erscheinung*) — the thing and its properties, the world of appearance, appearance and law, the essential relations (whole and parts, force and its expression, inner and outer) — and then **Actuality** (*Wirklichkeit*) — substance, causality, reciprocity — where essence and appearance are fully united and the sphere passes, in its turn, into the **Concept**.
+- **Beyond**: **Appearance** (*Erscheinung*) — the thing and its properties, the world of appearance, appearance and law, the essential relations (whole and parts, force and its expression, inner and outer) — and then **Actuality** (*Wirklichkeit*) — the absolute, the modal categories, substance, causality, reciprocity — where essence and appearance are fully united and the sphere passes, in its turn, into the **Concept**.
 
 ## Coda
 

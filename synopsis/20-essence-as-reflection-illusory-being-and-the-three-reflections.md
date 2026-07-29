@@ -62,7 +62,7 @@ With reflection in hand, essence can begin to generate its determinate content:
 
 - **§21 — the Determinations of Reflection**: **identity** (and why "A = A," taken alone, is empty and already harbours difference), **difference** (through *diversity* and *opposition*, driving into **contradiction**), and the rehabilitation of contradiction as the inner pulse of essence rather than a fault to be avoided — the determinations driving themselves toward their **ground**.
 - **§22 — Ground**: contradiction "driving itself toward its ground"; ground and grounded; the splitting of ground into form, matter, and content; the accumulation of **conditions**; and the passage by which, when the conditions are complete, the grounded steps forth immediately as **Existence** — essence's first move out of pure inwardness toward **Appearance**.
-- **Beyond**: **Appearance** (*Erscheinung*) — the thing and its properties, appearance and law, the essential relations — and then **Actuality** (*Wirklichkeit*) — substance, causality, reciprocity — where essence and appearance are fully united and the sphere passes, in its turn, into the **Concept**.
+- **Beyond**: **Appearance** (*Erscheinung*) — the thing and its properties, appearance and law, the essential relations — and then **Actuality** (*Wirklichkeit*) — the absolute, the modal categories, substance, causality, reciprocity — where essence and appearance are fully united and the sphere passes, in its turn, into the **Concept**.
 
 ## Coda
 
