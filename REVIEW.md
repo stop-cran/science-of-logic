@@ -40,6 +40,12 @@ breadth pass), then a single-vendor **regression** pass after the author's edits
 clean. Add a Gemini-pinned third agent for a tie-breaker / a guaranteed cross-model pass even when the
 author is on GPT or Claude.
 
+Foundry-served external reviewers (for example DeepSeek or xAI, invoked through
+`synopsis-foundry-review`) are **supplemental fresh-vendor passes** and count toward vendor
+diversity; triage their findings under the same severity and clean-round stop rules. They do not
+replace the default Claude + GPT first-review breadth pair unless the author explicitly changes that
+round's routing.
+
 ## How to review (discipline)
 
 - Review the **current** file, not a remembered one. Prefer a **word-diff against the
