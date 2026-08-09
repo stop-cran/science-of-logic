@@ -19,6 +19,20 @@ Run it every round.
 
 Never batch ahead of the author's authorization.
 
+**Additions to settled prose restart the loop.** A late insertion into an installment that has
+already gone clean — a gloss, a citation, a paragraph written to answer one of the author's
+questions — is **presumptively broken** and must go through the reviewer pair before it lands.
+This is the most reliable defect source the project has: of four additions drafted for §25 in a
+single round, one was cut outright and three were substantially rewritten over two further
+rounds, and every §25 defect found after the installment first went clean had entered this way.
+The characteristic failure is not a false claim but a **collision**: the addition restates a
+point the settled text already makes later and better, and the two then disagree about the
+*character* or the *cause* of the same move. Two symptoms worth watching for — the addition
+asserts something the neighbouring settled line denies (e.g. "already has a content" four lines
+after "no content has entered"), or it pre-empts a motor the next section supplies. **Prefer
+cutting to patching**: if the settled text already carries the point, the addition's only job
+was to point at it, and a forward reference does that without risk.
+
 **Rotate reviewer models across rounds.** Use at least two *different vendors* (e.g. Claude + GPT +
 Gemini) over a piece's review life. Observed division of labour: a **cross-model** pass catches canon
 and grammar errors a same-model pass tends to *rationalize away*; a **same-model regression** pass
@@ -59,6 +73,20 @@ round's routing.
 - An optional **cold / no-context reviewer pass** (a reviewer given only the installment, no project
   framing) is worth running once per piece: it reliably catches scholarly-provenance slips, over-reach,
   and false friends that the project-anchored reviewers read past.
+- **Independent convergence is the certainty signal.** When both reviewers, given no shared
+  context, flag the *same span*, treat it as established and fix it rather than re-arguing it.
+  Every convergent finding so far has been genuine.
+- **Adjudicate a reviewer split against the primary source — never by preferring a reviewer.**
+  When the pair disagrees about what Hegel (or a cited edition) actually says, go read it; one
+  fetch usually settles it. Expect each reviewer to be *half* right. On §25 one reviewer had the
+  correct Russian section heading and the wrong Spinoza wording while the other had the reverse,
+  and the verified answer matched **neither** proposal in full — it also dissolved a mirror-vs-
+  citation conflict both had reported as a forced choice. A split is therefore a signal to
+  *check*, not to arbitrate.
+- **Verify a quotation before an argument leans on it.** Quote from the text, not from memory or
+  from a reviewer's paraphrase, and confirm that any emphasis in the quotation is the source's
+  own rather than silently supplied. A section *heading* is often the strongest available
+  warrant — check whether the point is already titled before reconstructing it.
 - Tier every finding by severity; mark each a **fix** or a **hold (rationale)**.
 - You are **review-only**: report; the author edits.
 
@@ -83,6 +111,20 @@ For every Section III installment (NN ≥ 10) it checks:
 Don't eyeball anything the script can prove. Wire it to run automatically with a pre-commit hook —
 `git config core.hooksPath .githooks` (the committed `.githooks/pre-commit` runs the checker) — or as
 a Copilot CLI hook.
+
+**What the checker cannot see.** It proves structure, not prose. Check these by hand every round:
+
+- **Repetition across paragraphs** — the same figure, example, or cross-reference deployed twice
+  in one installment. An n-gram sweep over the file catches what re-reading misses. (Beware
+  fixed-width context regexes such as `.{130}pat.{130}` — they silently skip matches near line
+  boundaries.)
+- **An addition that contradicts a later section** — only a reader tracking the argument end to
+  end will catch it; see *Additions to settled prose* above.
+- **Smuggled canon violations.** Transition language is the recurring one: `§06` assigns
+  *Übergehen* to Being, so a phrase like "must take in an *other*" is a category error inside the
+  Doctrine of Essence, however natural it reads. When an addition describes a move, name the
+  move's kind and check it against `§06`'s typology.
+- **EN↔RU divergence** — run the mirror-parity audit documented in the Russian repo's `REVIEW.md`.
 
 ## 2 — Consistency & canon propagation
 

@@ -33,6 +33,15 @@ Apply genuine fixes (idiom, grammar, precision, consistency), but **hold** sugge
 conflict with fidelity to Hegel or with established house style — **always with an explicit
 rationale**. Principled, reasoned holds are preferred over blanket acceptance.
 
+**Additions to settled prose go back through review.** Anything inserted into an installment that
+has already gone clean — a gloss, a citation, a paragraph answering one of the author's questions —
+is presumptively broken until the reviewer pair has seen it. It is this project's single most
+reliable defect source, and the typical fault is a *collision* with settled text later in the same
+file rather than a false claim. Prefer cutting to patching. See `REVIEW.md`.
+
+**Settle reviewer disagreements against the primary source.** When the pair splits on what Hegel or
+a cited edition says, read the text rather than picking a reviewer — each is usually half right.
+
 ## House style
 
 - **Abstract**: the paragraph directly under the `#` title is wrapped in a **single `*…*`
@@ -45,6 +54,10 @@ rationale**. Principled, reasoned holds are preferred over blanket acceptance.
 - **Math**: italic plain text (e.g. *y = x²*, *a · b = k*, *s ∝ t²*, *h*) — **not** LaTeX
   `$…$`.
 - **Cross-references**: cite earlier installments as `§13`, `§16`, etc.
+- **Quotations from Hegel are verified against the text** before an argument leans on them, and
+  carry no emphasis the source lacks. A section **heading** is often the strongest warrant
+  available — check whether Hegel has already *titled* the point before reconstructing it. Where a
+  reading is yours rather than his, mark it as a reading.
 - Keep the dense, weighty register; do not loosen it for readability unless a sentence is
   genuinely over-literal.
 - Claims about physics are **categorial, not empirical**: the Logic supplies the *form*, not
