@@ -27,11 +27,20 @@ single round, one was cut outright and three were substantially rewritten over t
 rounds, and every §25 defect found after the installment first went clean had entered this way.
 The characteristic failure is not a false claim but a **collision**: the addition restates a
 point the settled text already makes later and better, and the two then disagree about the
-*character* or the *cause* of the same move. Two symptoms worth watching for — the addition
-asserts something the neighbouring settled line denies (e.g. "already has a content" four lines
-after "no content has entered"), or it pre-empts a motor the next section supplies. **Prefer
-cutting to patching**: if the settled text already carries the point, the addition's only job
-was to point at it, and a forward reference does that without risk.
+*character*, the *cause*, or the *level* of the same move. Three symptoms worth watching for — the
+addition asserts something the neighbouring settled line denies (e.g. "already has a content" four
+lines after "no content has entered"); it pre-empts a motor the next section supplies; or it routes
+a figure *down* the ladder where the settled text routes it *up* (a later §25 draft sent absolutized
+chance down into formal necessity, where the section close and the Coda take it up into absolute
+necessity). **Prefer cutting to patching**: if the settled text already carries the point, the
+addition's only job was to point at it, and a forward reference does that without risk.
+
+**A correct objection does not entail new prose.** The strongest version of this failure is an
+addition that is philosophically *right* and still unpublishable, because the objection it answers
+was already discharged elsewhere in the installment. Before drafting, search the file for the
+answer; if it is there, the whole remedy is one clause pointing at it. Check too that the addition
+is not smuggling in a coinage where the settled text already has a bolded term for the same thing —
+a term with exactly one corpus occurrence, and that one your own, is the tell.
 
 **Rotate reviewer models across rounds.** Use at least two *different vendors* (e.g. Claude + GPT +
 Gemini) over a piece's review life. Observed division of labour: a **cross-model** pass catches canon
@@ -75,14 +84,22 @@ round's routing.
   and false friends that the project-anchored reviewers read past.
 - **Independent convergence is the certainty signal.** When both reviewers, given no shared
   context, flag the *same span*, treat it as established and fix it rather than re-arguing it.
-  Every convergent finding so far has been genuine.
-- **Adjudicate a reviewer split against the primary source — never by preferring a reviewer.**
+  Every convergent finding so far has been genuine — including the verdicts to **cut**: on §25 both
+  independently returned "not publishable, cut both edits, use at most a forward pointer", in
+  near-identical words, and each had caught a decisive defect the other missed.
+- **Adjudicate a reviewer split against the primary source or against the corpus — never by
+  preferring a reviewer.**
   When the pair disagrees about what Hegel (or a cited edition) actually says, go read it; one
-  fetch usually settles it. Expect each reviewer to be *half* right. On §25 one reviewer had the
+  fetch usually settles it. When they disagree about **house style**, count the corpus: a §23
+  emphasis split was decided by ten instances showing philosopher names bolded on first appearance
+  and plain thereafter, which made one reviewer's stated premise simply false. Expect each reviewer
+  to be *half* right. On §25 one reviewer had the
   correct Russian section heading and the wrong Spinoza wording while the other had the reverse,
   and the verified answer matched **neither** proposal in full — it also dissolved a mirror-vs-
   citation conflict both had reported as a forced choice. A split is therefore a signal to
-  *check*, not to arbitrate.
+  *check*, not to arbitrate. The remedy may also be neither reviewer's: a proposed Russian
+  hyphenated calque for *that-it-is* was rejected because its first word is a homonym of an
+  interrogative, inverting *Dass-sein* into *Was-sein*.
 - **Verify a quotation before an argument leans on it.** Quote from the text, not from memory or
   from a reviewer's paraphrase, and confirm that any emphasis in the quotation is the source's
   own rather than silently supplied. A section *heading* is often the strongest available
