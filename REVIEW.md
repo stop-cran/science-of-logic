@@ -69,6 +69,83 @@ diversity; triage their findings under the same severity and clean-round stop ru
 replace the default Claude + GPT first-review breadth pair unless the author explicitly changes that
 round's routing.
 
+## The reviewer panel — what to parallelize, and what not to
+
+Reviewers may be run in parallel, but **only the procedural layer may be split by facet.**
+The judgment layer must stay whole and must stay duplicated.
+
+**Two or more generalists on *identical* whole-file prompts.** This layer is load-bearing and is
+never faceted. Its value is not coverage but **adjudicable disagreement**: two reviewers given the
+same file and the same instructions, disagreeing about the same line, is the single most productive
+event in this project's history. The §22/§25 condition-totality reversal — the most consequential
+correction the corpus has had — surfaced exactly this way, from two reviewers contradicting each
+other on a line that had already survived two Claude passes and two GPT passes. Faceting eliminates
+overlap **by construction**, and overlap is the only place such disagreement can occur. Keep at
+least one generalist whose vendor differs from the author model.
+
+**Facet agents, run alongside.** These are for work where a checklist beats a disposition and
+where overlap genuinely adds nothing:
+
+- **Quotation verifier** — extract *every* quoted span, including fragments inside the abstract,
+  and check each verbatim against the primary source. Exhaustive, not sampled. This exists because
+  the corpus once shipped a fabricated attribution; a generalist asked to also do everything else
+  will sample.
+- **Propagation sweeper** — body ↔ abstract ↔ README ↔ the prior installment's forward-pointers,
+  plus every claim the new file makes *about* a sibling installment. The characteristic defect is a
+  fix applied in the body and not in the abstract or the README.
+- **Corpus-lock auditor** — terminology, gloss format, heading skeleton, typography, against the
+  established 26 files rather than against taste.
+
+**Faceting is a division of labour, not of authority.** A facet agent reports; it does not
+adjudicate. Splits are still settled against the primary source, never by preferring a reviewer.
+
+**Two failure modes the split introduces, and their countermeasures.** First, defects fall in the
+**seams** between facets — so the generalists' prompts stay unrestricted, and the seams are their
+responsibility. Second, a pure parallel fan-out loses the **regression pass**: in the §26 round the
+second reviewer read the file *after* the first reviewer's fixes had landed, verified them verbatim,
+and on that basis withdrew eleven of its own candidate findings. Preserve this — after fixes, run
+one **sequential whole-file pass** on the amended text.
+
+**Migrate downward whenever possible.** The three facets above are procedural by design, which
+means each is a candidate for `tools/check-synopsis.js` and `tools/canon-denylist.json`. An agent
+that greps is an expensive grep. Every round, ask the corpus-lock auditor to propose denylist
+entries that would have caught its findings mechanically, and require it to verify each proposed
+pattern produces **zero matches against the already-settled files** before it is added.
+
+### The §27 round — the doctrine's first live confirmation, and one correction to it
+
+The §27 panel was the first run under the rules above, and it produced three results worth keeping.
+
+**The duplicated generalists earned their cost.** Two generalists received **byte-identical**
+whole-file prompts on different vendors. They converged on two sibling-misdescriptions — §27 had
+attributed to §03 the opposite of what §03 says, and had attributed to §06 a warning §06 never
+issues — which the propagation facet found independently, giving triple agreement and no need for
+adjudication. They then **flatly contradicted each other** on the section handling the sciences:
+one cleared it explicitly, in terms ("factually sound and do not overreach"), while the other
+returned six blockers in the same paragraphs — a false genealogy for modern logic, an
+impossibility claim the text does not support, an overreached cladistics parallel, an
+attribution of periodicity to nuclear charge alone, and a claim that the *impotence of nature*
+passage was detachable when the next sentences in Miller ground it systematically. Every one was
+upheld against the primary source. Had the clearing reviewer run alone, the section would have
+shipped. **Coverage would not have caught this; only overlap could.**
+
+**A narrow facet can be weaker than a generalist at its own facet.** The quotation verifier
+returned 52 of 54 spans verified and one genuine alteration. The generalist, not assigned to
+quotations at all, found four further quotation defects the facet had passed: a dropped
+parenthetical inside a quoted sentence, two German glosses placed inside quotation marks that
+Miller sets in square brackets, and one German gloss inside quotation marks that **is not in
+Miller at all**. The cause is instructive — the facet checked whether the *words* were Hegel's and
+stopped there, while the generalist also checked the punctuation, the brackets, and the silent
+elisions. Widen the quotation verifier's brief accordingly: **a quotation is altered if anything
+inside the quotation marks is not in the source, including brackets, commas, and glosses, and if
+anything is dropped from the middle without an ellipsis.** This does not weaken the case for
+facets; it shows a facet is only as good as the definition of its facet.
+
+**Check a facet's scope before believing its negative.** The verifier's single NOT FOUND was an
+artifact of the page range *the prompt* assigned it: the quoted phrase is verbatim Miller, on a
+page the prompt had not listed. A facet's negative finding is a claim about its search space
+first and about the corpus second.
+
 ## How to review (discipline)
 
 - Review the **current** file, not a remembered one. Prefer a **word-diff against the

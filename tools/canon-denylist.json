@@ -2,5 +2,13 @@
   {
     "pattern": "ℏ",
     "message": "use 'h' (Planck constant), not 'ℏ' — house canon settled on h (§18)"
+  },
+  {
+    "pattern": "[«»]",
+    "message": "use straight double quotes, not guillemets — guillemets are the Russian mirror's convention, not this corpus's (§27)"
+  },
+  {
+    "pattern": "\\bur-teilen\\b",
+    "message": "for Urteil's etymological split use the noun-form *Ur-Teil* ('original partition'), not the verbal *ur-teilen* (§26, §27)"
   }
 ]

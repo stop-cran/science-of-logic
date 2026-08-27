@@ -58,6 +58,14 @@ a cited edition says, read the text rather than picking a reviewer — each is u
   carry no emphasis the source lacks. A section **heading** is often the strongest warrant
   available — check whether Hegel has already *titled* the point before reconstructing it. Where a
   reading is yours rather than his, mark it as a reading.
+- **What counts as an altered quotation.** Anything inside the quotation marks that is not in
+  Miller is an alteration — not only substituted words, but added commas, added glosses, and
+  material dropped from the middle without an ellipsis. Two specific traps, both of which have
+  reached a draft: Miller writes **"Notion"**, so `Concept` must never appear inside a quotation
+  even though our own prose says *Concept*; and Miller's own German glosses are in **square**
+  brackets (`[*Seele*]`, `[*begrifflos*]`, `[*das Eins*]`), so a **parenthesised** gloss inside
+  quotation marks is always ours and always wrong. Our prose uses `English (*German*)`; quotations
+  reproduce Miller's brackets verbatim. Unescaped `[*…*]` is safe for the checker; `\[` is not.
 - Keep the dense, weighty register; do not loosen it for readability unless a sentence is
   genuinely over-literal.
 - Claims about physics are **categorial, not empirical**: the Logic supplies the *form*, not
@@ -65,6 +73,36 @@ a cited edition says, read the text rather than picking a reviewer — each is u
   guardrail wherever natural-science examples appear.
 - `README.md` carries a one-entry-per-installment index; **keep it parallel with the Russian
   README** (the two are mirrors of each other).
+
+## Environment and tooling (Windows / PowerShell 5.1)
+
+- **`>` and `Out-File` write UTF-16LE.** Never use them to capture binary or to inspect a file's
+  encoding — they will invent a BOM that is not there. Capturing `git cat-file blob` this way once
+  made every file in this repo appear to be UTF-16 and nearly triggered a needless repo-wide
+  re-encoding. Use `& $env:ComSpec /c "git cat-file blob <id> > out.bin"` for byte-exact capture.
+- **.NET static calls ignore `Set-Location`.** `[System.IO.File]::ReadAllText("README.md")` resolves
+  against the process start directory, not the current one. Always pass absolute paths.
+- **`Set-Location` does not persist between tool calls**; each call starts fresh.
+- **`npx` is blocked by execution policy** — use `& npx.cmd`. Checker command:
+  `Set-Location C:\Users\romanko\Documents\science-of-logic; & npx.cmd -y -p markdown-it@14 node tools/check-synopsis.js`
+- **After any `create`/`edit`**, re-normalize to CRLF + UTF-8-no-BOM, then re-run the checker.
+- **The `edit` tool has twice duplicated a blank line in `README.md`.** Prefer a PowerShell
+  array-splice for that file, and always inspect `git diff` for stray blank lines afterwards.
+
+## Line endings — a repo-specific trap
+
+`core.autocrlf=true`, but the stored blobs are **not uniform**: `README.md` is committed with
+**CRLF**, while every `synopsis/*.md`, `REVIEW.md`, and `tools/*` blob is committed with **LF**.
+Staging everything the same way therefore produces a spurious whole-file diff on one side or the
+other. Stage in two commands:
+
+```
+git -c core.autocrlf=false add -- README.md
+git -c core.autocrlf=true  add -- REVIEW.md synopsis/ tools/
+```
+
+Confirm before committing that `git diff --cached --stat` shows only the lines actually edited. A
+79-line diff on `README.md` means the EOL handling was wrong, not that the file changed.
 
 ## Commits
 
