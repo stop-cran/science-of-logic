@@ -39,6 +39,16 @@ is presumptively broken until the reviewer pair has seen it. It is this project'
 reliable defect source, and the typical fault is a *collision* with settled text later in the same
 file rather than a false claim. Prefer cutting to patching. See `REVIEW.md`.
 
+**Re-read after a fix batch — the defects no reviewer can see.** Edits in a batch are each written
+against the *pre-batch* text and none of them sees the others, so a batch reliably manufactures its
+own contradictions: a hedge that collides with a concession made elsewhere, a formulation struck at
+one site and left standing at another, a framing removed by one fix and reinstated by the next, a
+reversed verdict whose paragraph still ends on the old one. In the §27 round a single sequential pass
+over the amended file returned **eight MAJOR findings of exactly these shapes** — after five reviewers
+had already been run and applied. After any fix batch: **grep the whole file for every phrase the
+batch deleted or reversed**, re-read each amended paragraph to its **last sentence**, then re-run the
+checker. See `REVIEW.md`.
+
 **Settle reviewer disagreements against the primary source.** When the pair splits on what Hegel or
 a cited edition says, read the text rather than picking a reviewer — each is usually half right.
 
@@ -112,4 +122,6 @@ Confirm before committing that `git diff --cached --stat` shows only the lines a
 - Stage only `.md` / `README.md`; **do not** stage build artifacts (`node_modules/`,
   `synopsis.html`, `synopsis.pdf`, `build-pdf.js`, etc.).
 - Use the literal `§` character in commit messages.
+- For multi-paragraph messages, write the temp file **inside `.git/`** (e.g. `.git/COMMIT_MSG_27.txt`)
+  so it can never be staged by accident, and delete it after committing.
 - Verify after committing: `git log --pretty="%h %G? %s" -1` should show `G` (good signature).

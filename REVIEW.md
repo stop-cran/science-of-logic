@@ -146,6 +146,32 @@ artifact of the page range *the prompt* assigned it: the quoted phrase is verbat
 page the prompt had not listed. A facet's negative finding is a claim about its search space
 first and about the corpus second.
 
+**The sequential regression pass is where the round's remaining defects were.** Five reviewers — two
+generalists and three facets — had been run and every finding applied. A single sequential pass over
+the **amended** file then returned **eight further MAJOR findings, every one of them created by the
+repairs themselves**, and none of them visible to any reviewer who read the file before the fixes
+landed. They fell into four recurring shapes, and the shapes matter more than the instances:
+
+- **A hedge collides with a concession made elsewhere.** One fix conceded that Hegel does allow the
+  three moments to be counted "if one insists"; a paragraph four sections away still said counting
+  them was "forbidden outright."
+- **A struck formulation survives at a second site.** A sentence deleted from §III for overclaiming —
+  "the method can describe itself only when it has a result to describe" — was still standing, word
+  for word, in the Coda.
+- **A fix re-imports the framing another fix removed.** "Explanation" had just been struck from the
+  *Merkmal* passage as the wrong criterion; a repair three paragraphs later reinstated it verbatim
+  ("the later one *explains the earlier*, which is what having a principle means").
+- **A reversed verdict leaves its old closing sentence standing.** The *impotence of nature* paragraph
+  was rewritten to argue the passage is load-bearing, and still ended by calling it "a badly-expressed
+  observation."
+
+The common cause is that a batch of edits is applied blind: each edit is written against the text as
+it stood *before* the batch, and none of them sees the others. The countermeasure is **mechanical, not
+judgmental** — after applying a fix batch, grep the whole file for every formulation the batch deleted
+or reversed, and re-read each amended paragraph **to its last sentence**, which is where a reversed
+verdict characteristically survives. No gate in `tools/` catches any of this, and no parallel reviewer
+can: the defects did not exist when they read. Budget for this pass; it is not a formality.
+
 ## How to review (discipline)
 
 - Review the **current** file, not a remembered one. Prefer a **word-diff against the
