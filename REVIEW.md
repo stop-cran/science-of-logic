@@ -490,6 +490,64 @@ was made directly, which sidestepped the double-encoding trap entirely and — b
 replacement lay wholly within one line — left every line ending untouched, so the Russian mirror's
 1:1 parity survived the round without repair work.
 
+### Round 12 — §10, and the twin a phrase-grep could not find
+
+A regression panel on §10: two vendors across fidelity, generalist and style. Two Blockers, four
+Highs and a scatter of smaller findings were accepted; five were declined. One vendor returned
+"publishable" on two of the three facets and missed both Blockers.
+
+**"Publishable" is not evidence of absence.** Both vendors read the same file against the same
+rubric in the same round. One found two Blockers; the other found none, and said so twice. A clean
+report is something a model produced, not a property of the text. **Never let a favourable verdict
+retire a facet**, and never count verdicts across vendors.
+
+**A "verified ✓" list can be false, and the vendor's own sibling facet may disprove it.** One
+report certified the attribution of "the truth is the whole" as checked and sound; the same
+vendor's generalist facet flagged that very sentence. The quotation is at §09:13, and the text
+credited it to another installment in another section. **A claim marked verified is still a claim.
+Check it like any other** — the more so when a sibling facet disagrees with it.
+
+**A stored primary-text warrant turns a Question into a ruling.** The panel could only *ask*
+whether the threefold gloss of *Aufhebung* was Hegel's own; it said as much, and deferred. The
+stored quotation — "to sublate has a **twofold** meaning: it means to preserve, to maintain, and
+equally it means to cause to cease" — settled it at once: the third face is the word's ordinary
+sense of raising up, not Hegel's gloss. **Keep the primary-text warrants in the working set. They
+convert the findings a panel cannot close into findings the author can.**
+
+**A file can contradict itself twenty lines apart.** §10 argued conservation at :118 and :130
+while calling *Dasein* a "residue" at :110, and set out three distinct modes of transition at :9
+while universalizing a single collapse-model at :140. Eleven earlier rounds had read the file
+without seeing either, because each read it a passage at a time. **Reading a file against itself,
+end to end, is a distinct check** — not a by-product of reading it closely.
+
+**A repaired defect has unpropagated twins. Grep for the claim, not the string.** §10:140 was the
+twin, in different words, of the §02:52 over-generalization repaired in round 11. The section
+mislabel repaired at six sites in §10 had a seventh in §11:11, reachable only by sweeping the
+corpus for the *form* of the error. Conversely, a sweep for the bare word "residue" returned
+twenty-three hits across fourteen files, of which twenty were correctly scoped and owed nothing.
+**The same phrase is a defect in one place and doctrine in another; judge every hit by its claim.**
+
+**A sweep that propagates nothing is still a result worth logging.** Recording that the
+twenty-three hits were examined and that the defect was local spares the next panel from raising
+it again and the next author from running the sweep again.
+
+**One edit can discharge two findings.** The §10:130 attribution was reported once as the wrong
+installment and once as the wrong section. It was a single error with a single repair.
+
+**Accept the fact, reject the scope.** A High gathered three sentences under one charge of
+over-generalization. One was the defect; the other two stated correct doctrine about sublation and
+were held. **A finding's evidence and its extent are separately right or wrong** — the companion
+to the older rule that an observation and its proposed remedy are separate objects.
+
+**Verify the premise of a systematic-error hypothesis before acting on it.** Six wrong section
+labels looked like the residue of an earlier restructuring, which would have made them a migration
+to finish rather than slips to correct. One line elsewhere in the same file used the sections
+correctly, and disproved it. The repair was the same either way; the entry in this log is not.
+
+**A no-op edit is silent.** An edit whose search text and replacement text are identical reports
+success and changes nothing. In a batch of ten it is invisible, and here it dropped a Blocker.
+**Re-read the file after a batch; never count the tool's successes.**
+
 ## How to review (discipline)
 
 - Review the **current** file, not a remembered one. Prefer a **word-diff against the
