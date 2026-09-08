@@ -91,6 +91,120 @@ When you have finished reading and are ready to deliver, STOP calling tools and
 write the review as your final message.
 """
 
+DEFAULT_FACET = "generalist"
+
+# Facet briefs. The generalist brief is empty by design: REVIEW.md requires at least
+# two generalists on *identical* whole-file prompts, because the productive event is
+# adjudicable disagreement, which faceting eliminates by construction. Facets run
+# alongside that pair, never instead of it.
+FACET_BRIEFS: dict[str, str] = {
+    DEFAULT_FACET: "",
+    "fidelity": """\
+FACET: DIALECTICAL FIDELITY.
+
+Your assigned facet is whether the installment gets *Hegel* right. Everything else is
+secondary; do not spend your budget on prose quality or on defects the gate covers.
+
+Interrogate, in this order:
+- **Is the transition Hegel's or the author's?** The synopsis reconstructs movements. For
+  each transition it claims, ask whether Hegel actually makes it there, whether he makes it
+  on those grounds, and whether the synopsis has silently supplied a premise or a motive he
+  does not use. Where the reading is the author's rather than Hegel's, it must say so.
+- **Quotation integrity, strictly.** Extract every quoted span, including fragments inside
+  the abstract. A quotation is altered if *anything* inside the quotation marks is not in
+  the source — substituted words, added or removed commas, added glosses, emphasis the
+  source lacks, or material dropped from the middle without an ellipsis. Two known traps:
+  Miller writes "Notion", so "Concept" must never appear inside a quotation; and Miller's
+  own German glosses are in *square* brackets, so a parenthesised gloss inside quotation
+  marks is the author's and is wrong.
+- **Order and place in the system.** Does a category arrive before what it presupposes? Is
+  something credited to this stretch that the Logic settles earlier or later? Is a result of
+  the Doctrine of Essence being smuggled into the Concept, or vice versa?
+- **Retrofit ripple.** Every claim this file makes *about* a sibling installment (§NN) must
+  be checked by reading that sibling. Misdescribing a sibling is this project's most
+  frequent substantive defect.
+- **Over- and under-claiming.** "First", "only", "secured", "settles", "for the first time"
+  are load-bearing words; verify each. Equally, flag where the author has hedged a claim
+  Hegel actually makes outright — timidity is as much an infidelity as overreach.
+
+Where you allege an infidelity, quote the synopsis line and say what the text actually does.
+An objection you cannot ground in the primary text is a Question for the author, not a
+Finding.""",
+    "readability": """\
+FACET: COMPREHENSIBILITY FOR A CONTEMPORARY READER.
+
+Your assigned facet is whether a serious, educated, non-specialist reader of today can
+actually follow this — someone with a scientific or general humanist training, no German,
+and no prior Hegel.
+
+Read the installment as that reader and report where you would be lost, in order of how
+badly. Look for:
+- **Unearned presupposition.** A term, a distinction, or a result used as though established
+  when this file has not established it and does not point to where it was.
+- **First use without purchase.** A technical term (German or English) introduced without
+  enough grip for the reader to carry it through the paragraph that needs it.
+- **The unexplained pivot.** A sentence where the argument turns on a distinction the reader
+  has been given no way to see.
+- **Referential fog.** "This", "it", "the former" with more than one available antecedent —
+  especially across a paragraph break.
+- **Sentences that must be read twice.** Report the ones where the *second* reading is
+  needed to recover the syntax rather than to absorb the thought. The first is a defect; the
+  second is this project working as intended.
+
+**Hard constraint, and the point of the facet.** The house register is deliberately dense
+and weighty and is NOT to be loosened. Do not recommend simplification, shorter sentences as
+such, bullet points, summaries, or a friendlier tone; such a recommendation is itself a
+finding you got wrong. What you may recommend is a *added* clarifying clause, an earlier
+placement of a definition, a concrete instance, or a restored antecedent — additions and
+reorderings that leave the register intact. Difficulty that belongs to Hegel's subject
+matter should stay; difficulty that belongs only to the exposition should go.""",
+    "style": """\
+FACET: LANGUAGE AND STYLE.
+
+Your assigned facet is the prose itself. The register this project is reaching for is the
+high academic essay at its best — rigorous and exact, but *vivid, expressive, and alive*,
+with the confidence to state a hard thing plainly. Judge the writing against that standard
+and against the settled siblings, not against general readability advice.
+
+Hunt specifically for:
+- **Hedge accretion.** Qualifiers stacked until a sentence asserts nothing: "arguably",
+  "in some sense", "it might be said that", "not uncontroversially", "to some degree". This
+  installment has been through heavy correction, and over-hedging is the characteristic
+  damage such correction leaves. Where a claim was hedged into mush, say so and say what the
+  sentence was trying to assert.
+- **Dead verbs and abstraction-on-abstraction.** Nominalizations doing work a verb should do;
+  long stretches with no concrete noun; "is characterized by", "serves to", "constitutes".
+- **Cliché and borrowed swagger.** Phrases the corpus should be above — "root and branch",
+  "at a stroke", "in no uncertain terms" — especially where they replace an argument rather
+  than compress one.
+- **Rhythm and cadence.** Sentence-length monotony; a paragraph of uniform clauses; a
+  paragraph whose *last* sentence dribbles out where it should land. Endings matter: a
+  paragraph that has earned a verdict should close on it.
+- **Register breaks.** A colloquialism, a journalistic flourish, or an academic tic that
+  falls out of the surrounding voice. Also flag the opposite: pomposity, latinate padding,
+  and elegant variation that sacrifices a settled technical term for novelty.
+- **Consistency of the corpus voice.** Compare against the sibling installments you are
+  given. A rendering of a recurring phrase that departs from how the settled files render it
+  is a defect even when it reads better in isolation.
+
+For each finding, quote the offending sentence and propose a specific rewrite. Do not
+propose making the prose easier; propose making it *better* — sharper, more concrete, more
+confident. Density is a feature. Flatness is not.""",
+}
+
+# Some deployments reject the default combination of function tools and server-side
+# reasoning. gpt-6-astra returns 400 on /chat/completions unless reasoning_effort is
+# explicitly disabled; the documented alternative is the /v1/responses API, which this
+# runner does not speak.
+MODEL_PAYLOAD_EXTRAS: dict[str, dict[str, object]] = {
+    "gpt-6-astra": {"reasoning_effort": "none"},
+}
+
+
+def payload_extras(model: str) -> dict[str, object]:
+    return dict(MODEL_PAYLOAD_EXTRAS.get(model, {}))
+
+
 TOOLS = [
     {
         "type": "function",
@@ -402,7 +516,7 @@ def build_system_prompt(repo: Repo) -> str:
     return "".join(parts)
 
 
-def build_first_user_msg(target: str, context: list[str]) -> str:
+def build_first_user_msg(target: str, context: list[str], facet: str = DEFAULT_FACET) -> str:
     lines = [
         f"Review the installment `{target}`. Read it in full first (read_file).",
         "",
@@ -417,6 +531,18 @@ def build_first_user_msg(target: str, context: list[str]) -> str:
         "",
         "Deliver a single review in REVIEW.md's output format. Do not edit anything.",
     ]
+    brief = FACET_BRIEFS.get(facet, "")
+    if brief:
+        lines += [
+            "",
+            "=" * 72,
+            brief,
+            "=" * 72,
+            "",
+            "Stay inside your facet. Report a defect outside it only if it is a Blocker; "
+            "other reviewers in this round cover the rest. Depth within the facet is worth "
+            "more than breadth across facets, so spend your budget accordingly.",
+        ]
     return "\n".join(lines)
 
 
@@ -441,6 +567,7 @@ def review_one(model: str, base: str, api_version: str, token: str,
             "tools": TOOLS,
             "tool_choice": "auto",
             "temperature": temperature,
+            **payload_extras(model),
         }
         resp = _post_with_retry(url, headers, payload, read_timeout)
         choice = resp["choices"][0]
@@ -559,10 +686,16 @@ def _review_output_path(
     model: str,
     *,
     failed: bool = False,
+    facet: str | None = None,
 ) -> Path:
     safe_model = re.sub(r"[^A-Za-z0-9._-]+", "-", model).strip("-") or "model"
     suffix = ".failed.txt" if failed else ".md"
-    return repo_root / out_dir / f"{Path(target).stem}--{safe_model}{suffix}"
+    facet_part = ""
+    if facet:
+        safe_facet = re.sub(r"[^A-Za-z0-9._-]+", "-", facet).strip("-")
+        if safe_facet:
+            facet_part = f"--{safe_facet}"
+    return repo_root / out_dir / f"{Path(target).stem}--{safe_model}{facet_part}{suffix}"
 
 
 def expand_required_files(repo: Repo, patterns: list[str], label: str) -> list[str]:
@@ -623,6 +756,16 @@ def main() -> None:
         ),
     )
     ap.add_argument("--quiet", action="store_true", help="Suppress per-turn tool trace on stderr.")
+    ap.add_argument(
+        "--facet",
+        action="append",
+        default=[],
+        choices=sorted(FACET_BRIEFS),
+        help=(
+            "Review facet (repeatable); every facet runs against every --model. "
+            f"Default: {DEFAULT_FACET}, the unrestricted whole-file prompt."
+        ),
+    )
     args = ap.parse_args()
     if args.read_timeout <= 0:
         ap.error("--read-timeout must be greater than zero")
@@ -646,6 +789,7 @@ def main() -> None:
         sys.exit(f"--target must resolve to exactly one file; got {targets}")
     target = targets[0]
     models = args.model or ["grok-4.3", "DeepSeek-V4-Pro"]
+    facets = list(dict.fromkeys(args.facet)) or [DEFAULT_FACET]
 
     try:
         system_prompt = build_system_prompt(repo)
@@ -653,45 +797,50 @@ def main() -> None:
         ap.error(f"cannot load governing documents: {e}")
     base = resolve_endpoint(args)
     token = AzureCliCredential(process_timeout=30).get_token(AAD_SCOPE).token
-    first_user = build_first_user_msg(target, context)
     verbose = not args.quiet
 
     if args.out_dir:
         Path(repo_root / args.out_dir).mkdir(parents=True, exist_ok=True)
 
     failures = 0
-    for model in models:
-        print(f"\n{'=' * 78}\n== REVIEW — {model} — target {target}\n{'=' * 78}", flush=True)
-        t0 = time.time()
-        try:
-            review = review_one(model, base, args.api_version, token, system_prompt,
-                                 first_user, repo, args.temperature, args.read_timeout,
-                                 args.max_turns, args.contract_retries, verbose)
-        except ReviewFailure as e:
-            failures += 1
-            failure = f"FAILED: {e}"
-            diagnostic = failure
-            if e.contract_errors:
-                diagnostic += "\n\nCONTRACT ERRORS\n- " + "\n- ".join(e.contract_errors)
-            if e.rejected_review is not None:
-                diagnostic += "\n\nLAST REJECTED DRAFT\n\n" + e.rejected_review
+    for facet in facets:
+        first_user = build_first_user_msg(target, context, facet)
+        for model in models:
+            label = f"{model} / {facet}"
+            print(f"\n{'=' * 78}\n== REVIEW — {label} — target {target}\n{'=' * 78}", flush=True)
+            t0 = time.time()
+            try:
+                review = review_one(model, base, args.api_version, token, system_prompt,
+                                     first_user, repo, args.temperature, args.read_timeout,
+                                     args.max_turns, args.contract_retries, verbose)
+            except ReviewFailure as e:
+                failures += 1
+                failure = f"FAILED: {e}"
+                diagnostic = failure
+                if e.contract_errors:
+                    diagnostic += "\n\nCONTRACT ERRORS\n- " + "\n- ".join(e.contract_errors)
+                if e.rejected_review is not None:
+                    diagnostic += "\n\nLAST REJECTED DRAFT\n\n" + e.rejected_review
+                if args.out_dir:
+                    failure_path = _review_output_path(
+                        repo_root,
+                        args.out_dir,
+                        target,
+                        model,
+                        failed=True,
+                        facet=facet,
+                    )
+                    failure_path.write_text(diagnostic, encoding="utf-8")
+                print(failure, file=sys.stderr, flush=True)
+                print(f"\n-- {label}: {time.time() - t0:.0f}s --", file=sys.stderr, flush=True)
+                continue
             if args.out_dir:
-                failure_path = _review_output_path(
-                    repo_root,
-                    args.out_dir,
-                    target,
-                    model,
-                    failed=True,
+                output_path = _review_output_path(
+                    repo_root, args.out_dir, target, model, facet=facet
                 )
-                failure_path.write_text(diagnostic, encoding="utf-8")
-            print(failure, file=sys.stderr, flush=True)
-            print(f"\n-- {model}: {time.time() - t0:.0f}s --", file=sys.stderr, flush=True)
-            continue
-        if args.out_dir:
-            output_path = _review_output_path(repo_root, args.out_dir, target, model)
-            output_path.write_text(review, encoding="utf-8")
-        print(review, flush=True)
-        print(f"\n-- {model}: {time.time() - t0:.0f}s --", flush=True)
+                output_path.write_text(review, encoding="utf-8")
+            print(review, flush=True)
+            print(f"\n-- {label}: {time.time() - t0:.0f}s --", flush=True)
     if failures:
         raise SystemExit(1)
 

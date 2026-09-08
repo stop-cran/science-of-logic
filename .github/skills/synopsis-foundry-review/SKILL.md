@@ -99,6 +99,29 @@ az cognitiveservices model list --location swedencentral `
 Delete a deployment when finished:
 `az cognitiveservices account deployment delete --name $resource --resource-group $rg --deployment-name grok-4.3`.
 
+### Anthropic models need a REST create — and may be blocked outright
+
+`az cognitiveservices account deployment create` has **no flag** for
+`properties.modelProviderData`, which Anthropic deployments now require (`industry`,
+`organizationName`, `countryCode`), so they fail with `InvalidModelProviderData`. Use
+`az rest --method put` on the ARM deployment path — and note that api-version `2025-06-01`
+**silently drops** the field and reports the same "not provided" error; `2026-07-15-preview`
+accepts it. The provider-data values are an attestation made on the user's behalf: confirm
+them with the user rather than guessing.
+
+Two further walls may sit behind that, in this order:
+
+- `InsufficientQuota` with **limit 0** — check with
+  `az cognitiveservices usage list --location <loc> -o json | ConvertFrom-Json |
+  Where-Object { $_.name.value -match 'Claude' }`. (`-o table` renders `System.Object[]`;
+  the value is under `$_.name.value`.) `az quota show/list` returns `BadRequest` for the
+  `Microsoft.CognitiveServices/locations/<loc>` scope and is not a usable path.
+- `UserError: Error occurred when subscribing to Marketplace … This subscription is internal
+  or sandbox. Only $0.00 products or test products can be purchased.` This is terminal: on
+  such a subscription **no Anthropic model can be deployed at any quota**. Fill the
+  second-vendor slot with an OpenAI-, xAI-, or DeepSeek-format model instead, and don't
+  spend more time on quota.
+
 ## Prerequisites
 
 - Python + `pip`; install `foundry-review/requirements.txt`.
@@ -127,11 +150,36 @@ python foundry-review/review.py `
 told to verify cross-references against (it still reads the target in full and greps the
 README itself). With no `--model`, it defaults to `grok-4.3` + `DeepSeek-V4-Pro`. Reviews
 print to UTF-8 stdout; `--out-dir` also writes
-`out/<target-stem>--<model>.md` (git-ignored), so successive installments do not overwrite
+`out/<target-stem>--<model>.md`, or `out/<target-stem>--<model>--<facet>.md` when `--facet`
+is given (git-ignored), so successive installments do not overwrite
 one another. The report is persisted before console printing. `--quiet` drops the per-turn
 tool trace on stderr. `--read-timeout` controls the per-request timeout in seconds (default:
 600). Every target and explicitly supplied context pattern must match an existing allowed
 file; otherwise the command exits before authentication or paid model use.
+
+### Facets — narrowing one reviewer's brief
+
+`--facet` is repeatable and crosses with `--model`, so `--model A --model B --facet fidelity
+--facet style` runs four reviews. Four briefs exist:
+
+| Facet | Brief |
+| --- | --- |
+| `generalist` | **No brief at all** — the prompt is byte-identical to a run with no `--facet` |
+| `fidelity` | Is the transition Hegel's or the author's; quotation integrity; systematic order; retrofit ripple; over- *and* under-claiming |
+| `readability` | Where a contemporary reader loses the thread. Constrained: may propose only additions and reorderings, never simplification |
+| `style` | Hedge accretion, dead verbs, cliché, rhythm, register breaks, corpus voice |
+
+`generalist` is deliberately empty because `REVIEW.md` requires at least two reviewers on
+**byte-identical whole-file prompts**: the productive event is adjudicable disagreement
+between two reviewers who saw the same thing, and faceting destroys that by construction.
+Facets run *alongside* the generalist pair, never instead of it — a panel of four narrow
+specialists agrees about nothing and therefore settles nothing.
+
+Two constraints are written into the briefs themselves and should not be relaxed at the
+call site. `readability` is told the dense register is not to be loosened, and that
+recommending shorter sentences, bullets, or a friendlier tone is itself a wrong finding —
+difficulty belonging to Hegel's subject matter stays, difficulty belonging only to the
+exposition goes. `style` is told to propose making the prose *better*, not *easier*.
 
 ### Configuration
 
@@ -140,6 +188,7 @@ file; otherwise the command exits before authentication or paid model use.
 | `--target` | Exactly one existing `synopsis/**/*.md` file; glob allowed |
 | `--context` | Existing `synopsis/**/*.md` siblings; every supplied glob must match |
 | `--model` | Foundry deployment name; repeatable |
+| `--facet` | Reviewer brief: `generalist` (default, no brief), `fidelity`, `readability`, `style`; repeatable, crosses with `--model` |
 | `--resource` / `SOL_FOUNDRY_RESOURCE` | Foundry custom-domain resource name |
 | `--endpoint` / `SOL_FOUNDRY_ENDPOINT` | Full endpoint; overrides the resource name |
 | `--repo` | Alternate repository root containing the same English corpus layout |

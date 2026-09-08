@@ -248,6 +248,38 @@ Settled.
         )
         self.assertEqual(path.name, "25-test--DeepSeek-V4-Pro.failed.txt")
 
+    def test_facet_appears_in_output_path(self):
+        path = review._review_output_path(
+            Path("C:/repo"),
+            "out",
+            "synopsis/25-test.md",
+            "grok-4.3",
+            facet="fidelity",
+        )
+        self.assertEqual(path.name, "25-test--grok-4.3--fidelity.md")
+
+    def test_generalist_facet_leaves_the_prompt_byte_identical(self):
+        """REVIEW.md requires >=2 generalists on identical prompts; faceting must not
+        silently perturb that baseline."""
+        plain = review.build_first_user_msg("synopsis/25-test.md", ["synopsis/24-x.md"])
+        generalist = review.build_first_user_msg(
+            "synopsis/25-test.md", ["synopsis/24-x.md"], review.DEFAULT_FACET
+        )
+        self.assertEqual(plain, generalist)
+
+    def test_named_facet_injects_its_brief(self):
+        msg = review.build_first_user_msg(
+            "synopsis/25-test.md", ["synopsis/24-x.md"], "readability"
+        )
+        self.assertIn(review.FACET_BRIEFS["readability"].strip(), msg)
+        self.assertNotIn(review.FACET_BRIEFS["style"].strip(), msg)
+
+    def test_payload_extras_are_model_scoped(self):
+        self.assertEqual(review.payload_extras("gpt-6-astra"), {"reasoning_effort": "none"})
+        self.assertEqual(review.payload_extras("grok-4.3"), {})
+        review.payload_extras("gpt-6-astra")["mutated"] = True
+        self.assertEqual(review.payload_extras("gpt-6-astra"), {"reasoning_effort": "none"})
+
 
 if __name__ == "__main__":
     unittest.main()
