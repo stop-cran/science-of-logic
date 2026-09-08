@@ -548,7 +548,54 @@ correctly, and disproved it. The repair was the same either way; the entry in th
 success and changes nothing. In a batch of ten it is invisible, and here it dropped a Blocker.
 **Re-read the file after a batch; never count the tool's successes.**
 
-## How to review (discipline)
+### Round 13 — §01, and the discovery that the mirror is wrong rather than merely behind
+
+The first installment had never been regression-reviewed: it was written before the standards
+that later rounds established, and it held the densest defect cluster yet found — thirteen
+repairs in 108 lines, including a self-contradiction one sentence wide (line 41 said old
+metaphysics "assumes that **one** of each pair must simply be true," then immediately: "Hence
+the antinomies: with equal cogency **one proves** both"), and a Kantian misattribution inside it
+(soul-simplicity is the Second *Paralogism*, not an antinomy; Kant's antinomies are
+cosmological only). **Review debt concentrates in the earliest work**, which was written before
+the criteria existed to catch it. Sweep oldest-first, not newest-first.
+
+**Spot-check a vendor's *rationale*, not only its "verified ✓" list.** Both facets of one vendor
+reached opposite verdicts on the same span; the facet that voted *hold* cited §03:61 as its
+warrant, and §03:61 turned out to say nothing of the kind. **Intra-vendor disagreement is
+settled by checking the warrant, never by counting facets** — and a citation offered in support
+of leaving text alone deserves the same scepticism as one offered in support of changing it.
+
+**A vendor that fails a facet is still worth launching.** One model failed the fidelity facet
+twice, and its generalist facet nevertheless produced the round's best find — the line-41
+self-contradiction, which all three facets of the other vendor read past. **Close the round when
+every facet is covered across the panel, not when every run succeeds**: pair models so that a
+model with a known-failing facet is always partnered with one that covers it.
+
+**Two failure signatures, distinguished.** A `*.failed.txt` of ~220 B with a timing shape like
+`807s / 1s / 1s` is an expired token: the first facet consumed the credential's life and the
+siblings died instantly. A `*.failed.txt` of ~62 B reading `stopped after N turns without a
+contract-valid review`, on a single very long facet whose siblings succeeded, is a contract loop
+— the model cannot satisfy that facet's output contract, and relaunching changes nothing. **The
+per-run log is failure evidence only when non-empty; zero bytes means "no error *yet*."**
+
+**Line-count parity cannot see within-line drift.** An audit of the Russian mirror found the
+line counts intact in every file and the content diverging *inside* lines: guardrails the
+English gained in earlier rounds were never mirrored, and in two places the Russian still
+asserts precisely what those rounds removed. **A mirror can be wrong while every parity check
+passes.** Two complementary audits are needed, and neither suffices alone: a **cross-reference
+multiset** per line (catches wrong and missing §NN pointers; blind to length-only loss) and a
+**per-line length ratio against the file's median** (catches dropped guardrails; blind to
+divergence where the lengths happen to match). Run both; treat any ratio below ~0.6 as a
+probable dropped qualification rather than a stylistic compression.
+
+**PowerShell variable names are case-insensitive.** `$a` silently overwrites `$A`; the symptom
+surfaces far away as "Cannot index into a null array." Never distinguish two variables by case
+alone — and note this makes a whole class of transliterated-parallel-array scripts quietly wrong.
+
+**`initial_wait` is a maximum, not a sleep.** The call returns as soon as the command finishes,
+so it cannot be used to pace polling. To actually wait, put `Start-Sleep` *inside* the command.
+
+
 
 - Review the **current** file, not a remembered one. Prefer a **word-diff against the
   last-reviewed commit**: `git --no-pager diff --word-diff=plain <prev>..HEAD -- <file>` — so
