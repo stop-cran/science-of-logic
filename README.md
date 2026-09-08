@@ -6,7 +6,7 @@ A synopsis of G. W. F. Hegel's philosophy with primary attention to his method o
 
 1. **[From School-Logic to Dialectic](synopsis/01-from-school-logic-to-dialectic.md)** — The contradiction of traditional logic; the historical-logical itinerary from pre-logical consciousness through old metaphysics, empiricism, and critical philosophy to the speculative standpoint.
 
-2. **[With What Must Science Begin?](synopsis/02-with-what-must-science-begin.md)** — The immanent opening of the *Logic* (Being, Nothing, Becoming, Dasein) as the paradigm of the dialectical step; *Aufhebung*; consequences for scientific method.
+2. **[With What Must Science Begin?](synopsis/02-with-what-must-science-begin.md)** — The immanent opening of the *Logic* (Being, Nothing, Becoming, Dasein) as the introductory paradigm of the dialectical step; *Aufhebung*; consequences for scientific method.
 
 3. **[Understanding and Reason](synopsis/03-understanding-and-reason.md)** — The three sides of the logical (*Verstand*, *Dialektik*, *Spekulation*); dialectical reconstruction of induction, hypothesis, experiment, and mathematical formalism; the history of physics read as a dialectical sequence, and the limits of that reading.
 

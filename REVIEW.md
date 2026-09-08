@@ -332,6 +332,60 @@ distinctive phrase with anything that had been edited. Phrase-grep cannot find t
 what an installment asserts, grep the corpus for its number and read what each citation says it
 holds.**
 
+### Round 10 — §02, with a ripple into §10
+
+**Verify a suspected fabrication before dismissing it.** A reviewer grounded a complaint on §28. The
+corpus has twenty-seven installments, and the finding was very nearly rejected as invention — but
+§27 does forward-reference a §28 at four places, booking there the residue of a debt it only
+half-discharges. The fact was sound; only the proposed remedy was misplaced. **A reference to an
+installment not yet written is legitimate in this corpus, and the cheapest check — does the file
+exist — is the wrong one.** The disposition that follows is now a standing category of its own:
+**accept the fact, reject the remedy.** A reviewer can be right about what is wrong and wrong about
+where to repair it, and the two judgements must be taken separately.
+
+**A sibling can contradict itself, and the target inherits the contradiction.** §02 called *Dasein*
+the "first concrete category" on §10's authority. §10 says so at :118 — and at :82 says Becoming
+"is more concrete than either," then compares *Dasein* only to Being and Nothing, stepping around
+Becoming. The defect was never §02's; it was §10 disagreeing with itself, and §02 faithfully
+reproducing one side. Repairing the target alone would have preserved the error at its source.
+**Checking an installment against its sibling is not enough; the sibling must be checked against
+itself.** The fix — *the first concrete determination that stands*, the first result that *remains*
+— was written into both files at once.
+
+**A style facet attacked a fidelity repair for the second consecutive round.** One vendor's style
+report proposed sharpening the very sentence another had ruled must be cut, and lightening a
+qualification another had explicitly filed a Hold to preserve. Neither reviewer could see the
+other's report; both were doing their assigned job. This is not vendor error but a structural
+property of a facet panel, and it is now predictable rather than surprising. **Check every style
+proposal against the last two rounds' rulings on the same line before acting on it.**
+
+**Within-vendor correlation is not confirmation.** One model flagged the same line on all three
+facets and the "first concrete" claim on two. That is one finding each, not three and not two. Both
+were accepted — but on verification against §10 and against the named-philosopher list, never
+because reports agreed. **The panel supplies candidates; the corpus supplies warrants.**
+
+**Detect a file's conventions; do not carry them forward as an assumption.** This corpus was
+believed to use typographic apostrophes, and exact-string edits were being defended against a hazard
+that does not exist here: a full non-ASCII inventory of §02 returned em dashes, one section sign,
+two en dashes and one umlaut — every apostrophe and quotation mark plain ASCII. **Inventory the
+non-ASCII codepoints of the file you are about to edit.** It costs one command and it retires a
+whole class of imagined risk — while revealing the real one, which is the em dash.
+
+**The mechanical gate does not check that text is *sane*, only that it is well-formed — and a
+generated script is a file PowerShell must first decide how to read.** An edit script written as
+BOM-less UTF-8 was parsed as the ANSI codepage; every em dash, section sign and umlaut it carried
+was double-encoded into the corpus, and the gate returned PASS on all twenty-seven files, because
+mojibake is still valid UTF-8. The damage was visible only on re-reading the prose. **After any
+scripted edit, re-read the changed lines as text, and audit for the double-encoding signature
+(`\u00C2`, `\u00C3`, `\u00E2\u0080`) before staging.** Repair by reinterpretation must be applied
+per line and guarded against the replacement character: a line mixing sound and corrupt characters
+cannot be reinterpreted wholesale and has to be rebuilt from character codes. **A passing gate is
+not evidence that an edit landed correctly; it is evidence of nothing more than what it measures.**
+
+**A detached launcher reports its own sleep, never the panel's completion.** Waiting on the
+notification wastes the interval; the interval is where the target file should be read in full, so
+that adjudication rests on one's own reading rather than on the panel's account of it.
+
 **A fix can trade one imprecision for another, and the same paragraph can be right to flag
 twice.** §27's abstraction argument was flagged by the same vendor in two consecutive rounds for
 **opposite** reasons. Round 3 objected that "the product is itself a singular" equivocates on

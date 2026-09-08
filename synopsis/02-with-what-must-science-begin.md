@@ -1,6 +1,6 @@
 # With What Must Science Begin?
 
-*The immanent opening of the* Science of Logic *— Being, Nothing, Becoming — as the paradigm of the dialectical step.*
+*The immanent opening of the* Science of Logic *— Being, Nothing, Becoming — as the introductory paradigm of the dialectical step.*
 
 ---
 
@@ -10,7 +10,7 @@ Every science begins somewhere. The geometer begins with point and line; the phy
 
 This is harmless for a special science, whose office is precisely to develop the consequences of its assumptions. But for a science that proposes to be **science as such** — a science of the very forms in which anything whatever can be thought — every assumption is fatal. To presuppose anything is to presuppose a *content* (some determination already given) and a *form* (some manner of givenness — intuition, definition, faith). But the science of logic is supposed to be the science of all content and of all form. It cannot smuggle in either without contradicting itself in its first step.
 
-Hegel therefore asks the question with full radicalism: **with what must science begin?** The answer must satisfy two conditions at once.
+Hegel therefore asks the question in its most radical form: **with what must science begin?** The answer must satisfy two conditions at once.
 
 1. The beginning must be **immediate** — for if it were mediated, it would presuppose the very thing whose mediation it is, and would not be a beginning.
 2. The beginning must be **without any further determination** — for any determination is already a content, brought in from outside.
@@ -49,17 +49,17 @@ So in three steps the *Logic* has given us:
 - Its **immanent self-negation** — the discovery, when we attend to it, that it is its own opposite (Nothing).
 - The **mediated unity** in which both are preserved as moments of a more concrete thought (Becoming).
 
-This is the **paradigm of the dialectical step**. It will repeat itself, with ever richer content, through the entire system.
+This is the **paradigm of the dialectical step**, in the introductory form in which the *Logic* first exhibits it. Its content grows richer as the system develops, and its form does not stay fixed — a qualification made precise once *Dasein* is reached.
 
 ## V. Determinate Being (*Dasein*)
 
-Becoming, however, cannot be the final word either. To *become* is to pass over; but every actual passage settles into a result. Being-in-becoming, when its ceaseless oscillation comes to rest, is no longer pure Being or pure Nothing — it is a **determinate** being, a being-this-rather-than-that, a being with a *quality*. This is *Dasein*: being-there, being with a determination.
+Becoming, however, cannot be the final word either, and the reason is internal to it. Becoming has content only as the vanishing of its two moments into each other; but each moment vanishes precisely *as* vanishing, so that the unrest cancels itself, and what is left is the **result** of the vanishing rather than the vanishing itself. What is left is no longer pure Being or pure Nothing: it is a **determinate** being, a being-this-rather-than-that, a being with a *quality*. This is *Dasein*: being-there, being with a determination (the movement is set out in full in §10).
 
-With Dasein the *Logic* has won its first concrete category, and with it the entire sphere of quality opens — quality, limit, finitude, infinity, being-for-self — and beyond it quantity, measure, essence, and so on through the system. Within the sphere of Being each subsequent step has the same triadic shape: an immediate determination posits itself, generates its own opposite by its own internal demand, and is sublated in a richer determination that contains both as moments and points beyond itself in turn. The three moments hold throughout the *Logic*, but this particular shape — passage into an opposite — is Being's; in the Doctrine of the Concept the universal specifies itself without passing over into anything opposed to it (§27).
+With *Dasein* the *Logic* has won its first concrete determination that **stands**: Becoming is already richer than Being or Nothing, but it subsists only as its own vanishing, whereas *Dasein* is a result that remains (§10). With it the entire sphere of quality opens — quality, limit, finitude, infinity, being-for-self — and beyond it quantity, measure, essence, and so on through the system. Within the sphere of Being each subsequent step has the same triadic shape: an immediate determination posits itself, generates its own opposite by its own internal demand, and is sublated in a richer determination that contains both as moments and points beyond itself in turn. The three moments hold throughout the *Logic*, but this particular shape — passage into an opposite — is Being's; in the Doctrine of the Concept the universal specifies itself without passing over into anything opposed to it (§27).
 
 ## VI. What This Teaches: The Structure of the Dialectical Step
 
-It is essential to distinguish what Hegel actually does here from the schoolroom caricature of "thesis–antithesis–synthesis" (a formula Hegel never used, and which was foisted on him by Chalybäus and propagated by Marxist textbooks). The caricature suggests three *external* operations: someone proposes a thesis, someone else opposes it, a third party reconciles them. This is exactly the kind of *external reflection* that Hegel rejects.
+Hegel's procedure here is not the schoolroom formula of "thesis–antithesis–synthesis" — a formula he does not use as the name of his method, given currency by Chalybäus and later carried by Marxist textbooks. The formula suggests three *external* operations: someone proposes a thesis, someone else opposes it, a third party reconciles them. This is exactly the kind of *external reflection* that Hegel rejects.
 
 The actual structure is **immanent**:
 
@@ -69,25 +69,25 @@ The actual structure is **immanent**:
 
 The dialectical step is therefore not a *method imposed* on a content; it is the **content's own self-articulation as registered in thought**. The thinker does not "apply dialectic" — he watches the determination negate itself. Method here is identical with the matter; the *how* of the investigation is the *what* of the object.
 
-This is the crucial reversal that Hegel introduces into the very idea of method. In every prior conception of method — Bacon's induction, Descartes' analysis, the hypothetico-deductive schema — the method is a set of rules **external** to the subject-matter, applied *to* it from the standpoint of an inquiring subject. With Hegel, the method **is** the self-movement of the matter; the inquirer's task is to give himself over to that movement and let it speak. This is what *speculative* means in the strict sense: not idle conjecture, but the willingness to follow the thing itself wherever its own logic carries it.
+This is the crucial reversal Hegel introduces into the very idea of method. Where method is conceived as a set of rules **external** to the subject-matter — Bacon's induction, Descartes' analysis, and, later, the hypothetico-deductive schema all take this form — the rules are applied *to* the matter from the standpoint of an inquiring subject. With Hegel the method **is** the self-movement of the matter, and the inquirer's task is to give himself over to that movement and let it speak. This is the root of what *speculative* will mean in the strict sense: not conjecture, but the grasp of the positive unity that the self-negation of the determinations itself discloses (§03).
 
 ## VII. Why the Beginning Is at Once a Beginning and a Result
 
 There is a final, characteristic Hegelian twist. The beginning — pure Being — looks like the most immediate, presuppositionless point one could find. And in one sense it is. But in another sense it is itself a **result**: it is the residue left when consciousness has stripped away every determinate content, every assumption, every claim about what is. To arrive at the standpoint from which one can let pure Being stand as the first thought is itself the work of the entire *Phenomenology of Spirit* — the labor by which natural consciousness is purified into pure thinking.
 
-Hence the famous saying: the beginning of the *Logic* is at once **the absolutely immediate** (taken in itself) and **the absolutely mediated** (taken with respect to the standpoint that has been won). In the system as a whole, the end will return to the beginning — the Absolute Idea will recognize itself as that with which we began — and only then will the beginning be fully *grounded*, retroactively, by the totality it has unfolded.
+Hence the double character of the beginning: it is at once **the absolutely immediate** (taken in itself) and **the absolutely mediated** (taken with respect to the standpoint that has been won). In the system as a whole, the end will return to the beginning — the Absolute Idea will recognize itself as that with which we began — and only then will the beginning be fully *grounded*, retroactively, by the totality it has unfolded.
 
 This is the second deep lesson for any account of scientific method: **a science is not validated by its first step alone, but by the whole circle of its development**. The justification of the beginning is the system that issues from it. Foundationalism (the search for an indubitable starting-point that secures everything afterward) and skepticism (the demonstration that no such starting-point exists) are both refuted at once: science begins with the **least possible**, and grounds itself in the **whole** that issues from this least.
 
 ## VIII. Implications for Scientific Method
 
-Three consequences of this opening for the conduct of any science:
+Three consequences follow for the way the **categories** of a science are ordered and developed. They concern categorial form, not empirical content: the *Logic* supplies no facts, no laws, and no procedure for finding them, and each science must establish its own starting-point by its own means.
 
-**1. The beginning of any science must be the most abstract determination of its subject-matter, not the most concrete.** A science of mechanics begins not with a concrete machine but with the bare concept of motion; a science of life not with a particular organism but with the abstract concept of self-maintenance; a science of economic life not with a market but with the commodity (as Marx will explicitly do, in conscious imitation of this opening). The richness comes by deduction, not by accumulation.
+**1. The categorial beginning of a science is its most abstract determination, not its most concrete.** A science of mechanics begins not with a concrete machine but with the bare concept of motion; a science of life not with a particular organism but with the abstract concept of self-maintenance; a science of economic life not with a market but with the commodity (as Marx will explicitly do, in conscious imitation of this opening). The order of *exposition* runs from the abstract to the concrete — which says nothing about the order in which the material was found.
 
-**2. The development of a science is the unfolding of contradictions immanent in its starting-point, not the addition of external facts.** Each successive category in a properly constructed science is the resolution of a contradiction in the previous one. To "follow the science" is to follow these immanent transitions, not to memorize a list of results.
+**2. The categories of a science can develop through tensions in their own content, and not by accretion alone.** Where a successive category resolves a contradiction in the one before it, the sequence acquires an order that mere collection would not give it. This is a claim about how categories hang together, not a warrant for dispensing with empirical findings: no such development can be had without them.
 
-**3. A category, taken in isolation, is always one-sided and self-contradictory; it is true only as a moment of the whole.** This is the great prophylactic against the *fixed* abstractions in which every science is tempted to rest — "particle," "force," "gene," "individual," "market," "consciousness." Each is indispensable; each, taken absolutely, generates its own collapse and demands sublation in a richer concept. Dialectic is precisely the art of seeing this in advance, and of refusing to absolutize any finite determination.
+**3. A category taken in isolation is one-sided, and is true only as a moment of the whole.** This is the standing caution against the *fixed* abstractions in which a science may come to rest — "particle," "force," "gene," "individual," "market," "consciousness." Each is indispensable; each, taken absolutely, invites the collapse of the account built upon it. Dialectic supplies no forecast of which determination will fail, or when — that is settled by the work of the science itself — but it does refuse in principle to treat any finite determination as final.
 
 ---
 
@@ -110,12 +110,12 @@ Three consequences of this opening for the conduct of any science:
         Determinate Being  →  (the next immediate determination)
 ```
 
-Each new determination, in its turn, will reveal itself as immediate-and-self-negating, and the step will repeat — through quality, quantity, measure, essence, ground, appearance, actuality, the concept, the idea — until the entire system has been traversed and the Idea recognizes itself as the totality of its own moments.
+Each new determination, in its turn, will reveal itself as one-sided and self-negating, and the movement will continue — through quality, quantity, measure, essence, ground, appearance, actuality, the concept, the idea — until the entire system has been traversed and the Idea recognizes itself as the totality of its own moments. It does not continue by repeating this opening unchanged: the self-specification of the universal is not Being's passage into an opposite (§27).
 
 ---
 
 ## Coda: The Bridge to What Follows
 
-We now have both the *outer* itinerary (synopsis 01) and the *inner* paradigm (this synopsis): the historical-logical sequence by which thought arrives at the speculative standpoint, and the elementary form of the dialectical step by which speculative thought proceeds.
+We now have both the *outer* itinerary (§01) and the *inner* paradigm (this installment): the historical-logical sequence by which thought arrives at the speculative standpoint, and the elementary form of the dialectical step by which speculative thought proceeds.
 
-The next installment will examine what this means for the actual practice of the empirical sciences. We will ask: what becomes of induction, of hypothesis, of mathematical formalism, of experiment, when the conduct of science is understood dialectically? What is the difference between **the understanding** (*Verstand* — the faculty of fixed determinations, indispensable to every science) and **reason** (*Vernunft* — the dialectical faculty that grasps determinations as moments)? And how does Hegel's account explain, rather than displace, the genuine achievements of mathematical natural science from Galileo through Newton to his own day — and, by extension, beyond?
+The next installment will examine what this means for the actual practice of the empirical sciences. We will ask: what becomes of induction, of hypothesis, of mathematical formalism, of experiment, when the conduct of science is understood dialectically? How do **the understanding** (*Verstand*) and **reason** (*Vernunft*) stand to one another — not as two separate faculties, but as moments of one activity of thought, the one holding determinations fast, the other grasping them as moments of a whole? And how does Hegel's account explain, rather than displace, the genuine achievements of mathematical natural science from Galileo through Newton to his own day — and, by extension, beyond?
