@@ -190,7 +190,9 @@ Hunt specifically for:
 
 For each finding, quote the offending sentence and propose a specific rewrite. Do not
 propose making the prose easier; propose making it *better* — sharper, more concrete, more
-confident. Density is a feature. Flatness is not.""",
+confident. Density is a feature. Flatness is not. But prose quality here means what the
+reader can follow and feel, not lexical housekeeping: a rewrite that swaps one acceptable
+word for another you prefer is churn, and churn crowds out the findings that matter.""",
     "translation": """\
 FACET: FIDELITY OF THE RUSSIAN MIRROR TO ITS ENGLISH ORIGINAL.
 
@@ -592,6 +594,18 @@ def build_first_user_msg(target: str, context: list[str], facet: str = DEFAULT_F
             "Stay inside your facet. Report a defect outside it only if it is a Blocker; "
             "other reviewers in this round cover the rest. Depth within the facet is worth "
             "more than breadth across facets, so spend your budget accordingly.",
+            "",
+            "Every finding must name what the reader gains from the fix. A finding whose "
+            "whole content is a preferred synonym, a tidier notation, or a rephrasing you "
+            "find more elegant is not a finding — hold it, or file it as Optional. The "
+            "mechanical gates already prove structure, emphasis parity, cross-reference "
+            "format and line counts, so do not re-derive them. What earns a round is "
+            "method, argument, attribution, and whether a serious reader can follow the "
+            "text at speed.",
+            "",
+            "If an earlier round already ruled on a point and the ruling is visible in the "
+            "text or its history, do not re-raise it without new evidence; say instead why "
+            "the earlier ruling was wrong.",
         ]
     if source_text is not None:
         lines += [

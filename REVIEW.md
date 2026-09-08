@@ -709,6 +709,31 @@ named two sentences earlier.
 the English reads the same way by design — a doubled "precise/exactly", a twice-repeated verb.
 Check the English before repairing the Russian; the mirror, not Russian euphony, governs.
 
+## What the panel is for — and what it is not for
+
+**The scripts prove the mechanics; you are not the scripts.** `check-synopsis.js` and
+`check-mirror.js` already decide structure, emphasis parity, README linkage, denylisted terms,
+line counts, and EOL bytes, and they run before every commit. A round spent re-deriving what a
+gate has already proven is a round wasted, and the reports that do it crowd out the findings only
+a reader can produce.
+
+Two things are worth a reviewer's budget, in this order:
+
+1. **Method and philosophy.** Does the installment get Hegel's *movement* right — does the
+   transition it claims actually follow, is the contradiction the real one, is a result claimed
+   before it has been earned? Is an attribution correct: Hegel's own claim distinguished from
+   Miller's rendering, from a commentator's, from ours? Is a physics or history example true, and
+   under the categorial-not-empirical guardrail?
+2. **Readability.** Can a serious reader follow the argument at full speed — is the structure
+   legible, does each paragraph land its verdict, is a hard sentence hard because the thought is
+   hard rather than because the prose is tangled?
+
+Notation, cross-reference arithmetic, and terminological tidiness matter only where they carry
+argument: a wrong `§NN` that sends the reader to the wrong proof, a rendering that flattens a
+distinction the argument needs. **A finding whose entire content is a preferred synonym is not a
+finding.** Before reporting one, say what the reader gains; if the answer is only "it reads
+better to me," hold it.
+
 ## 1 — Mechanical gates (must be green)
 
 Run from the repo root:
@@ -771,11 +796,17 @@ terms, `(*German*)` glosses, `§NN` cross-references, italic-plain math.
 
 ## Severity rubric
 
-- **Blocker** — breaks a mechanical gate, or a factually wrong claim.
-- **High** — fidelity error, broken cross-reference, guardrail missing where physics appears.
-- **Medium** — terminology drift, imprecision, inconsistency with a sibling installment.
-- **Low** — idiom, grammar, polish.
-- **Optional** — taste; offer, don't press.
+Severity tracks **what the reader loses**, not how formal the defect is.
+
+- **Blocker** — a factually wrong claim, a misattribution, a transition that does not follow, or
+  a passage asserting what another passage denies. Also a red mechanical gate.
+- **High** — a fidelity error in the Hegel; a result claimed before it is earned; a missing
+  categorial-not-empirical guardrail where physics appears; a passage a competent reader cannot
+  follow. A cross-reference is High only when following it lands the reader on the wrong argument.
+- **Medium** — terminology drift that costs a distinction; a paragraph that loses its verdict;
+  inconsistency with a sibling installment that a reader would notice.
+- **Low** — idiom, grammar, spelling, and polish that has an argumentative payoff.
+- **Optional** — taste; offer, don't press. Synonym preferences live here or nowhere.
 
 ## Review output format
 
