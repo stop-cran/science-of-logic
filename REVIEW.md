@@ -286,6 +286,52 @@ not only what the edited file quotes, but *who quotes the edited file*; grep the
 edited installment's own number and read every hit. Applying that rule in round 8 turned up a second
 live ripple in §01 that reading had missed. A sibling that cites you is a sibling you can break.
 
+Round 9 re-ran the panel on the twice-repaired §03 and produced a **third** void certification, the
+first outright conflict between two facets, and the discovery that the repairs had themselves become
+a defect. Nine fixes were accepted across §03 and §04; the minority vendor found all of them.
+
+**Verify the check before declaring a round dead.** Round 9 was diagnosed as having died in flight
+because `Get-Process python` returned nothing, and its output was wiped and the round relaunched. The
+process is named **`python3.13`**; the check had been wrong for several rounds, and the original run
+was very likely healthy and merely slow. Match on a pattern —
+`Get-Process | Where-Object { $_.ProcessName -match 'python' }` — and before destroying any output,
+read the `.log.out` files and count the reports on disk. A panel that looks dead is usually just
+slow. Launch panels **detached**, so that a session teardown can never be what kills them.
+
+**A certification that presupposes access the panel does not have is void, whether or not it happens
+to be false.** The fast vendor's fidelity facet returned zero findings and certified that every
+direct quotation had been "extracted and compared for verbatim fidelity." No edition of the primary
+text is in the panel's context. The minority vendor stated that limit explicitly and **declined to
+certify**, which is the correct behaviour. Three consecutive rounds have now produced a failed
+certification: round 7 on a false premise about the file, round 8 on a false report of work
+performed, round 9 on work that was not possible. Read what a certification claims to have *done*,
+and ask whether the panel could have done it.
+
+**A style facet can attack a fidelity repair, and a load-bearing hedge looks like accretion from the
+outside.** The fast vendor's style facet proposed restoring, at `:19`, the exact unrestricted
+universal that round 8's fidelity findings had forced out — offered as tightening flabby prose.
+Before accepting any stylistic proposal, **check the line against the last two rounds' rulings on
+it**; a qualification that reads as defensive throat-clearing may be the entire result of a previous
+round. Conversely, the same facet was right that §03 asserted its ownership of the reconstruction
+three separate times in one paragraph. Both observations are stylistic; only the history
+distinguishes them.
+
+**Repairs accrete, and a pile of disclaimers is itself a defect.** Rounds 7 and 8 answered scope
+findings by adding qualifications, and by round 9 the paragraph introducing the four procedures
+carried three overlapping statements that the reconstruction was the synopsis's own — which reads as
+a review response left inside the essay. The standing rule to **prefer cutting a universal to adding
+a disclaimer** has a corollary: when disclaimers have already accumulated, consolidate them into one
+that carries every limit rather than adding a fourth. The same edit dropped a categorical negative
+about Hegel for which no warrant could be found; an unsourced denial is a claim like any other.
+
+**A correction ripples to whoever cites the corrected claim, not only to whoever quotes the corrected
+words.** §27 established that fixed determinations are not the Understanding's fault but reason's
+failure to go on, and §03 was amended to say so. §04 still credited §03 with "the characteristic
+product of the Understanding" — a claim §03 now explicitly refuses, in a sentence sharing no
+distinctive phrase with anything that had been edited. Phrase-grep cannot find this. **After changing
+what an installment asserts, grep the corpus for its number and read what each citation says it
+holds.**
+
 **A fix can trade one imprecision for another, and the same paragraph can be right to flag
 twice.** §27's abstraction argument was flagged by the same vendor in two consecutive rounds for
 **opposite** reasons. Round 3 objected that "the product is itself a singular" equivocates on
