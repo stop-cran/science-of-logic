@@ -22,7 +22,10 @@ The author reviews each piece before authorizing the next — **never batch ahea
 check-in.
 
 **Review process.** Authors self-check and reviewers critique against `REVIEW.md` (the checklist,
-severity rubric, and critique loop). Run the mechanical gate before submitting:
+severity rubric, and critique loop). A review is for **method, philosophy, attribution, and
+readability** — the mechanical gates already prove structure, emphasis parity, references, and
+line counts, so don't spend a round re-deriving them, and don't report a finding whose whole
+content is a preferred synonym. Run the mechanical gate before submitting:
 `npx -y -p markdown-it@14 node tools/check-synopsis.js`. The `synopsis-reviewer-claude` and
 `synopsis-reviewer-gpt` custom agents in
 `.github/agents/` encode the review-only reviewer role (a two-vendor pair).
