@@ -429,6 +429,67 @@ been adjudicated in an earlier round and recorded above; reviewers see the rubri
 adjudication history, and will raise them again. Read this file's round log first — otherwise a
 settled ruling is silently reversed by the next round's "fix".
 
+### Round 11 — §02 again, and a defect that no panel could have seen
+
+The round-10 batch rewrote arguments rather than wording, which by the rule above earns a fresh
+panel; round 11 was that panel. Five findings were accepted, six declined. The accepted five are
+worth less than the three lessons the round produced about *how the ledger was read*.
+
+**A reviewer's line numbers were right and the author's recollection was wrong.** The previous
+round's log recorded that this vendor's citations "run about two low," and the first reflex was to
+discount its numbering. A direct read of the file disproved that: the citations were exact. The
+standing instruction — verify a cited line against the file before ruling — must be applied
+symmetrically. **Treat your own memory of a line number as no more reliable than the reviewer's**,
+and never carry a claim about a reviewer's accuracy forward as if it were a property of the vendor.
+
+**A line number is not a stable key for a protection.** "§02:86 is protected" had been carried
+over from round 10. It was false in the way that matters: :86 was the one consequence round 10 had
+*not* narrowed, and it was the correct target. Protections must be keyed to the **claim or
+sentence**, never to its address, because every accepted edit can move the address.
+
+**An unnarrowed sibling in a numbered list is itself evidence.** Round 10 narrowed consequences 2
+and 3 and left consequence 1 a bare universal. That asymmetry, noticed only on re-reading,
+independently corroborated the reviewer. It is the practical form of the older rule that a
+narrowing propagates by claim and not by phrase: after narrowing one member of a list, **read the
+others for the same claim in different words.**
+
+**The cited sibling was right and the citing original was wrong.** A propagation was urged from
+§02 into §10:39–41. Reading §10 showed it already stated the point correctly — and that it cites
+§02 as its source. The error ran the other way. **Never propagate on a reviewer's assertion
+without reading the sibling; it may already contain the correction.**
+
+**The panel cannot see `essays/`, and a repaired defect survived there.** The §02 repair removed
+an account of the *Phenomenology* as a stripping-away leaving a residue. A bidirectional grep for
+the deleted phrases — run across the whole repository, not merely `synopsis/` and `README.md` —
+found the same error twice in a tracked essay that cites §02 as its authority. No reviewer could
+have caught it: the essays are never in the panel's context. **The grep for deleted phrases is not
+a formality after a fidelity repair; it is the only instrument that reaches the unreviewed parts
+of the corpus. Run it repository-wide.** The essays are mirrored in Russian too, so such a repair
+incurs a translation obligation as well as an English one.
+
+**A style facet attacked a fidelity repair for the third consecutive round.** The proposal would
+have restored the universal quantifier that round 10 had deliberately removed, in the name of a
+firmer cadence. Declined, as in the two preceding rounds. The pattern is now regular enough to
+state as procedure: **check every style proposal against the last two rounds' rulings on the same
+claim before weighing its prose merits.** A style facet optimizes the sentence it is shown and
+cannot know what the sentence cost.
+
+**"Accept the fact, reject the remedy" was applied three times in one round** — including once
+where the proposed rewrite was *more* editorial than the text it replaced, judged by the
+reviewer's own stated criterion. The observation and the repair are separate objects and are
+separately right or wrong.
+
+**Describe the corpus; do not narrate its repair.** Two vendors independently objected to a clause
+that located a qualification by where the exposition would later make it precise. The replacement
+states the qualification's **content** instead. This had been settled once before, at §26, on the
+same reasoning; two independent confirmations make it standing doctrine. A forward pointer is
+legitimate when it is anchored in content and illegitimate when it narrates the document.
+
+**Prefer the editing tool to a generated script for edits inside a line.** Every edit this round
+was made directly, which sidestepped the double-encoding trap entirely and — because each
+replacement lay wholly within one line — left every line ending untouched, so the Russian mirror's
+1:1 parity survived the round without repair work.
+
 ## How to review (discipline)
 
 - Review the **current** file, not a remembered one. Prefer a **word-diff against the

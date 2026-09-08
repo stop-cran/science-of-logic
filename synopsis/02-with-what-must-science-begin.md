@@ -12,7 +12,7 @@ This is harmless for a special science, whose office is precisely to develop the
 
 Hegel therefore asks the question in its most radical form: **with what must science begin?** The answer must satisfy two conditions at once.
 
-1. The beginning must be **immediate** — for if it were mediated, it would presuppose the very thing whose mediation it is, and would not be a beginning.
+1. The beginning must be **immediate** — it may not be derived from any prior determination of the science, for it would then presuppose what it is meant to begin. This bars mediation *within* the science; it does not make the beginning unmediated in every respect, as the standpoint from which it is taken will show.
 2. The beginning must be **without any further determination** — for any determination is already a content, brought in from outside.
 
 The beginning, in short, must be **pure**: pure immediacy, pure indeterminacy. Anything richer than this is borrowed; anything thinner is nothing at all.
@@ -25,7 +25,7 @@ What survives the demand for absolute purity? Only this: that there is *somethin
 
 Being is not a *thing*. It is not the totality of things, nor a highest being, nor an attribute. It is not even a concept in the ordinary sense, for a concept distinguishes its object from others, and Being is precisely the determination from which all distinction has been withdrawn. It is **pure indeterminate immediacy**.
 
-So conceived, Being has no content to display, no inner articulation to unfold, no neighbor against which to define itself. It is utterly empty. *To say of it anything at all — that it is here, that it is now, that it is one, that it is — is already to add to it.*
+So conceived, Being has no content to display, no inner articulation to unfold, no neighbor against which to define itself. It is utterly empty. *To say of it anything at all — that it is here, that it is now, that it is one — is already to add to it.*
 
 ## III. Nothing
 
@@ -49,7 +49,7 @@ So in three steps the *Logic* has given us:
 - Its **immanent self-negation** — the discovery, when we attend to it, that it is its own opposite (Nothing).
 - The **mediated unity** in which both are preserved as moments of a more concrete thought (Becoming).
 
-This is the **paradigm of the dialectical step**, in the introductory form in which the *Logic* first exhibits it. Its content grows richer as the system develops, and its form does not stay fixed — a qualification made precise once *Dasein* is reached.
+This is the **paradigm of the dialectical step**, in the introductory form in which the *Logic* first exhibits it. Its content grows richer as the system develops, and its form does not stay fixed: passage into an opposite is the shape of Being's sphere, not of every sphere.
 
 ## V. Determinate Being (*Dasein*)
 
@@ -73,7 +73,7 @@ This is the crucial reversal Hegel introduces into the very idea of method. Wher
 
 ## VII. Why the Beginning Is at Once a Beginning and a Result
 
-There is a final, characteristic Hegelian twist. The beginning — pure Being — looks like the most immediate, presuppositionless point one could find. And in one sense it is. But in another sense it is itself a **result**: it is the residue left when consciousness has stripped away every determinate content, every assumption, every claim about what is. To arrive at the standpoint from which one can let pure Being stand as the first thought is itself the work of the entire *Phenomenology of Spirit* — the labor by which natural consciousness is purified into pure thinking.
+The beginning itself remains to be accounted for. Pure Being looks like the most immediate, presuppositionless point one could find. And in one sense it is. But in another sense it is itself a **result**: the standpoint from which one can let pure Being stand as the first thought is won only by traversing every form in which consciousness sets itself over against its object, and exhausting them. That labor is the entire *Phenomenology of Spirit*, whose result is the concept of science itself — not a content stripped bare, but an opposition worked through.
 
 Hence the double character of the beginning: it is at once **the absolutely immediate** (taken in itself) and **the absolutely mediated** (taken with respect to the standpoint that has been won). In the system as a whole, the end will return to the beginning — the Absolute Idea will recognize itself as that with which we began — and only then will the beginning be fully *grounded*, retroactively, by the totality it has unfolded.
 
@@ -83,7 +83,7 @@ This is the second deep lesson for any account of scientific method: **a science
 
 Three consequences follow for the way the **categories** of a science are ordered and developed. They concern categorial form, not empirical content: the *Logic* supplies no facts, no laws, and no procedure for finding them, and each science must establish its own starting-point by its own means.
 
-**1. The categorial beginning of a science is its most abstract determination, not its most concrete.** A science of mechanics begins not with a concrete machine but with the bare concept of motion; a science of life not with a particular organism but with the abstract concept of self-maintenance; a science of economic life not with a market but with the commodity (as Marx will explicitly do, in conscious imitation of this opening). The order of *exposition* runs from the abstract to the concrete — which says nothing about the order in which the material was found.
+**1. A science may begin its exposition from its most abstract determination rather than its most concrete.** Mechanics can be set out from the bare concept of motion rather than from a concrete machine; a science of life from self-maintenance rather than from a particular organism; a science of economic life from the commodity rather than from the market — as Marx will explicitly do, in conscious imitation of this opening. The order of *exposition* runs from the abstract to the concrete — which says nothing about the order in which the material was found.
 
 **2. The categories of a science can develop through tensions in their own content, and not by accretion alone.** Where a successive category resolves a contradiction in the one before it, the sequence acquires an order that mere collection would not give it. This is a claim about how categories hang together, not a warrant for dispensing with empirical findings: no such development can be had without them.
 
