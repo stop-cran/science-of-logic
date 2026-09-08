@@ -45,9 +45,12 @@ DEFAULT_READ_TIMEOUT = 600.0
 MAX_TURNS = 60
 MAX_CONTRACT_RETRIES = 2
 # Governing docs handed to the reviewer as the rubric it must apply.
+# A repo that lacks one is fine: missing entries are skipped, so a doc that
+# exists only in the Russian mirror (the glossary) can be listed here safely.
 GOVERNING_DOCS = [
     "REVIEW.md",
     ".github/copilot-instructions.md",
+    "ГЛОССАРИЙ.md",
 ]
 ALLOWED_ROOT_FILES = frozenset({"README.md", *GOVERNING_DOCS})
 DEFAULT_CORPUS_DIR = "synopsis"
@@ -562,8 +565,12 @@ def resolve_endpoint(args) -> str:
 def build_system_prompt(repo: Repo) -> str:
     parts = [REVIEWER_ROLE, "\n\n===== GOVERNING DOCS =====\n"]
     for rel in GOVERNING_DOCS:
+        try:
+            body = repo.read_text(rel)
+        except (ValueError, OSError):
+            continue
         parts.append(f"\n----- {rel} -----\n")
-        parts.append(repo.read_text(rel))
+        parts.append(body)
     return "".join(parts)
 
 
