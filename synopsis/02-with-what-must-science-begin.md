@@ -55,7 +55,7 @@ This is the **paradigm of the dialectical step**. It will repeat itself, with ev
 
 Becoming, however, cannot be the final word either. To *become* is to pass over; but every actual passage settles into a result. Being-in-becoming, when its ceaseless oscillation comes to rest, is no longer pure Being or pure Nothing — it is a **determinate** being, a being-this-rather-than-that, a being with a *quality*. This is *Dasein*: being-there, being with a determination.
 
-With Dasein the *Logic* has won its first concrete category, and with it the entire sphere of quality opens — quality, limit, finitude, infinity, being-for-self — and beyond it quantity, measure, essence, and so on through the system. Each subsequent step has the same triadic shape: an immediate determination posits itself, generates its own opposite by its own internal demand, and is sublated in a richer determination that contains both as moments and points beyond itself in turn.
+With Dasein the *Logic* has won its first concrete category, and with it the entire sphere of quality opens — quality, limit, finitude, infinity, being-for-self — and beyond it quantity, measure, essence, and so on through the system. Within the sphere of Being each subsequent step has the same triadic shape: an immediate determination posits itself, generates its own opposite by its own internal demand, and is sublated in a richer determination that contains both as moments and points beyond itself in turn. The three moments hold throughout the *Logic*, but this particular shape — passage into an opposite — is Being's; in the Doctrine of the Concept the universal specifies itself without passing over into anything opposed to it (§27).
 
 ## VI. What This Teaches: The Structure of the Dialectical Step
 

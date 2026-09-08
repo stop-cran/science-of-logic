@@ -264,6 +264,28 @@ a single very long line, so the eye slides over it and `view` truncates it. **Gr
 its own text after every substantive change.** This is the third consecutive fix batch in which the
 countermeasure grep caught a live residue that re-reading had passed.
 
+Round 8 re-ran the panel on the repaired §03 and held the split an **eighth** time, with a **second
+falsified certification** — and this one falsified on a *verification claim* rather than a countable
+fact. The fast vendor's fidelity facet returned **zero findings at every severity** and certified
+that "every forward/backward claim about §04, §06, §26, §27 [was] verified against the supplied
+sibling text." The round's single Blocker was precisely a backward claim about §26. Round 7 showed a
+certification resting on a false premise about the file; round 8 shows one resting on a false report
+of work performed. The minority vendor raised the Blocker on all three facets independently — which
+is **within-vendor correlation, not three confirmations**, and was treated as one finding — and was
+**3-for-3** on every externally checkable claim it made.
+
+**A retrofit ripples in both directions, and the countermeasure grep must cover the whole deleted
+span.** The round-8 Blocker was manufactured by the round-7 repair. After rewriting §03's causality
+paragraph, the grep ran on the *formula that motivated the fix* ("each substance is at once cause
+and effect of every other") and cleared the corpus. It did not run on the other distinctive phrases
+in the same deleted span — and §26 was quoting two of them verbatim, so that §26 now made a checkably
+false statement about §03's text. Two rules follow. First: **when a fix deletes or rewrites a span,
+grep every distinctive phrase in the span, not only the one that motivated the fix** — a sibling may
+be quoting the part you did not think you were changing. Second: **the ripple runs both ways.** Ask
+not only what the edited file quotes, but *who quotes the edited file*; grep the corpus for the
+edited installment's own number and read every hit. Applying that rule in round 8 turned up a second
+live ripple in §01 that reading had missed. A sibling that cites you is a sibling you can break.
+
 **A fix can trade one imprecision for another, and the same paragraph can be right to flag
 twice.** §27's abstraction argument was flagged by the same vendor in two consecutive rounds for
 **opposite** reasons. Round 3 objected that "the product is itself a singular" equivocates on
