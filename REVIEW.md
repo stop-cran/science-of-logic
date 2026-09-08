@@ -595,6 +595,45 @@ alone — and note this makes a whole class of transliterated-parallel-array scr
 **`initial_wait` is a maximum, not a sleep.** The call returns as soon as the command finishes,
 so it cannot be used to pace polling. To actually wait, put `Start-Sleep` *inside* the command.
 
+### Round 14 — repairing the mirror, and what the repair itself revealed
+
+Round 13 diagnosed the Russian mirror as *wrong* rather than behind. Repairing it across §01,
+§02, §03, §06, §10, §25 and one essay confirmed the diagnosis at scale and taught four things
+the diagnosis could not.
+
+**The severe cases are not omissions but assertions of the corrected error.** In file after
+file the mirror did not merely fall short of the English — it published the very claim the
+English guardrail had been written to remove. §03:81 kept the textbook ladder «от гипотезы к
+**теории**, а от теории — к **закону**» against an English line that says in terms that
+theories do not mature into laws. §10:140 promised that «то же упражнение будет повторяться»
+against a line whose whole point is that the *form* of the movement does not repeat. §03:113
+declared «Диалектический образец безошибочен» where the English says the direction is not a
+law. **A stale mirror is not a weaker version of the current text; it is the refuted version,
+still in print.**
+
+**Never repair a flagged line by patching its reference.** The audit flags a missing §NN, and
+the temptation is to add the pointer. In every case examined the missing pointer was a symptom:
+the line was the previous *generation*, and the guardrail it lacked was the reason the pointer
+existed. Read the pair; re-translate the line.
+
+**Repair raises the file's own baseline and exposes more.** §03's median ratio rose 0.91 → 0.97
+once its truncations were fixed, and two further defects (:81, :101) surfaced that had been
+hiding *below* the median a corrupted file had itself depressed. **A median computed over
+damaged text understates the damage. Re-run the audit after every repair pass and expect new
+findings — the first pass is a lower bound, not an inventory.**
+
+**Check formatting before content when line counts diverge.** The one essay whose line count
+disagreed (108 vs 112) had no missing content at all: its Russian numbered list was
+blank-line-separated where the English is tight. Four blank lines, not four lost sentences.
+
+Two classes remain invisible to both audits and must be swept by grep: the legacy
+«конспект NN» / `synopsis NN` citation form, which matches no `§NN` pattern and barely moves
+the ratio; and additions the mirror makes on its own, which inflate the ratio in the *safe*
+direction. Every "mirror longer" outlier this round proved benign Russian expansion — but the
+one real defect among them was an inserted fourth clause in an emphatic triad, which no audit
+would ever have ranked as urgent.
+
+
 
 
 - Review the **current** file, not a remembered one. Prefer a **word-diff against the
