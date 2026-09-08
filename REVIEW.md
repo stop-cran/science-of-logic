@@ -672,6 +672,43 @@ would ever have ranked as urgent.
 - Tier every finding by severity; mark each a **fix** or a **hold (rationale)**.
 - You are **review-only**: report; the author edits.
 
+### The Russian panel — §27, four rounds, and what a translation facet actually catches
+
+The first corpus-wide Russian review ran four rounds over the same installment and produced
+6, 10, 7 and 6 accepted fixes. **Fix counts do not decay; the *kind* of finding does.** By round
+4, three of the five rejections were re-raisings of items already adjudicated with a written
+warrant in round 3 — that, and not a falling count, is the signal to stop. Answer a re-raising
+by citing the earlier ruling; a repeat without new evidence does not overturn a considered hold.
+
+**Grep before acting on any finding — it cuts both ways.** It confirmed a real governing canon
+the reviewer alleged was violated; it confirmed a guardrail formula the reviewer said was
+mangled; and it *rejected half* of two otherwise-valid findings, because the noun the reviewer
+wanted replaced was the corpus's settled rendering. Accepting those remedies whole would have
+broken a canon in the course of fixing a calque. Take the diagnosis, verify the remedy separately.
+
+**Whenever an installment recaps an earlier one, grep that installment for the recapped phrase.**
+This produced a defect class of its own: the same Hegel quotation rendered two ways in two
+installments, and a two-part procedure named with a different second term than where it was
+established. Neither is visible from the English side or from any mechanical gate.
+
+**Reviewers prescribe fixes that are already in the file.** One vendor did this twice in a single
+round, and in the same round asked for Russian content that is not in the English at all — a
+mirror-breaking request. That vendor has now fabricated in two consecutive rounds on the
+translation facet while remaining honest on style; facet-level trust is not vendor-level trust.
+
+**Recurring Russian calque classes**, worth re-checking after every translation: "share" →
+«разделять» (want «общий»); "account" as a discourse formula → «отчёт» (want «представление» —
+though the idiomatic «дать отчёт о» is legitimate and must not be purged with it); "live case" →
+«живой случай»; "gloss" → «глянцевая отделка»; "answered" transferred to the thing answered
+*about*; «принципиальный» for "principled". Watch the homograph «уже» (already / narrower) at
+clause head. And a translation facet catches what no style facet will: a genuine orthographic
+error, and a lowercase English "ones" that was a deliberate return to a capitalized category
+named two sentences earlier.
+
+**A reviewer may be right that the Russian reads badly and still be wrong to change it**, when
+the English reads the same way by design — a doubled "precise/exactly", a twice-repeated verb.
+Check the English before repairing the Russian; the mirror, not Russian euphony, governs.
+
 ## 1 — Mechanical gates (must be green)
 
 Run from the repo root:
