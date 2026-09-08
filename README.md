@@ -8,7 +8,7 @@ A synopsis of G. W. F. Hegel's philosophy with primary attention to his method o
 
 2. **[With What Must Science Begin?](synopsis/02-with-what-must-science-begin.md)** — The immanent opening of the *Logic* (Being, Nothing, Becoming, Dasein) as the paradigm of the dialectical step; *Aufhebung*; consequences for scientific method.
 
-3. **[Understanding and Reason](synopsis/03-understanding-and-reason.md)** — The three sides of the logical (*Verstand*, *Dialektik*, *Spekulation*); dialectical reconstruction of induction, hypothesis, experiment, and mathematical formalism; the history of physics as a dialectical sequence.
+3. **[Understanding and Reason](synopsis/03-understanding-and-reason.md)** — The three sides of the logical (*Verstand*, *Dialektik*, *Spekulation*); dialectical reconstruction of induction, hypothesis, experiment, and mathematical formalism; the history of physics read as a dialectical sequence, and the limits of that reading.
 
 4. **[From Method to System](synopsis/04-from-method-to-system.md)** — The architectonic of the *Encyclopaedia* (Logic, Nature, Spirit); the circle of circles; the resolution of the One and the Many; the relation of philosophy to the special sciences.
 

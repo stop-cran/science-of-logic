@@ -227,6 +227,36 @@ advance in the empirical sciences", and "every successful scientific theory". §
 been amended by this installment on a different point, which is precisely why the residue survived:
 **a sibling corrected once reads as a sibling checked.** It is not.
 
+Round 7 turned the panel on **§03 itself** — a file amended twice by later installments but never
+reviewed on its own — and held the split a **seventh** time, with the first *falsification* of a
+certifying verdict. The fast vendor returned *publishable* on both facets; its fidelity pass
+reported **zero findings** on the stated premise that the target contains "no direct quotations with
+quotation marks present," so that the quotation-integrity check was "vacuously clean." §03 contained
+four quoted spans. The premise was checkable and false, and the same vendor affirmatively certified
+as "explicitly presented… the guardrails are in place" the very line that proved to be the round's
+worst error: "this is precisely the sequence Hegel reconstructs in the Philosophy of Nature," where
+the *Philosophy of Nature* proceeds **Mechanics–Physics–Organics** (§04), **mechanism–chemism–
+teleology** is *logical* Objectivity (§27), and §03's own list was a third triad. The minority
+vendor returned 3 Blockers, 5 Highs, 2 Mediums; **every one verified against the text, and none was
+wrong.** Where earlier rounds showed a certification to be *unreliable*, this one shows one resting
+on a false statement of fact about the file. That is the end of the argument for vote-counting.
+
+**A narrowing retrofit must be checked against the whole file, not the lines it edited.** Round 6
+carried §27's guardrail back into §03 at four lines. Round 7 found the retrofit *defeated three
+lines away*: surviving universals — "every actual act of cognition," "the advance of any science,"
+"precisely the sequence," "has had to learn the hard way" — simply overrode it. A disclaimer
+standing beside an unrestricted assertion does not neutralize it. **Prefer cutting the universal to
+adding another qualifier**, and after a narrowing pass grep the file for the quantifiers themselves,
+not only for the deleted formulation.
+
+**An early installment is the corpus's weakest point, and the panel has never seen it.** §03 was
+written before §16, §17, §26 and §27 existed; each of those later fixed a result §03 had stated
+loosely, and §03 kept the loose statement. Its three Blockers were all of this kind — a calculus
+claim superseded by §16/§17, a move "beyond reciprocity" that §26 explicitly calls an empty mode of
+representing, and a Nature-sequence attribution §04 and §27 jointly refute. **Schedule a regression
+round on the early installments as the later ones land**; being cited by a newer file is not being
+checked against it.
+
 **The abstract is a propagation site, and it is the one that gets missed.** The scope fix touched
 five places; four were found by reading, and the fifth — the installment's own opening abstract —
 only by the mandatory grep for the deleted formulation. The abstract restates the whole argument in
