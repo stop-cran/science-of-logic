@@ -44,7 +44,7 @@ The three moments — universal, particular, singular — are not three separate
 
 ### Judgment: the concept put under tension
 
-A concept, taken simply, holds its three moments in unity. **Judgment** (*Urteil*, which Hegel famously hears as *Ur-teil*, "original division") is the concept dividing itself into its moments and asserting the unity across the division. Every judgment has the form *S is P* — singular as subject, universal as predicate, copula asserting their identity-in-difference. The act of judging is the concept self-consciously holding itself together across its own division.
+A concept, taken simply, holds its three moments in unity. **Judgment** (*Urteil*, which Hegel famously hears as *Ur-Teil*, "original division") is the concept dividing itself into its moments and asserting the unity across the division. Every judgment has the form *S is P* — singular as subject, universal as predicate, copula asserting their identity-in-difference. The act of judging is the concept self-consciously holding itself together across its own division.
 
 Hegel's progression of judgments is one of the densest and most rewarding stretches of the Logic. It runs through four kinds, each recovering and overcoming the limitations of its predecessor:
 

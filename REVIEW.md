@@ -132,14 +132,23 @@ shipped. **Coverage would not have caught this; only overlap could.**
 **A narrow facet can be weaker than a generalist at its own facet.** The quotation verifier
 returned 52 of 54 spans verified and one genuine alteration. The generalist, not assigned to
 quotations at all, found four further quotation defects the facet had passed: a dropped
-parenthetical inside a quoted sentence, two German glosses placed inside quotation marks that
-Miller sets in square brackets, and one German gloss inside quotation marks that **is not in
-Miller at all**. The cause is instructive — the facet checked whether the *words* were Hegel's and
+parenthetical inside a quoted sentence, and three German glosses placed inside quotation marks,
+one of them a word **not in Miller at all**. The cause is instructive — the facet checked whether
+the *words* were Hegel's and
 stopped there, while the generalist also checked the punctuation, the brackets, and the silent
 elisions. Widen the quotation verifier's brief accordingly: **a quotation is altered if anything
 inside the quotation marks is not in the source, including brackets, commas, and glosses, and if
 anything is dropped from the middle without an ellipsis.** This does not weaken the case for
 facets; it shows a facet is only as good as the definition of its facet.
+
+**Two settled conventions, so that reviewers stop spending findings on them.** First, **bold inside
+a quotation is the synopsis's own emphasis.** It is applied throughout the corpus to mark the
+load-bearing words of a cited passage, it is deliberate and uniform, and it makes no claim about
+emphasis in the source. It is not an alteration and should not be reported as one. Second, and
+conversely, **a German gloss belongs outside the quotation marks**, in the synopsis's own voice and
+in parentheses — `the **soul** (*Seele*)`, not `"the **soul** [*Seele*]"`. The glosses are ours, not
+the translator's; inside the quotation marks they are an alteration, and square brackets falsely
+imply the translator supplied them.
 
 **Check a facet's scope before believing its negative.** The verifier's single NOT FOUND was an
 artifact of the page range *the prompt* assigned it: the quoted phrase is verbatim Miller, on a
@@ -171,6 +180,102 @@ judgmental** — after applying a fix batch, grep the whole file for every formu
 or reversed, and re-read each amended paragraph **to its last sentence**, which is where a reversed
 verdict characteristically survives. No gate in `tools/` catches any of this, and no parallel reviewer
 can: the defects did not exist when they read. Budget for this pass; it is not a formality.
+
+### The §27 regression rounds — five further results
+
+**Vendor verdicts split, and the minority vendor was right every time.** Round 1: one vendor
+returned *not publishable* with two Blockers while two others certified the file clean; every
+Blocker held. Round 2, over the amended file, reproduced the split **exactly** — the two
+certifying vendors again returned "publishable, no Blockers" on *both* their facets, while the
+minority vendor returned "not yet publishable" on both, and all four of its findings were then
+verified true against the sibling installments and applied. Round 3 reproduced it a **third**
+time: the fast vendor certified "publishable, no Blockers" and its sole Medium asked for
+something the paragraph's last sentence already contained, while the minority vendor returned
+2 High and 2 Medium — every one of which was verified true and applied. Round 4 reproduced it a
+**fourth** time, and more sharply: the fast vendor's generalist facet returned **no findings at
+any severity**, while the minority vendor returned 2 High and 1 Medium on the generalist facet
+and 2 Medium and 2 Low on style — all seven verified true and applied, and the Medium (a
+cross-reference pointing at §VII for a result used only in §VIII) provably so. **Do not vote-count
+across vendors.** A majority certification is not evidence; adjudicate every finding against the
+siblings and the primary source. The fast, cheap vendor has now four times certified a file
+containing real defects, and twice returned findings the text already satisfied.
+
+Round 5 reproduced the split a **fifth** time, with the same polarity: the fast vendor certified
+*publishable* on both facets, its generalist again returning **no findings at any severity**, while
+the minority vendor returned *not yet publishable* on both. Its leading finding is the sharpest
+evidence yet for the rule below. The round-4 fix had rewritten the abstraction argument at `:97` to
+locate the defeat in **what abstraction keeps**, expressly denying that the omitted differences
+survive — but five paragraphs earlier `:65` still said the abstract universal has content "only by
+borrowing it back from what it stripped," which is that denied reading verbatim. The fix had
+contradicted a passage it did not touch. That passage *had* been checked against the rewrite in the
+same session and cleared as consistent; the author's own re-reading missed it, and only the next
+round's outside eye caught it. **An author cannot certify his own fix batch, and neither can the
+vendor that has already passed the file.**
+
+Round 6 held the split a **sixth** time and closed the argument. The fast vendor returned
+*publishable* on both facets with its fidelity pass reporting **zero findings**, and its three
+generalist findings all failed on inspection — one of them proposing a "tighter" citation that
+would have relocated *Macht* to a transition later than the one where §26 actually establishes it,
+i.e. a correction that would have **introduced** the error it claimed to prevent. The minority
+vendor, meanwhile, returned three Mediums that every one verified, two of them in the dominant
+class: an **opponent-scope overreach** — the chapter arguing against "the tradition" where its own
+coda, its README entry and §09 all name the narrower *school logic*, so that Aristotle and the
+scholastics were being charged with the empiricists' doctrine — and a **retrofit ripple** in which
+§27's new guardrail ("neither uniform nor ever quite finished", "the Logic does not certify any
+such transition") contradicted §03's surviving "the historical pattern is **invariant**", "every
+advance in the empirical sciences", and "every successful scientific theory". §03 had *already*
+been amended by this installment on a different point, which is precisely why the residue survived:
+**a sibling corrected once reads as a sibling checked.** It is not.
+
+**The abstract is a propagation site, and it is the one that gets missed.** The scope fix touched
+five places; four were found by reading, and the fifth — the installment's own opening abstract —
+only by the mandatory grep for the deleted formulation. The abstract restates the whole argument in
+a single very long line, so the eye slides over it and `view` truncates it. **Grep it explicitly by
+its own text after every substantive change.** This is the third consecutive fix batch in which the
+countermeasure grep caught a live residue that re-reading had passed.
+
+**A fix can trade one imprecision for another, and the same paragraph can be right to flag
+twice.** §27's abstraction argument was flagged by the same vendor in two consecutive rounds for
+**opposite** reasons. Round 3 objected that "the product is itself a singular" equivocates on
+type and token; the rewrite that removed the equivocation produced "carries over the very content
+the operation set out to strip," which round 4 objected to as a straw man — retaining the common
+content is precisely what abstraction *intends*. The correct formulation was a **third** thing,
+neither of the two errors: what abstraction retains is itself one determinate content among
+others, so universality is reached only *in* individual content. **A fix batch is not
+self-certifying.** When a fix rewrites an argument rather than correcting a reference, the
+rewrite is new text and earns a fresh pass. Re-review after substantive rewrites, and do not
+treat a paragraph as settled merely because it was amended in response to a verified finding.
+
+**A reviewer's line citation can be wrong while its finding is right.** Round 3's first High
+cited a sibling at lines that are blank. The substance was nonetheless correct, and was
+confirmed by grep against the sibling's headings. **Verify the claim, not the coordinates** —
+and do not dismiss a finding because its pointer misses.
+
+**A requested facet can fail silently.** Round 3's launcher requested two facets from the
+minority vendor; only one report appeared at first, with a zero-byte stderr log — the second
+arrived late. Check for *missing outputs*, not only for errors, and re-check before concluding
+a facet failed.
+
+**A facet's certification is not evidence of absence.** Round 1's second Blocker — a quotation
+headed "Second, to §25" whose backward link was in fact **§26** — was returned by the **style**
+facet, and missed by *both* dedicated fidelity facets, one of which had explicitly "verified" the
+attribution as correct. Facets of one model are correlated (one finding appeared in three of four
+facets from the same vendor), so **multiple facets are not a substitute for a second vendor**, and
+a non-fidelity facet must be kept in every round.
+
+**The dominant defect class is cross-sibling contradiction, not local error.** Every round-2
+finding had the same shape: a claim in the new installment contradicted by a sibling's committed
+text — "at no point importing an external standard" against §25's recorded limit that *the repair
+is the critic's*; "without announcing it" against §23 and §24, which name immanent critique
+outright; a placement in §06 in tension with what §27 reports Hegel saying about a **calculus**.
+Local prose is comparatively safe; **the sentences that assert what the corpus elsewhere does are
+the ones to audit**, and the fix belongs wherever the contradiction is — three of these were
+repaired by amending the *sibling*, not the new file.
+
+**Check the round log before acting on a re-flagged finding.** Two round-1 findings had already
+been adjudicated in an earlier round and recorded above; reviewers see the rubric, not the
+adjudication history, and will raise them again. Read this file's round log first — otherwise a
+settled ruling is silently reversed by the next round's "fix".
 
 ## How to review (discipline)
 

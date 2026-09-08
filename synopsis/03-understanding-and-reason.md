@@ -16,7 +16,7 @@ Hegel accepts the distinction but transforms its meaning. Understanding and Reas
 
 These are **not three separate operations** performed by three different faculties on three different occasions; they are the three constitutive moments of any genuine act of thinking. Every concept, when thought through, displays all three: it is first held fast as itself, then shows itself to demand its opposite, then is grasped together with its opposite in a higher unity. To stop at the first moment is to give us *abstract* understanding; to stop at the second is *skepticism*; to traverse all three is *speculative cognition*.
 
-This trinity is the architecture of every dialectical step we examined in synopsis 02 — and it is the architecture, equally, of every advance in the empirical sciences, whether or not the practitioners are aware of it.
+This trinity is the architecture of every dialectical step we examined in synopsis 02 — and it is legible, equally, in the advances of the empirical sciences, whether or not the practitioners are aware of it. What is claimed is a structural kinship, not that every advance conforms to it.
 
 ## II. The Indispensable Achievement of the Understanding
 
@@ -32,7 +32,7 @@ The Understanding's accomplishments are the very substance of civilization:
 
 Hegel goes further: he says the Understanding's power of holding determinations fixed and apart is **the most astonishing and absolute power** there is — for it is the power by which thought arrests the flow of intuition and lifts a determination into the universality of the concept. Without this arrest, there is nothing to think about and nothing to think with. The whole edifice of mathematical natural science — Galileo, Newton, Lavoisier, Maxwell, Mendel — is the work of the Understanding operating with magnificent rigor on its proper terrain.
 
-The dialectical critique of the Understanding is not a critique of its work, but of its **finality**. The Understanding becomes pernicious only when it forgets that its determinations are *finite* — when it absolutizes them, treats its abstractions as the last word, and refuses the further moments of dialectic and speculation. Then it becomes what Hegel calls *abstract* or *one-sided* understanding, the dogmatic counterpart of the very metaphysics it imagines itself to have left behind.
+The dialectical critique of the Understanding is not a critique of its work, but of its **finality**. The Understanding becomes pernicious only when it forgets that its determinations are *finite* — when it absolutizes them, treats its abstractions as the last word, and refuses the further moments of dialectic and speculation. Then it becomes what Hegel calls *abstract* or *one-sided* understanding, the dogmatic counterpart of the very metaphysics it imagines itself to have left behind. One qualification is owed to the primary text and is entered here from §27: in the Doctrine of the Concept Hegel insists on the **infinite force of the understanding** in splitting the concrete, and assigns the *fixity* of its determinations to a **subjective impotence of reason** rather than to the understanding's own work. The finality criticized above is therefore better read as reason failing to carry the determinations further than as the understanding overreaching.
 
 ## III. The Negative-Rational (Dialectical) Moment
 
@@ -88,7 +88,7 @@ Experiment is the moment of **practical mediation**: the question put to nature 
 
 Speculatively, experiment is the recognition that the Understanding's distinctions must be **realized in the matter** before they can be confirmed in thought. To separate cause from concomitant, the experimenter physically separates them. To distinguish electric from magnetic effects, the experimenter physically isolates them. The laboratory is the place where the categories of the Understanding are forced upon nature and nature is forced to respond in their terms.
 
-But experiment is also the place where the dialectical moment first appears in empirical clothing. The historical pattern is invariant: a successful experimental program isolates a determination, gives it sharp definition, generates a body of laws — and then, at its boundaries, runs into anomalies that the very precision of the program brings to light. (Mercury's perihelion. The photoelectric effect. The negative result of Michelson–Morley.) These anomalies are not failures of experiment; they are experiment's dialectical fruit — the points at which the finite determination shows itself to be finite, and the call for a more concrete category becomes audible.
+But experiment is also the place where the dialectical moment first appears in empirical clothing. The historical pattern is a recurrent one, though neither uniform nor exceptionless: a successful experimental program isolates a determination, gives it sharp definition, generates a body of laws — and then, at its boundaries, runs into anomalies that the very precision of the program brings to light. (Mercury's perihelion. The photoelectric effect. The negative result of Michelson–Morley.) These anomalies are not failures of experiment; they are experiment's dialectical fruit — the points at which the finite determination shows itself to be finite, and the call for a more concrete category becomes audible.
 
 ### 4. Mathematical Formalism
 
@@ -120,7 +120,7 @@ This is precisely the sequence Hegel reconstructs in the Philosophy of Nature �
 | Dialectical (*Dialektisch*) | Negative reason | Exhibits the immanent self-cancellation of finite determinations | Yield a positive result; risks ending in skepticism |
 | Speculative (*Spekulativ*) | Positive reason | Grasps the unity of opposed determinations as moments of a more concrete whole | Operate without the prior labor of the Understanding |
 
-These are not optional moments. Every actual act of cognition — every successful scientific theory, every genuine philosophical insight — passes through all three, whether explicitly or tacitly. Hegel's claim is not that scientists ought to start using a new method; it is that the method by which science actually advances is dialectical, and that bringing this to consciousness is what philosophy contributes to science.
+These are not optional moments. Every actual act of cognition passes through all three, whether explicitly or tacitly — and where a scientific theory or a philosophical insight genuinely advances, the same three moments can be exhibited at work, though the Logic certifies no particular case and predicts none. Hegel's claim is not that scientists ought to start using a new method; it is that the method by which science actually advances is dialectical, and that bringing this to consciousness is what philosophy contributes to science.
 
 ## VIII. The Place Won
 
