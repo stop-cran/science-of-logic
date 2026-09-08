@@ -100,8 +100,14 @@ class RepoBoundaryTests(unittest.TestCase):
             )
 
     def test_target_must_be_a_synopsis_markdown_file(self):
-        with self.assertRaisesRegex(ValueError, "synopsis Markdown"):
-            review.validate_synopsis_files(["README.md"], "--target")
+        with self.assertRaisesRegex(ValueError, r"synopsis/\*\.md"):
+            review.validate_corpus_files(["README.md"], "--target", "synopsis/")
+
+    def test_corpus_files_are_validated_against_the_configured_corpus_dir(self):
+        """A Russian run must reject English paths, and vice versa."""
+        review.validate_corpus_files(["конспект/26-x.md"], "--target", "конспект/")
+        with self.assertRaisesRegex(ValueError, r"конспект/\*\.md"):
+            review.validate_corpus_files(["synopsis/26-x.md"], "--target", "конспект/")
 
 
 class ReviewContractTests(unittest.TestCase):
@@ -186,6 +192,8 @@ Settled.
 
     def test_contract_retries_are_bounded_and_preserve_last_draft(self):
         class FakeRepo:
+            corpus_dir = "synopsis"
+
             def reset_gate_status(self):
                 self.gate_attempted = False
                 self.gate_exit_code = None
@@ -201,7 +209,7 @@ Settled.
                     "model",
                     "https://example",
                     "api-version",
-                    "token",
+                    lambda: "token",
                     "system",
                     "user",
                     FakeRepo(),
@@ -216,6 +224,52 @@ Settled.
             "missing or out-of-order section 1. Verdict",
             raised.exception.contract_errors,
         )
+
+    def test_authorization_header_is_refreshed_on_every_turn(self):
+        """A DeepSeek run once took 42 minutes and died on HTTP 401: the token it was
+        handed at startup had expired mid-review. The header must be re-read per turn."""
+
+        class FakeRepo:
+            corpus_dir = "synopsis"
+
+            def reset_gate_status(self):
+                self.gate_attempted = False
+                self.gate_exit_code = None
+                self.gate_error = None
+
+        issued = []
+
+        def token_provider():
+            issued.append(None)
+            return f"token-{len(issued)}"
+
+        responses = [
+            {"choices": [{"message": {"content": "first draft"}, "finish_reason": "stop"}]},
+            {"choices": [{"message": {"content": "last draft"}, "finish_reason": "stop"}]},
+        ]
+        sent = []
+
+        def capture(url, headers, payload, read_timeout, **kwargs):
+            sent.append(headers["Authorization"])
+            return responses[len(sent) - 1]
+
+        with patch("review._post_with_retry", side_effect=capture):
+            with self.assertRaises(review.ReviewFailure):
+                review.review_one(
+                    "model",
+                    "https://example",
+                    "api-version",
+                    token_provider,
+                    "system",
+                    "user",
+                    FakeRepo(),
+                    0.2,
+                    10,
+                    10,
+                    1,
+                    False,
+                )
+        self.assertEqual(sent, ["Bearer token-2", "Bearer token-3"])
 
     def test_retry_handles_read_timeout(self):
         response = unittest.mock.Mock()
@@ -240,8 +294,7 @@ Settled.
 
     def test_failure_output_uses_diagnostic_suffix(self):
         path = review._review_output_path(
-            Path("C:/repo"),
-            "out",
+            Path("C:/repo/out"),
             "synopsis/25-test.md",
             "DeepSeek/V4 Pro",
             failed=True,
@@ -250,8 +303,7 @@ Settled.
 
     def test_facet_appears_in_output_path(self):
         path = review._review_output_path(
-            Path("C:/repo"),
-            "out",
+            Path("C:/repo/out"),
             "synopsis/25-test.md",
             "grok-4.3",
             facet="fidelity",

@@ -1,5 +1,8 @@
 # Review outputs — never commit generated reviews.
+# The skill directs runs at per-round directories (out-r10/, out-ru26-r2/, ...),
+# so match the whole family, not just the bare default.
 out/
+out-*/
 
 # Python
 __pycache__/

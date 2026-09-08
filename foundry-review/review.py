@@ -34,6 +34,7 @@ import re
 import subprocess
 import sys
 import time
+from collections.abc import Callable
 from pathlib import Path, PurePosixPath
 
 import requests
@@ -455,11 +456,14 @@ class Repo:
             r = subprocess.run(
                 ["npx", "-y", "-p", "markdown-it@14", "node", "tools/check-synopsis.js"],
                 cwd=self.root, capture_output=True, text=True, timeout=300, shell=(os.name == "nt"),
+                encoding="utf-8", errors="replace",
             )
             self.gate_exit_code = r.returncode
-            output = (r.stdout + r.stderr).strip() or "(no output)"
+            output = ((r.stdout or "") + (r.stderr or "")).strip() or "(no output)"
             return f"{output}\n(exit {r.returncode})"
-        except (OSError, subprocess.SubprocessError) as e:
+        except Exception as e:
+            # A gate crash must be reported back to the reviewer as a tool result;
+            # letting it escape aborts an otherwise complete review.
             self.gate_error = str(e)
             return f"ERROR running gate: {e}\n(exit unavailable)"
 
@@ -641,11 +645,12 @@ def _number_lines(text: str) -> str:
     return "\n".join(f"{i:>{width}}  {line}" for i, line in enumerate(rows, 1))
 
 
-def review_one(model: str, base: str, api_version: str, token: str,
+def review_one(model: str, base: str, api_version: str, token_provider: Callable[[], str],
                system_prompt: str, first_user: str, repo: Repo,
                temperature: float, read_timeout: float, max_turns: int,
                max_contract_retries: int, verbose: bool) -> str:
     url = f"{base}/models/chat/completions?api-version={api_version}"
+    token = token_provider()
     headers = {"Authorization": f"Bearer {token}", "Content-Type": "application/json"}
     messages = [
         {"role": "system", "content": system_prompt},
@@ -665,6 +670,9 @@ def review_one(model: str, base: str, api_version: str, token: str,
             "temperature": temperature,
             **payload_extras(model),
         }
+        # A slow deployment can outlive the token that started the run, so re-read it
+        # every turn; the credential caches and only re-authenticates near expiry.
+        headers["Authorization"] = "Bearer " + token_provider()
         resp = _post_with_retry(url, headers, payload, read_timeout)
         choice = resp["choices"][0]
         msg = choice["message"]
@@ -776,8 +784,7 @@ def _configure_utf8_stdio() -> None:
 
 
 def _review_output_path(
-    repo_root: Path,
-    out_dir: str,
+    out_base: Path,
     target: str,
     model: str,
     *,
@@ -791,7 +798,7 @@ def _review_output_path(
         safe_facet = re.sub(r"[^A-Za-z0-9._-]+", "-", facet).strip("-")
         if safe_facet:
             facet_part = f"--{safe_facet}"
-    return repo_root / out_dir / f"{Path(target).stem}--{safe_model}{facet_part}{suffix}"
+    return out_base / f"{Path(target).stem}--{safe_model}{facet_part}{suffix}"
 
 
 def expand_required_files(repo: Repo, patterns: list[str], label: str) -> list[str]:
@@ -921,11 +928,15 @@ def main() -> None:
     except (OSError, ValueError) as e:
         ap.error(f"cannot load governing documents: {e}")
     base = resolve_endpoint(args)
-    token = AzureCliCredential(process_timeout=30).get_token(AAD_SCOPE).token
+    credential = AzureCliCredential(process_timeout=30)
+    credential.get_token(AAD_SCOPE)
     verbose = not args.quiet
 
-    if args.out_dir:
-        Path(repo_root / args.out_dir).mkdir(parents=True, exist_ok=True)
+    # Resolved against the working directory, not --repo: a review of the Russian mirror
+    # is launched from this repo and must not write its reports into the mirror.
+    out_base = Path(args.out_dir).expanduser().resolve() if args.out_dir else None
+    if out_base:
+        out_base.mkdir(parents=True, exist_ok=True)
 
     failures = 0
     for facet in facets:
@@ -936,7 +947,9 @@ def main() -> None:
             print(f"\n{'=' * 78}\n== REVIEW — {label} — target {target}\n{'=' * 78}", flush=True)
             t0 = time.time()
             try:
-                review = review_one(model, base, args.api_version, token, system_prompt,
+                review = review_one(model, base, args.api_version,
+                                     lambda: credential.get_token(AAD_SCOPE).token,
+                                     system_prompt,
                                      first_user, repo, args.temperature, args.read_timeout,
                                      args.max_turns, args.contract_retries, verbose)
             except ReviewFailure as e:
@@ -947,10 +960,9 @@ def main() -> None:
                     diagnostic += "\n\nCONTRACT ERRORS\n- " + "\n- ".join(e.contract_errors)
                 if e.rejected_review is not None:
                     diagnostic += "\n\nLAST REJECTED DRAFT\n\n" + e.rejected_review
-                if args.out_dir:
+                if out_base:
                     failure_path = _review_output_path(
-                        repo_root,
-                        args.out_dir,
+                        out_base,
                         target,
                         model,
                         failed=True,
@@ -960,9 +972,9 @@ def main() -> None:
                 print(failure, file=sys.stderr, flush=True)
                 print(f"\n-- {label}: {time.time() - t0:.0f}s --", file=sys.stderr, flush=True)
                 continue
-            if args.out_dir:
+            if out_base:
                 output_path = _review_output_path(
-                    repo_root, args.out_dir, target, model, facet=facet
+                    out_base, target, model, facet=facet
                 )
                 output_path.write_text(review, encoding="utf-8")
             print(review, flush=True)

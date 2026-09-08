@@ -16,7 +16,8 @@ Foundry-served chat model as a **`synopsis-reviewer-*` critic** over one install
 exists to add review vendors the **GitHub Copilot CLI can't route to** — `grok-4.3` (xAI),
 `DeepSeek-V4-Pro`, etc. — so the two-vendor loop in `REVIEW.md` can be widened to three or
 four genuinely different models. The model is handed the project's governing docs
-(`REVIEW.md` + `.github/copilot-instructions.md`) and a small,
+(`REVIEW.md` + `.github/copilot-instructions.md`, plus `ГЛОССАРИЙ.md` in the Russian
+mirror) and a small,
 **review-corpus-sandboxed** toolset — `read_file`, `grep`, `list_dir`, `run_gate` — the same
 moves a human reviewer makes, then returns a review in `REVIEW.md`'s output format.
 
@@ -27,8 +28,9 @@ moves a human reviewer makes, then returns a review in `REVIEW.md`'s output form
   Apply fixes in a separate authoring session, per the project workflow (the same review →
   apply-with-judgment → commit loop as the in-CLI reviewers).
 - The tools are **read-only and review-corpus-confined**. The model may read only
-  `synopsis/**/*.md`, `README.md`, `REVIEW.md`, and
-  `.github/copilot-instructions.md`; `.git/`, unrelated worktree files, parent paths,
+  the corpus directory (`synopsis/**/*.md`, or `конспект/**/*.md` under `--corpus-dir`),
+  `README.md`, `REVIEW.md`, `.github/copilot-instructions.md`, and `ГЛОССАРИЙ.md`;
+  `.git/`, unrelated worktree files, parent paths,
   absolute paths, and symlink escapes are rejected. The only execution tool is `run_gate`,
   which runs the existing mechanical checker.
 - **Data boundary:** anything matching the allowlist is sent to the selected model even if
@@ -160,7 +162,7 @@ file; otherwise the command exits before authentication or paid model use.
 ### Facets — narrowing one reviewer's brief
 
 `--facet` is repeatable and crosses with `--model`, so `--model A --model B --facet fidelity
---facet style` runs four reviews. Four briefs exist:
+--facet style` runs four reviews. Five briefs exist:
 
 | Facet | Brief |
 | --- | --- |
@@ -168,6 +170,7 @@ file; otherwise the command exits before authentication or paid model use.
 | `fidelity` | Is the transition Hegel's or the author's; quotation integrity; systematic order; retrofit ripple; over- *and* under-claiming |
 | `readability` | Where a contemporary reader loses the thread. Constrained: may propose only additions and reorderings, never simplification |
 | `style` | Hedge accretion, dead verbs, cliché, rhythm, register breaks, corpus voice |
+| `translation` | Russian mirror against its English original: doctrinal drift, dropped emphasis, the one-word-for-two trap, canon terminology, quotation handling. Requires `--source-file` |
 
 `generalist` is deliberately empty because `REVIEW.md` requires at least two reviewers on
 **byte-identical whole-file prompts**: the productive event is adjudicable disagreement
@@ -188,10 +191,12 @@ exposition goes. `style` is told to propose making the prose *better*, not *easi
 | `--target` | Exactly one existing `synopsis/**/*.md` file; glob allowed |
 | `--context` | Existing `synopsis/**/*.md` siblings; every supplied glob must match |
 | `--model` | Foundry deployment name; repeatable |
-| `--facet` | Reviewer brief: `generalist` (default, no brief), `fidelity`, `readability`, `style`; repeatable, crosses with `--model` |
+| `--facet` | Reviewer brief: `generalist` (default, no brief), `fidelity`, `readability`, `style`, `translation`; repeatable, crosses with `--model` |
 | `--resource` / `SOL_FOUNDRY_RESOURCE` | Foundry custom-domain resource name |
 | `--endpoint` / `SOL_FOUNDRY_ENDPOINT` | Full endpoint; overrides the resource name |
 | `--repo` | Alternate repository root containing the same English corpus layout |
+| `--corpus-dir` | Top-level corpus directory and sandbox boundary (default `synopsis`; `конспект` for the Russian mirror) |
+| `--source-file` | Path *outside* the repo, embedded verbatim in the first user message as the source of truth — hands the English original to a review of its Russian mirror. Read once at launch; the model gets no tool access to it |
 | `--api-version` | Model Inference API version (default `2024-05-01-preview`) |
 | `--temperature` | Sampling temperature (default `0.2`) |
 | `--read-timeout` | Per-request timeout in seconds (default `600`) |
@@ -256,8 +261,11 @@ Claude + GPT first-review breadth pair.
 
 These are current capability boundaries, not permanent review-only invariants:
 
-- Does **not** review the Russian corpus yet (would need the nauka-logiki repo root via
-  `--repo` and its own governing docs); English only for now.
+- Reviews the Russian mirror through `--repo` + `--corpus-dir конспект` + `--source-file`
+  (which embeds the English original verbatim as the standard) and the `translation` facet.
+  What it does **not** yet do is settle the corpus's open quotation-provenance question:
+  reviewers stall on whether quoted spans follow Столпнер or the English translator, and
+  no flag resolves it for them.
 - The reviewer contract verifies the gate outcome and output structure, but philosophical
   judgment remains model-produced and author-checked rather than mechanically provable.
 
