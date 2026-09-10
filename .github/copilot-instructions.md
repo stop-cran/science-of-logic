@@ -55,6 +55,42 @@ checker. See `REVIEW.md`.
 **Settle reviewer disagreements against the primary source.** When the pair splits on what Hegel or
 a cited edition says, read the text rather than picking a reviewer — each is usually half right.
 
+**Never assert an unverified universal negative.** "Hegel nowhere explains…", "Spinoza never
+wrote…", "no such science existed…" — a negative claim over an author's whole corpus cannot be
+settled by reading one chapter, and this project has produced **five**, four of them false or
+overstated: §27's organism claim and its historical-geology claim; "Hegel nowhere explains the
+choice of title" (he explains it twice, in the Foreword and in the Introduction); §26's "Hegel never
+announces the fact" (true of the chapter and of the recapitulation that opens the next Doctrine —
+unverifiable beyond them); and one the mirror manufactured on its own at §02, where the English
+"a formula he **does not use as the name of his method**" was rendered "a formula Hegel **never
+used**". **State the claim at the bound you actually checked, and name the bound** — "not in the
+chapter, and not in the recapitulation that opens the Doctrine of the Concept". §25's *omnis
+determinatio est negatio* paragraph is the model: the negative is asserted and then paid for, with
+the letter, the language, the lost autograph and the competing lines of scholarship. **Sweep both
+languages** — the mirror can introduce this defect into a line whose original was clean (`нигде не`,
+`никогда не`, `не существовал`). A denylist rule was considered and rejected: any regex blunt enough
+to catch the bad cases also fires on the verified ones, which must stay green.
+
+**Check the corpus before the claim — it is usually already settled there.** A finished installment
+binds every later one. This round produced **seven** collisions in which a line asserted something
+the corpus had already decided against: §09's life-restriction attributed to the *Logic*, against
+§27:27, which assigns it to the *Philosophy of Nature*; §09's praxis-grounding presented as Hegel's
+own, against §06:33, which flags it as a materialist reconstruction; §05's "no subject who
+experiences its contradictions", against §27:23, where the Concept is at work in nature "as blind,
+as unaware of itself and unthinking"; §05's law covering "any complex system", against §03:113,
+"the direction is not a law"; §05's "precisely Hegel's claim against atomism", against §26:121,
+which "validates no emergentist thesis and refutes none"; §05's defective Understanding, against
+§27:87, where fixity is "a subjective impotence of reason"; and §09:66's "passes over into the
+Object", against §09:9 seven lines above it — and against *Encyclopaedia* §161, which denies
+transition to this sphere outright, and §193, whose heading is *realisation*. **Before writing or
+repairing a claim about Hegel, grep the corpus for the sibling paragraph that already governs it**,
+and cite that sibling in the line.
+
+**When correcting a locus or an attribution, read the whole stretch first.** §27:59 had to be
+corrected **twice**: the Kant indictment in "On the Concept in General" does not end where either
+earlier reading assumed — Kant is named and rebutted continuously through §1311. A fix written
+against the pre-edit sentence instead of against the full passage swaps one false claim for another.
+
 ## House style
 
 - **Abstract**: the paragraph directly under the `#` title is wrapped in a **single `*…*`

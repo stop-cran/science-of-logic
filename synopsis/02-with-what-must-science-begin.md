@@ -59,7 +59,7 @@ With *Dasein* the *Logic* has won its first concrete determination that **stands
 
 ## VI. What This Teaches: The Structure of the Dialectical Step
 
-Hegel's procedure here is not the schoolroom formula of "thesis–antithesis–synthesis" — a formula he does not use as the name of his method, given currency by Chalybäus and later carried by Marxist textbooks. The formula suggests three *external* operations: someone proposes a thesis, someone else opposes it, a third party reconciles them. This is exactly the kind of *external reflection* that Hegel rejects.
+Hegel's procedure here is not the schoolroom formula of "thesis–antithesis–synthesis" — words he uses of *Kant*'s scheme, crediting him in the *Lectures on the History of Philosophy* with having "exhibited on all sides thesis, antithesis and synthesis," but not as a name for his own method; the formula was given currency by Chalybäus and later carried by Marxist textbooks. The formula suggests three *external* operations: someone proposes a thesis, someone else opposes it, a third party reconciles them. This is exactly the kind of *external reflection* that Hegel rejects.
 
 The actual structure is **immanent**:
 
