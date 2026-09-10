@@ -8,7 +8,7 @@
 
 The *Logic* opens, as we saw in synopsis 02, with the simplest and most abstract determination thought can entertain: the bare thought *is*, pure Being. The opening movement — Being into Nothing into Becoming into Determinate Being — gave us the paradigm of the dialectical step. We now resume that trail and follow it through the entire first sphere, the **Doctrine of Being**.
 
-The sphere of Being is the sphere of **immediacy**. Its categories appear, at first sight, simply to *be*; their connection to one another seems external; each looks like a self-contained determination next to the others. The mode of transition, as established in the orientation, is *passing-over* (*Übergehen*): when a category of Being is held fast and thought through, it shows itself incapable of remaining what it is — it spontaneously vanishes into another determination, and is gone.
+The sphere of Being is the sphere of **immediacy**. Its categories appear, at first sight, simply to *be*; their connection to one another seems external; each looks like a self-contained determination next to the others. The mode of transition, as established in the orientation, is *passing-over* (*Übergehen*): when a category of Being is held fast and thought through, it shows itself incapable of remaining what it is — it spontaneously vanishes into another determination, and is gone as the independent determination it seemed to be, preserved only as a moment of what supersedes it.
 
 The Doctrine of Being divides into three sub-spheres:
 
