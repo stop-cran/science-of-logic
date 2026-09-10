@@ -27,11 +27,11 @@ If the truth is the whole, what is the architecture of that whole?
 
 Hegel's answer, presented in compact form in the *Encyclopaedia of the Philosophical Sciences in Outline* (three editions, 1817 / 1827 / 1830), is a tripartition:
 
-1. **The Science of Logic** — the Idea **in itself** (*an sich*), as it is in the pure element of thought, before any externality.
+1. **The Science of Logic** — the Idea **in and for itself** (*an und für sich*), as it is in the pure element of thought, before any externality. Hegel's own wording, and worth keeping exact: the Logic is not the Idea merely *implicit*, since it closes in the self-knowing Absolute Idea (§09), but the Idea developed in its own medium (*Enc.* §18).
 2. **The Philosophy of Nature** — the Idea **in its otherness** (*Anderssein*), as it has externalized itself into the form of nature, of space, time, matter, life.
 3. **The Philosophy of Spirit** — the Idea **returned to itself** (*Rückkehr zu sich*) out of nature, as conscious, knowing, willing, free — first as individual mind, then as social and historical world, finally as art, religion, and philosophy.
 
-The triadic shape is not imposed externally; it is the very shape of the dialectical step we have been studying. The Idea is **immediate** in Logic (thought in its own element, with no other), **self-negating** in Nature (thought as the other of itself, dispersed into externality), and **mediated unity** in Spirit (thought that has traversed its other and returned to itself enriched). Logic, Nature, Spirit are the three moments of a single movement, exhibited at the highest possible level of abstraction — the architectonic of reality itself.
+The triadic shape is not imposed externally; it is the very shape of the dialectical step we have been studying — with one reservation entered at once. The Idea is **in its own element** in Logic (thought with no other), **outside itself** in Nature (thought as the other of itself, dispersed into externality), and **returned to itself** in Spirit (thought that has traversed its other and come back enriched). Logic, Nature, Spirit are the three moments of a single movement, exhibited at the highest possible level of abstraction — the architectonic of reality itself. The reservation is that the first of those two steps is not, on Hegel's own account, a transition like the others (§09).
 
 A word is needed about each.
 
@@ -81,7 +81,7 @@ This image — the circle of circles — is Hegel's deepest intuition of what a 
 
 This brings us to one of the oldest problems of philosophy. From Parmenides and Heraclitus, through Plato's *Parmenides*, through medieval debates over universals, through Spinoza's monism and Leibniz's pluralism, philosophy has been haunted by the question: is reality ultimately One or Many?
 
-If it is One, the manifold of experience is illusion — a position that flatters speculation but contradicts the very experience that drove us to philosophize.
+If it is One in the sense that excludes all differentiation, the manifold of experience is illusion — a position that flatters speculation but contradicts the very experience that drove us to philosophize. That horn is the dilemma's own construction and not a report on Spinoza, whose modes are dependent without being thereby untrue (§25).
 
 If it is Many, the unity of experience — the fact that everything connects with everything, that the world is *one* world, that knowledge of one thing illuminates another — becomes inexplicable. We are reduced to a heap of unrelated atoms (Democritus, Hume) or to monads with no windows (Leibniz), and the connection of things becomes either a brute fact or a pre-established harmony that explains nothing.
 
@@ -89,7 +89,7 @@ Hegel's system resolves this problem by exhibiting the One **as** the totality o
 
 This is what the system **is**: the demonstration that there is no choice between unity and multiplicity, because the true unity is the differentiated self-mediating whole, and the true multiplicity is the developed articulation of that whole. Each category, each natural form, each shape of spirit is **at once** itself (the moment of multiplicity) and a determinate moment of the whole (the moment of unity). The whole is **in** each; each **is** the whole, taken from a particular angle of its self-articulation.
 
-This is also why the system cannot be **arbitrary**. If the moments were merely many, their order would be one possible arrangement among others. If the One were merely one, it would be the night in which all cows are black (Hegel's famous jab at Schelling). It is because the One is the **inner necessity** by which each moment generates the next that the order of the system is not arbitrary but compelled — the only order in which the whole can articulate itself.
+This is also why the system cannot be **arbitrary**. If the moments were merely many, their order would be one possible arrangement among others. If the One were merely one, it would be the night in which all cows are black (Hegel's famous jab at Schelling). It is because the One is the **inner necessity** by which each moment generates the next that the order of the system is not arbitrary but compelled — the only order in which the whole can articulate itself. One joint is excepted, and Hegel excepts it himself: the passage from Logic to Nature is given not as a compulsion but as a free release, which is precisely why §09 marks it as the system's most exposed seam.
 
 ## V. Is the System Closed?
 
@@ -111,7 +111,7 @@ Philosophy is not, for Hegel, a competitor to the special sciences. It does not 
 
 What philosophy contributes is something the special sciences cannot contribute themselves: the **categorial articulation** of the field — the exhibition of the conceptual determinations in terms of which the field is intelligible at all, and the demonstration of their place in the total system of categories. The Philosophy of Nature does not tell the physicist what to discover; it shows what concepts of *space*, *time*, *matter*, *force*, *life* are, in their relation to one another and to the rest of the conceptual framework — and so frees the physicist from the unconscious metaphysics with which he would otherwise be working.
 
-This is the precise sense in which philosophy stands to the special sciences as the speculative moment stands to the Understanding: not as a competitor, not as a higher tribunal, but as the **moment of self-comprehension** by which the conceptual labor of the sciences becomes transparent to itself. To do philosophy of nature is to bring to consciousness what the natural scientist is already doing without consciousness; to do philosophy of right is to bring to consciousness what the jurist and the citizen are already doing without consciousness; and so for every domain.
+This is the precise sense in which philosophy stands to the special sciences as the speculative moment stands to the Understanding: not as a competitor, not as a substitute for empirical inquiry, but as the **moment of self-comprehension** by which the conceptual labor of the sciences becomes transparent to itself. That philosophy does not replace the sciences is not the claim that Hegel passes no verdict on them: he calls the project of a logical calculus an idle fancy and nature's profusion an impotence, and §27 contests both. To do philosophy of nature is to bring to consciousness what the natural scientist is already doing without consciousness; to do philosophy of right is to bring to consciousness what the jurist and the citizen are already doing without consciousness; and so for every domain.
 
 ---
 
@@ -122,7 +122,7 @@ This is the precise sense in which philosophy stands to the special sciences as 
                           │                                            │
                           ▼                                            │
                   ┌──────────────┐                                    │
-                  │    LOGIC     │   Idea an sich (in pure thought)   │
+                  │    LOGIC     │ Idea an und für sich (pure thought)│
                   │  Being—      │                                    │
                   │  Essence—    │                                    │
                   │  Concept     │                                    │
