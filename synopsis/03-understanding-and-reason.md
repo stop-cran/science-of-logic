@@ -48,7 +48,7 @@ Examples are everywhere in the history of science. The Logic here locates a cate
 
 - **Cause and effect.** The Understanding draws a clean line: the cause precedes and produces, the effect follows and is produced. Pursued, the distinction collapses — though not by the route usually given. That every cause is itself the effect of an earlier cause yields only an endless **chain**, and a chain is not yet reciprocity; the regress merely repeats the relation it was supposed to undo. What bends the line into a circle is that the effect turns back upon the cause that produced it: the substance acted upon **reacts** against the original agent, which is thereby made passive in its turn, so that the *qua-cause* status is not in the thing but in the relation, which is reciprocal — *causa transit in effectum, et effectus in causam*. (§26 sets out the step in full.) The dialectical result is the move from causality to **reciprocity** (*Wechselwirkung*). What lies beyond reciprocity, however, is not a richer causal picture: as §26 sets out, the formula that each "part" is at once cause and effect of every other still moves within the relation it was meant to explain, and Hegel calls it, taken as an explanation, an empty mode of representing. The genuine advance is the passage to the **Concept**, in which the reciprocally determined terms are grasped as moments of a whole that determines itself.
 
-In each of these the dialectical moment is **not destructive**. The Understanding's determinations are not annulled — they are exhibited as moments of a more concrete category, in which they live on with their finite validity intact. Atomism is not refuted; it is preserved as one moment of a richer concept of matter. Wave and particle are not denied; they are recognized as inseparable aspects of an entity neither can name alone. Cause and effect are not abolished; they are enclosed in the wider category of reciprocity.
+In each of these the dialectical moment is **not destructive**. The Understanding's determinations are not annulled — they are exhibited as moments of a more concrete category, in which they live on with their finite validity intact. Atomism is not simply cancelled; it is refuted in the only way Hegel counts as genuine — preserved as one moment of a richer concept of matter (§27). Wave and particle are not denied; they are recognized as inseparable aspects of an entity neither can name alone. Cause and effect are not abolished; they are enclosed in the wider category of reciprocity.
 
 This is what *Aufhebung* — sublation — actually means in scientific practice: a more adequate concept supersedes a less adequate one *by containing it as a moment*. The finite concept is not erased; it is given its place.
 
@@ -106,7 +106,7 @@ The history of physics can be read along the same lines, provided the reading is
 
 - **Mechanism** (Galileo, Newton): matter as inert mass acted on by external forces. The Understanding's clearest determination of the physical. *Generates its own boundary*: the inability to account for chemical combination, in which the parts cease to be mere parts and acquire new qualitative determinations.
 
-- **Chemism** (Lavoisier, Dalton, Mendeleev): matter as bearer of qualitative affinities, of combination and decomposition. *Generates its own boundary*: the inability to account for self-organization and self-maintenance, the phenomena of life.
+- **Chemism** (Lavoisier, Dalton, Mendeleev): matter as bearer of qualitative affinities, of combination and decomposition. *Generates its own boundary*: not self-organization as such — chemistry reaches that in autocatalytic and oscillating systems, and §27 leaves open how far inorganic nature realizes the form — but the self-*maintaining* whole that reproduces the conditions of its own persistence, which is life.
 
 - **Organism** (biology, from Cuvier and Darwin onward): the living being as the self-maintaining unity of its parts, in which each part is what it is only through its function in the whole. *Generates its own boundary*: the question of consciousness, of the subject that knows.
 
@@ -130,7 +130,7 @@ We have now reached a point at which the contours of Hegel's contribution to the
 2. The Understanding's fixed determinations are **indispensable** but **finite**; their finitude is not a mark of failure but the spring of further development.
 3. The advances examined here proceed by passing from less concrete to more concrete categories, **preserving** the lower at each step — a pattern the Logic exhibits in its own material, and one this synopsis finds again in those cases, not a law it imposes on the sciences.
 4. There is no privileged method standing over the sciences; there is the one logical movement, exhibited in different matters at different levels of concreteness — physical, chemical, organic, mental, social, historical, philosophical.
-5. The justification of any science is the **circle of its development**: the beginning is grounded by the totality that issues from it.
+5. The justification of any science is the **circle of its development**: the beginning is grounded by the totality that issues from it. This concerns the order of a science's categories, not its empirical content: no such circle dispenses with findings, and each science must win its own starting-point by its own means (§02).
 
 ---
 
