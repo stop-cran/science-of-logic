@@ -1,6 +1,6 @@
 # The Afterlife of Dialectic — From Marx to Complexity, and What Remains as Living Truth
 
-*The fate of Hegelian dialectic in the sciences after Hegel: its capture by Marx and Engels; its independent rediscovery in evolutionary biology, systems theory, and complexity science; its long quarrel with the analytic-empiricist tradition; and what, of all this, remains as living contribution to the scientific paradigm of our own time.*
+*The fate of Hegelian dialectic in the sciences after Hegel: its capture by Marx and Engels; the convergent structures independently reached in evolutionary biology, systems theory, and complexity science; its long quarrel with the analytic-empiricist tradition; and what, of all this, remains as living contribution to the scientific paradigm of our own time.*
 
 ---
 
@@ -36,13 +36,13 @@ Whatever one thinks of Lenin politically, the philosophical observation in the m
 
 ## IV. The Independent Rediscoveries
 
-Meanwhile, in domains entirely outside the Hegelian and Marxist traditions, the substance of dialectical thought reappeared again and again under other names — often without its practitioners having read a line of Hegel. The convergence is itself evidence that what Hegel articulated is not the eccentric doctrine of a single thinker but a real logic of development, recurrently reached in traditions that did not take it from him. How far it extends is not settled by the convergence; §VI states the claims this synopsis does make.
+Meanwhile, in domains entirely outside the Hegelian and Marxist traditions, the substance of dialectical thought reappeared again and again under other names — often without its practitioners having read a line of Hegel. The convergence is itself evidence that what Hegel articulated is not the eccentric doctrine of a single thinker but a real logic of development, recurrently reached in traditions that did not take it from him. How far it extends is not settled by the convergence; §VI states the claims this synopsis does make. One thing the convergence does not establish is Hegel's endorsement: where these sciences derive their object's differences from that object's own **history**, they take precisely the step the *Philosophy of Nature* refuses, since nature for Hegel is a system of stages and has no history (§27). The rediscoveries are not his doctrine arriving late. The affinity of structure is real; the authority is not his.
 
 ### A. Evolutionary Biology
 
 Darwin published the *Origin of Species* in 1859. He had not read Hegel; he was working in the empirical-British tradition. Yet the structure of his thought is dialectical to its core. Variation produces individuals that differ from their parents and from each other; the differences are at first contingent. Struggle for existence — *the contradiction of the species with its environment* — selects among these variations. Over time, the contradictions of the species with its conditions of life produce the species itself in modified form, and at certain thresholds produce new species altogether. Quantity (small variations) passes into quality (specific difference); the negation of one form is the affirmation of another; the whole is a self-developing totality whose movement is driven by its own internal contradictions.
 
-Engels noticed this immediately and saluted Darwin as having brought the dialectic into biology. The history of evolutionary thought since — punctuated equilibria (Eldredge, Gould), evo-devo, the extended evolutionary synthesis, the recognition of organism–environment co-construction (niche construction theory) — has only deepened the dialectical character of the field. The very concept of an organism as a self-maintaining unity in active reciprocity with its environment is the **organic** category of Hegel's Philosophy of Nature, returning under empirical clothing.
+Engels noticed this immediately and saluted Darwin as having brought the dialectic into biology. The history of evolutionary thought since — punctuated equilibria (Eldredge, Gould), evo-devo, the extended evolutionary synthesis, the recognition of organism–environment co-construction (niche construction theory) — has only deepened the dialectical character of the field. The very concept of an organism as a self-maintaining unity in active reciprocity with its environment is the **organic** category of Hegel's *Philosophy of Nature* in empirical clothing — with the irony that the same work refuses the descent of one species from another, so that biology reached the category by the road Hegel had closed.
 
 ### B. Systems Theory, Cybernetics, Self-Organization
 
@@ -74,7 +74,7 @@ In the late twentieth and early twenty-first century, an explicit "Pittsburgh He
 
 ## VI. What Remains as Living Truth
 
-It is possible now to state, with some confidence, what remains of Hegel's contribution to the scientific paradigm — what survives the obsolescence of his particular *Naturphilosophie* (whose specific claims about magnetism, chemistry, and animal taxonomy were in many cases already wrong when he made them and are simply wrong now), what survives his contestable politics, what survives the embarrassment of his more grandiose claims about the Absolute. Five propositions:
+It is possible now to state, with some confidence, what remains of Hegel's contribution to the scientific paradigm — what survives the obsolescence of his particular *Naturphilosophie* (whose specific claims about magnetism, chemistry, and animal taxonomy were in many cases already wrong when he made them and are simply wrong now), what survives his contestable politics, what survives the embarrassment of his more grandiose claims about the Absolute. What follows is a distillation and not a summary: the five are stated in this synopsis's voice, as what a later inquiry can take up, and the last of them Hegel would not have accepted in the form given here. Five propositions:
 
 **1. The whole is real.** Against every form of methodological atomism, dialectic insists that totalities — organisms, ecosystems, languages, societies, scientific paradigms, the biosphere, the human mind — are not mere aggregates of their parts but have their own structure, their own dynamics, their own causality. To explain *away* the whole into its parts is not science but the imposition of a metaphysical prejudice.
 
@@ -84,7 +84,7 @@ It is possible now to state, with some confidence, what remains of Hegel's contr
 
 **4. Method and content are one.** Against every conception of method as a set of rules external to the matter under investigation, dialectic insists that the genuine method of any inquiry is the immanent self-articulation of its content. The claim is not that there are no procedural canons (induction, hypothesis, experiment, formalism) but that these canons are not the *whole* method; the whole method is the dialectical self-development of the matter, of which the procedural canons are moments.
 
-**5. Every fixed determination is finite.** No concept, no theory, no framework, however successful, is the last word. Each is a moment in a development that has already exceeded it, or will exceed it. This is not a counsel of skepticism but the precise opposite: it is the demand that we hold our determinations as **determinate**, with full rigor — and at the same time as **finite**, open to the further determinations they themselves require.
+**5. Every fixed determination is finite.** No concept, no theory, no framework, however successful, is the last word. Each is a moment in a development that has already exceeded it, or will exceed it. This is not a counsel of skepticism but the precise opposite: it is the demand that we hold our determinations as **determinate**, with full rigor — and at the same time as **finite**, open to the further determinations they themselves require. The distance from Hegel must be marked here rather than blurred. He holds the *Logic* to have completed the **form** of the categories, however open their content and their application remain — the closure §04 defends and the completion question below reopens. This proposition extends the finitude of every determination *within* the system to the system as well; the extension is the synopsis's, and Hegel denies it.
 
 ## VII. The Open Questions
 
