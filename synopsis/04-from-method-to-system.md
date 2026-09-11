@@ -10,7 +10,7 @@ The word "system," in ordinary usage, suggests something rigid, finished, perhap
 
 The argument is simple and inescapable. Every concept is what it is only through its relations to others — *cause* through its relation to *effect*, *substance* through its relation to *accident*, *finite* through its relation to *infinite*, *part* through its relation to *whole*. To assert any single concept as a final truth is therefore to assert, tacitly, the entire web of concepts that give it meaning. Either philosophy makes this web explicit — exhibits each concept in its connection to every other — or it operates with concepts whose meaning it does not fully command. The first is **system**; the second is **dogmatism dressed up as common sense**.
 
-This is why Hegel writes, in the Preface to the *Phenomenology*: "**The True is the whole.**" Not the whole as opposed to the parts, but the whole *as* the articulated unity of its parts. Truth is not a result alongside other results; it is the totality of results in their mutual mediation. And the form of truth is therefore not the proposition (*S is P*) but the **system** — the developed exposition of the entire concept in all its determinations.
+This is why Hegel writes, in the Preface to the *Phenomenology*: "**The truth is the whole.**" Not the whole as opposed to the parts, but the whole *as* the articulated unity of its parts. Truth is not a result alongside other results; it is the totality of results in their mutual mediation. And the form of truth is therefore not the proposition (*S is P*) but the **system** — the developed exposition of the entire concept in all its determinations.
 
 This commitment puts Hegel in opposition, on principle, to:
 
@@ -73,7 +73,7 @@ The system is **circular** in a precise and important sense. The end returns to 
 
 This circularity is not a logical defect (a *petitio principii*); it is the very form in which a self-grounding totality must be exhibited. A linear deduction must always rest on premises external to itself; a circular deduction grounds itself by **closing on its own beginning**. The *Logic* begins with pure Being, the absolutely abstract; it ends with the Absolute Idea, the fully concrete totality of categories. But the Absolute Idea is precisely what was implicit in pure Being from the start — the entire system of determinations was already there, undeveloped, in the simple thought "is." The end is the beginning, *now seen as the end* — i.e., as having developed itself into all its moments.
 
-Hegel makes this even more emphatic with the figure of the **circle of circles**. Each science within the system — Logic, Nature, Spirit — is itself a circle, beginning with its most abstract moment and returning to it through its own development. Logic ends in the Absolute Idea, which "lets itself go" into Nature; Nature ends in the animal organism, which passes over into Spirit; Spirit ends in philosophy, which is the conscious recovery of the whole — and so reaches back to its beginning in the Logic. The system is therefore a circle whose every part is a circle — a totality of self-mediating sub-totalities, each of which is what it is by its place in the whole, and the whole is what it is as the unity of all of them.
+Hegel makes this even more emphatic with the figure of the **circle of circles**. Each science within the system — Logic, Nature, Spirit — is itself a circle, beginning with its most abstract moment and returning to it through its own development. Logic ends in the Absolute Idea, which "resolves to let" its own particularity "go forth freely as Nature" (*Enc.* §244); Nature ends in the animal organism, which passes over into Spirit; Spirit ends in philosophy, which is the conscious recovery of the whole — and so reaches back to its beginning in the Logic. The system is therefore a circle whose every part is a circle — a totality of self-mediating sub-totalities, each of which is what it is by its place in the whole, and the whole is what it is as the unity of all of them.
 
 This image — the circle of circles — is Hegel's deepest intuition of what a self-grounding totality must look like. It is neither a tower (whose ground floor must hold up everything) nor a chain (whose first link must be tied to something outside) nor a tree (whose root must be planted in something not itself). It is a **living organism of thought**, in which each moment is a moment because every other is, and the whole exists only as the activity of its parts mediating themselves into one another.
 
@@ -127,7 +127,7 @@ This is the precise sense in which philosophy stands to the special sciences as 
                   │  Essence—    │                                    │
                   │  Concept     │                                    │
                   └──────┬───────┘                                    │
-                         │ Idea "lets itself go" into externality      │
+                         │ Idea releases itself into externality       │
                          ▼                                             │
                   ┌──────────────┐                                    │
                   │    NATURE    │   Idea in its otherness            │
