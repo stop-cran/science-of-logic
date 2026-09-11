@@ -195,10 +195,23 @@ turns on substance exercising *power* over its accidents without *Kraft*.
 | *Begriffslogik* | Doctrine of the Concept | §09 |
 | *Merkmal* | mark | §27 |
 | *Ohnmacht der Natur* | the impotence of nature | §27 |
+| *Urteil* | judgment | §27, §28 |
+| *Ur-Teil* | original division | §09, §26, §27, §28 |
+| *Teilung* | division | §28 |
 
 *Merkmal* is the **mark** of the old logic — the external feature by which a
 class is picked out — and §27's argument is precisely that the Concept is *not*
 a mark. Miller's "characteristic" would blunt the polemic.
+
+*Urteil* is kept in German wherever the etymological reading is in play, because
+the English "judgment" carries none of it. The split is written **\*Ur-Teil\***,
+the noun — never the verbal *ur-teilen* — and a mechanical rule in
+`tools/canon-denylist.json` enforces it. Our prose says **original division**;
+Miller says "original division [Teilung]" and Wallace "original partition", and
+§28 quotes each in its own words. The corpus does **not** treat the etymology as
+evidence — §28 says outright that the *Ur-Teil* reading is a philosophical
+re-reading rather than the word's historical derivation, and that Hegel's case
+does not rest on it.
 
 ---
 
@@ -212,6 +225,8 @@ a mark. Miller's "characteristic" would blunt the polemic.
 | *nihil est sine ratione* | the principle of sufficient ground | §22 |
 | *virtus dormitiva* | the dormitive virtue (the pseudo-explanation) | §22 |
 | *ex-sistere* | immediacy sprung from ground | §23 |
+| *punctum saliens* | the leaping point | §28 |
+| *copula* | the copula | §28 |
 
 ---
 
