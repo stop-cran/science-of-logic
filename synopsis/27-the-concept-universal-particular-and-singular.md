@@ -140,7 +140,7 @@ And it was available to him. Kant's cosmogony was sixty years old when the *Logi
 
 - **§28 — Judgment.** The Concept's own partition — *Urteil* as **original division** — in which the moments become self-subsistent and their unity is at first only an external **connection**. The four classes of judgment, and Hegel's claim that the traditional list of judgment-forms is not an inventory but a **progressive determination**, each class arising from the failure of the last. Here the debt recorded in §IX begins to be paid.
 
-- **Beyond.** The **syllogism** as the Concept rejoined to itself and "everything is a Syllogism" (*Enc.* §181), with the figures re-derived rather than enumerated; then the collapse of subjectivity into **objectivity**, and mechanism, chemism, and teleology; then Life, Cognition, and the **Absolute Idea**, in which the method at last becomes its own content — and the Idea's release of itself into Nature, where the question of how the pure categories bear on external material is finally placed.
+- **Beyond.** The **syllogism** as the Concept rejoined to itself and "everything is a Syllogism" (*Enc.* §181), with the figures re-derived rather than enumerated; then the realization of subjectivity as **objectivity**, and mechanism, chemism, and teleology; then Life, Cognition, and the **Absolute Idea**, in which the method at last becomes its own content — and the Idea's release of itself into Nature, where the question of how the pure categories bear on external material is finally placed.
 
 ## Coda
 
