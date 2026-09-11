@@ -91,6 +91,41 @@ corrected **twice**: the Kant indictment in "On the Concept in General" does not
 earlier reading assumed — Kant is named and rebutted continuously through §1311. A fix written
 against the pre-edit sentence instead of against the full passage swaps one false claim for another.
 
+## Verifying a quotation
+
+**Draft from memory; never land from memory.** Recalling a passage is how most quotations here were
+first written, and the audit so far vindicates the practice — of the sixteen highest-confidence
+mismatches in a corpus-wide sweep, **every one was sound and not one was a misremembered
+quotation**. What makes it safe is the second step, which is not optional: before the line lands,
+the span is read off the source. A quotation that has only ever been recalled is a draft, however
+firm the recall.
+
+**Verify against the text, not against a search engine, a summary, or the corpus.** A phrase that
+returns hits is not thereby verified, and a phrase the corpus already contains is only evidence
+that we wrote it before.
+
+**A failed match is not evidence of damage — probe the instrument and the source first, in that
+order.** Every quotation in this project that was "corrected" on the strength of a failed lookup
+was sound and the lookup was broken. Commit `f21ba3b` stripped two genuine Miller dashes because
+the fetcher had silently eaten `&#8212;`; it was reverted in `04a9716`, and a dozen more
+installments were queued for the same treatment. In the full sweep, all sixteen top-ranked "defect"
+candidates dissolved: eight were the checker's own normalisation gaps, four were corruption in the
+online source, three were the synopsis quoting itself, and one was Engels. Likewise a quotation
+missing from the corpus may simply never have been fetched — four pages of the *Logic* were absent
+for months, and restoring them cleared 102 spans in installment 16 alone.
+
+**The online text is a transcription, and transcriptions are corrupt in places.** marxists.org's own
+HTML — not our copy of it — reads `in its own sey`, `the other itse@ again`, `through its on nature`
+(all quoted at §19) and `is in imperfect transcending` (§13). In every case the manuscript's reading
+is the right one. Hence: **where the source reading is not English, the source is wrong**, and the
+printed edition settles it. Never "correct" a sound quotation into a transcription error.
+
+**A quotation that is not Hegel's names whose it is, in the line.** §26's Engels quotation from
+*Anti-Dühring* is the model — it was the only thing that distinguished it from a defect. The same
+holds when the synopsis quotes **itself**: re-using a formulation from an earlier installment is
+legitimate and frequent, but it carries its `§NN`, so a reader never meets our own words dressed
+as Hegel's.
+
 ## House style
 
 - **Abstract**: the paragraph directly under the `#` title is wrapped in a **single `*…*`
@@ -113,8 +148,15 @@ against the pre-edit sentence instead of against the full passage swaps one fals
   reached a draft: Miller writes **"Notion"**, so `Concept` must never appear inside a quotation
   even though our own prose says *Concept*; and Miller's own German glosses are in **square**
   brackets (`[*Seele*]`, `[*begrifflos*]`, `[*das Eins*]`), so a **parenthesised** gloss inside
-  quotation marks is always ours and always wrong. Our prose uses `English (*German*)`; quotations
-  reproduce Miller's brackets verbatim. Unescaped `[*…*]` is safe for the checker; `\[` is not.
+  quotation marks is always ours and always wrong. Our prose uses `English (*German*)`; a quotation
+  either reproduces Miller's bracket verbatim **or omits it silently, with no ellipsis** — the gloss
+  is the translator's interpolation, not Hegel's words, so dropping it removes nothing of the
+  sentence. That exception is narrow: it covers **square-bracketed glosses only**, and every other
+  omission from the middle of a quotation still needs its ellipsis. Established practice across §11,
+  §12, §13, §18, §19 and §27 is to lift the German out of the quotation and give it in our own
+  `English (*German*)` form in the lead-in — §13's "*ideal* (*ideell*)" ahead of "The proposition
+  that the finite is ideal constitutes idealism" is the model. Unescaped `[*…*]` is safe for the
+  checker; `\[` is not.
 - Keep the dense, weighty register; do not loosen it for readability unless a sentence is
   genuinely over-literal.
 - Claims about physics are **categorial, not empirical**: the Logic supplies the *form*, not
@@ -122,6 +164,11 @@ against the pre-edit sentence instead of against the full passage swaps one fals
   guardrail wherever natural-science examples appear.
 - `README.md` carries a one-entry-per-installment index; **keep it parallel with the Russian
   README** (the two are mirrors of each other).
+- Terminology has a **single source of truth**: [`GLOSSARY.md`](../GLOSSARY.md) (German → our
+  English, with the `§§` where each term is used). Look a term up there before introducing it;
+  when introducing a new one, add a row in the same commit. If the corpus and the glossary
+  disagree, that is a defect: fix one of them, never leave both. Its Russian mirror is
+  `ГЛОССАРИЙ.md`; keep the two parallel as with the READMEs.
 
 ## Environment and tooling (Windows / PowerShell 5.1)
 
