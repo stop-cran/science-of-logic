@@ -242,7 +242,7 @@ Four places, stated with the same care about limits the corpus has used since §
 
 ## XI. What Comes Next
 
-- **§29 — The Syllogism.** The copula fully charged, judgment's extremes rejoined by the middle that the apodeictic judgment placed inside its subject. "Everything is a syllogism" (*Enc.* §181), and the figures re-derived from the Concept's moments rather than enumerated — with the traditional apparatus of moods and figures faced directly, including where Hegel's treatment of it has not worn well. The syllogism of existence, of reflection, and of necessity, ending in the disjunctive syllogism, where the mediation becomes so complete that the mediating drops away — and subjectivity passes over into **objectivity**.
+- **§29 — The Syllogism.** The copula fully charged, judgment's extremes rejoined by the middle that the apodeictic judgment placed inside its subject. "Everything is a Syllogism" (*Enc.* §181), and the figures re-derived from the Concept's moments rather than enumerated — with the traditional apparatus of moods and figures faced directly, including where Hegel's treatment of it has not worn well. The syllogism of existence, of reflection, and of necessity, ending in the disjunctive syllogism, where the mediation becomes so complete that the mediating drops away — and subjectivity passes over into **objectivity**.
 
 - **Beyond.** Mechanism, chemism, and teleology — the last of these where the concept of an end returns as an objective category and the long argument with external purposiveness is settled; then **Life**, where the warrant deferred in §VIII above is finally addressed; then Cognition, and the **Absolute Idea**, in which the method becomes its own content; and the Idea's release into Nature.
 

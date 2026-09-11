@@ -105,4 +105,4 @@ The scientific method, on this view, is not a set of external rules imposed on a
 
 We have traced the *outer* itinerary — the historical-logical pre-history of speculative science. What remains is to descend into its *inner* movement: to follow the actual self-development of the categories from the simplest determination (*Being*) through their entire articulation, and to exhibit how this movement is at once the structure of thought and the structure of the real.
 
-The next installment will take up the question with which Hegel's *Science of Logic* itself begins: **"With what must science begin?"** — and will show why the answer to that question is already the first step of the method.
+The next installment will take up the question with which Hegel's *Science of Logic* itself begins: **"With What must Science Begin?"** — and will show why the answer to that question is already the first step of the method.
