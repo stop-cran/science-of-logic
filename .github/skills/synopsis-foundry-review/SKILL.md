@@ -159,6 +159,15 @@ tool trace on stderr. `--read-timeout` controls the per-request timeout in secon
 600). Every target and explicitly supplied context pattern must match an existing allowed
 file; otherwise the command exits before authentication or paid model use.
 
+**Never pipe the command, and always pass `-u`.** The per-turn tool trace is the only liveness
+signal a long run gives, and PowerShell's `| Select-Object -Last N` — like `| Tee-Object` and
+`| Out-String` — buffers the *entire* stream until the process exits, so a healthy multi-minute
+review looks identical to a hung one. Run it bare as `python -u foundry-review/review.py …`, so
+that neither the pipeline nor Python's own block buffering can hide progress. Long runs are
+normal: a generalist pass takes about 8 minutes and ~24 turns, a DeepSeek fidelity pass ~28
+minutes and 32 turns. **Silence is not evidence of a wedged run** — this trap cost two healthy
+runs, killed on a false "dead deployment" diagnosis, before it was found.
+
 ### Facets — narrowing one reviewer's brief
 
 `--facet` is repeatable and crosses with `--model`, so `--model A --model B --facet fidelity

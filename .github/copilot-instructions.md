@@ -157,6 +157,19 @@ as Hegel's.
   `English (*German*)` form in the lead-in — §13's "*ideal* (*ideell*)" ahead of "The proposition
   that the finite is ideal constitutes idealism" is the model. Unescaped `[*…*]` is safe for the
   checker; `\[` is not.
+- **Capitalisation and truncation at the edges of a quotation.** A quotation adapts to its host
+  sentence at its **first letter and nowhere else**. Raising a lower-case initial where the
+  quotation opens a sentence of ours, or lowering a capital where it is embedded mid-sentence, is
+  silent and needs no bracket — established practice throughout. Capitalisation **inside** a
+  quotation is a different matter and is always an alteration: promoting a source's *subjective
+  concept* to *Subjective Concept* puts our own terminological habit into Hegel's mouth.
+  Truncating a quotation at its **end** needs no ellipsis, and the corpus marks none — the single
+  trailing `…` in the corpus (§21) is a suspension in our own voice, not a dropped clause. Omission
+  from the **middle** still needs its ellipsis, per the rule above. `sweep2.py` reports the edge
+  cases as `CASE-INIT-UP` / `CASE-INIT-DOWN`, which are expected and need no action; `CASE-MID` is
+  the defect class. Its one standing false positive is the **mention-quote** — `"Subjective
+  Concept"` at §09:31 names our own section title rather than quoting a source, so the checker,
+  finding no citation, matches it against the whole corpus and reports a mismatch.
 - Keep the dense, weighty register; do not loosen it for readability unless a sentence is
   genuinely over-literal.
 - Claims about physics are **categorial, not empirical**: the Logic supplies the *form*, not
