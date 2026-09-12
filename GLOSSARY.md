@@ -76,7 +76,7 @@ a generic "becomes".
 | *Sein-für-Anderes* | being-for-other | §11, §12 |
 | *an sich* / *an ihm* | in itself / present in it | §12 |
 | *Bestimmung* | determination | §11–§13, §23 |
-| *Beschaffenheit* | constitution | §11–§13, §23 |
+| *Beschaffenheit* | constitution | §11–§13, §23, §28 |
 | *Grenze* | limit | §11, §12, §13 |
 | *Schranke* | Restriction | §13 |
 | *Sollen* | the Ought | §13 |
