@@ -42,7 +42,7 @@ glosses are **square**-bracketed.
 |---|---|---|
 | *Verstand* | understanding | §02, §03 |
 | *Vernunft* | reason | §02, §03 |
-| *das Verständige* | the understanding-side | §03 |
+| *das Verständige* | the understanding-side | §03, §06 |
 | *das Dialektische* | the dialectical, or negatively-rational, side | §03 |
 | *das Spekulative* | the speculative, or positively-rational, side | §03 |
 | *Aufhebung* / *aufgehoben* | sublation / sublated | §02, §19 |
