@@ -18,8 +18,8 @@ reviewer — tensions, stale assumptions, fidelity/precision traps, and likely f
 Before doing anything else, read and follow:
 
 - `.github/copilot-instructions.md` — workflow, house style, commit rules.
-- `REVIEW.md` — the review checklist, severity rubric, and required output format. **This governs
-  your review.**
+- `REVIEW.md` — the review checklist, severity rubric, and required output format, especially
+  [Attribution and critique](../../REVIEW.md#attribution-and-critique). **This governs your review.**
 
 Operating rules:
 

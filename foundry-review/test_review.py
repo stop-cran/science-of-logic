@@ -74,6 +74,18 @@ class RepoBoundaryTests(unittest.TestCase):
         self.assertTrue(list_result.startswith("ERROR"))
         self.assertNotIn("forbidden outside marker", read_result + grep_result)
 
+    def test_system_prompt_includes_live_canonical_policies_once(self):
+        critique = "## Attribution and critique\nLive critique policy marker.\n"
+        quotation = "### Quotation form\nLive quotation policy marker.\n"
+        (self.root / "REVIEW.md").write_text(critique, encoding="utf-8")
+        (self.root / ".github" / "copilot-instructions.md").write_text(
+            quotation, encoding="utf-8"
+        )
+        prompt = review.build_system_prompt(self.repo)
+        self.assertEqual(prompt.count(critique), 1)
+        self.assertEqual(prompt.count(quotation), 1)
+        self.assertIn('REVIEW.md\'s "Attribution and critique"', prompt)
+
     def test_unrelated_repo_files_are_rejected_and_hidden(self):
         read_result = review.dispatch(
             self.repo,
@@ -313,6 +325,7 @@ Settled.
     def test_generalist_facet_leaves_the_prompt_byte_identical(self):
         """REVIEW.md requires >=2 generalists on identical prompts; faceting must not
         silently perturb that baseline."""
+        self.assertEqual(review.FACET_BRIEFS[review.DEFAULT_FACET], "")
         plain = review.build_first_user_msg("synopsis/25-test.md", ["synopsis/24-x.md"])
         generalist = review.build_first_user_msg(
             "synopsis/25-test.md", ["synopsis/24-x.md"], review.DEFAULT_FACET
@@ -325,6 +338,23 @@ Settled.
         )
         self.assertIn(review.FACET_BRIEFS["readability"].strip(), msg)
         self.assertNotIn(review.FACET_BRIEFS["style"].strip(), msg)
+
+    def test_fidelity_brief_uses_canonical_policy_not_old_quotation_rule(self):
+        brief = review.FACET_BRIEFS["fidelity"]
+        normalized = " ".join(brief.split())
+        self.assertIn('"Attribution and critique"', brief)
+        self.assertIn("canonical quotation policy", brief)
+        self.assertIn("primary text is unavailable", brief)
+        self.assertNotIn("emphasis the source lacks", normalized)
+        self.assertNotIn("timidity is as much an infidelity", normalized)
+
+    def test_translation_brief_can_report_an_english_source_defect(self):
+        brief = review.FACET_BRIEFS["translation"]
+        normalized = " ".join(brief.split())
+        self.assertIn("English-review handoff", normalized)
+        self.assertIn("corpus precedent is not primary-text verification", normalized)
+        self.assertNotIn("Do not propose improvements to the *English*", brief)
+        self.assertNotIn("not your finding", brief)
 
     def test_payload_extras_are_model_scoped(self):
         self.assertEqual(review.payload_extras("gpt-6-astra"), {"reasoning_effort": "none"})

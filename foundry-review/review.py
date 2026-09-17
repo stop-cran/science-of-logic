@@ -75,6 +75,8 @@ Operating rules:
   applies.
 - Governing docs are provided below (REVIEW.md and the Copilot instructions).
   REVIEW.md governs your severity rubric and output format — follow it exactly.
+- Apply REVIEW.md's "Attribution and critique" contract to substantive findings.
+  Use the repository's canonical quotation policy rather than a facet's restatement.
 - Use the tools to READ THE ACTUAL FILES before judging: read the target
   installment in full, read every cross-referenced sibling you rely on, and run
   the mechanical gate (run_gate) — treat any gate failure as a Blocker.
@@ -107,8 +109,9 @@ FACET_BRIEFS: dict[str, str] = {
     "fidelity": """\
 FACET: DIALECTICAL FIDELITY.
 
-Your assigned facet is whether the installment gets *Hegel* right. Everything else is
-secondary; do not spend your budget on prose quality or on defects the gate covers.
+Your assigned facet is textual fidelity and warranted critique under REVIEW.md's
+"Attribution and critique" contract. Everything else is secondary; do not spend your
+budget on prose quality or on defects the gate covers.
 
 Interrogate, in this order:
 - **Is the transition Hegel's or the author's?** The synopsis reconstructs movements. For
@@ -116,12 +119,9 @@ Interrogate, in this order:
   on those grounds, and whether the synopsis has silently supplied a premise or a motive he
   does not use. Where the reading is the author's rather than Hegel's, it must say so.
 - **Quotation integrity, strictly.** Extract every quoted span, including fragments inside
-  the abstract. A quotation is altered if *anything* inside the quotation marks is not in
-  the source — substituted words, added or removed commas, added glosses, emphasis the
-  source lacks, or material dropped from the middle without an ellipsis. Two known traps:
-  Miller writes "Notion", so "Concept" must never appear inside a quotation; and Miller's
-  own German glosses are in *square* brackets, so a parenthesised gloss inside quotation
-  marks is the author's and is wrong.
+  the abstract. Apply the canonical quotation policy referenced by REVIEW.md, including
+  permitted adaptations and consultation status. If the primary text is unavailable,
+  identify the unchecked spans rather than certify them from the corpus or a summary.
 - **Order and place in the system.** Does a category arrive before what it presupposes? Is
   something credited to this stretch that the Logic settles earlier or later? Is a result of
   the Doctrine of Essence being smuggled into the Concept, or vice versa?
@@ -129,11 +129,12 @@ Interrogate, in this order:
   be checked by reading that sibling. Misdescribing a sibling is this project's most
   frequent substantive defect.
 - **Over- and under-claiming.** "First", "only", "secured", "settles", "for the first time"
-  are load-bearing words; verify each. Equally, flag where the author has hedged a claim
-  Hegel actually makes outright — timidity is as much an infidelity as overreach.
+  are load-bearing words; verify each. When reporting Hegel's position, do not soften a
+  categorical claim he actually makes. Distinguish such a report from our critical
+  judgment of it under REVIEW.md's contract.
 
-Where you allege an infidelity, quote the synopsis line and say what the text actually does.
-An objection you cannot ground in the primary text is a Question for the author, not a
+Where you allege a textual infidelity, quote the synopsis line and say what the text actually does.
+A textual objection you cannot ground in the primary text is a Question for the author, not a
 Finding.""",
     "readability": """\
 FACET: COMPREHENSIBILITY FOR A CONTEMPORARY READER.
@@ -232,13 +233,14 @@ budget re-counting lines. Spend it on what no script can see:
   carries a connotation the English lacks. Where a Russian word's ordinary use pulls
   against the technical sense the passage needs, say so and propose the alternative.
 - **Quotations from Hegel.** Where the English quotes Miller, the Russian must not
-  back-translate Miller into Russian as though it were Hegel: check that quoted spans are
-  handled as the settled siblings handle them.
+  back-translate Miller into Russian as though it were Hegel. Apply the quotation and
+  verification rules in the governing Copilot instructions: corpus precedent is not
+  primary-text verification. Name unchecked spans when the edition is unavailable.
 
 Quote both lines — the English and the Russian — for every finding, and give the line
-number in each. Do not propose improvements to the *English*; it is settled and is here
-only as the standard. A Russian line that is a good translation of a bad English line is
-not your finding.""",
+number in each. For defects inherited from the English, follow REVIEW.md's English-review
+handoff: do not classify a faithful translation as a mistranslation or silently correct
+the philosophy in Russian.""",
 }
 # Some deployments reject the default combination of function tools and server-side
 # reasoning. gpt-6-astra returns 400 on /chat/completions unless reasoning_effort is

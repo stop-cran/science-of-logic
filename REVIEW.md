@@ -5,6 +5,75 @@ roles: the **author** self-checking *before submitting*, and the **`synopsis-rev
 **`synopsis-reviewer-gpt`** agents (a two-vendor review pair).
 Run it every round.
 
+## Attribution and critique
+
+**Reviewer-checked contract; authors self-check it before submission.** Fidelity means accountable
+representation, not assent to Hegel's verdict. For a substantive claim about Hegel, his opponents,
+or our reconstruction, distinguish:
+
+1. **Text:** what the named author or edition actually says.
+2. **Local warrant:** what the argument establishes, under its stated assumptions and for its
+   stated purpose.
+3. **Methodological reconstruction:** what we infer from Hegel's method, with an explicit owner,
+   textual basis, and inferential step. Calling it *our reading* supplies ownership, not proof.
+4. **Critical judgment:** whether the particular verdict satisfies the criterion invoked.
+   Agreement and disagreement both need grounds; neither is the review's predetermined result.
+
+**Meet the opponent on his own ground.** In *SL* §§1287–1288 Hegel requires refutation to engage
+the strength of the position itself, not defeat it through assumptions it can reject; the higher
+standpoint must contain the subordinate one. See §27, III. Apply this symmetrically to Hegel, his
+opponents, and our synopsis: establish the position's actual commitments and achievement, then test
+whether its own requirements expose a limit. Do not replace it with an easier target or silently
+improve it into a position its author never held. Merely announcing this procedure does not prove
+that Hegel, or we, have performed it.
+
+**A method–system tension must be demonstrated.** Name and ground the methodological criterion,
+show how it bears on the particular argument, and specify the content the verdict loses or fails
+to justify. Preserve what has actually been established, including concessions. A disagreement in
+valuation is not yet an immanent criticism. An external scientific or historical criticism remains
+possible, but must name and defend its own standard rather than present it as the opponent's.
+Likewise, a reconstruction that changes the method's grounding must justify that change, not treat
+the method as an intact recipe detachable from its grounding.
+
+**Scope belongs to the claim.** Read restrictive purpose clauses and both favourable and hostile
+continuations. An exact quotation can still misrepresent the argument. Failure to derive categories
+does not by itself invalidate inferences within them; a conditional achievement does not establish
+adequacy for that further task. Neither polemical severity nor later scientific productivity settles
+this distinction. Do not collapse validity under assumptions, adequacy of proof, and derivation of
+the assumptions into one question.
+
+For findings of this kind, show **the target passage and scope → criterion, owner, and source →
+inferential step and retained achievement → bounded conclusion**. Use the existing Findings or
+Questions sections, not an extra gate receipt. State what was checked; an unavailable source or an
+unestablished premise is a limit to report, not something a reviewer may certify from memory.
+
+**Worked case — a provisional Question on §27, VIII.** This is a specimen for the existing Questions
+section, not the verdict future reviewers must reach:
+
+> **Question — does the depreciation exceed its stated limit?** §27's calculus paragraph contests
+> *SL* §1480's verdict: Leibniz's procedure is better "solely in being more methodical on the
+> arithmetical side", but "for the rest, they were both equally meaningless". I checked these clauses
+> in the supplied Miller transcription, together with the objection that fixed combinations ignore
+> the Concept's self-transformation. §62 states that "the result essentially contains that from
+> which it results". Our inference is that an exhaustive inventory, combined with stipulated rules
+> distinguishing valid from invalid forms, permits checking whether an accepted list omits a
+> rule-valid form. Counting combinations alone does not answer that question. This conditional
+> achievement does not derive the forms or the rules; Hegel's objection to that sufficiency stands.
+> Applying his criterion to this assessment is our reconstruction. It supports the criticism only
+> if the "rest" depreciated includes this coverage check, not just the further derivation.
+> Does the arithmetical concession already cover the check? That scope premise needs adjudication:
+> if it does, this alleged loss is not established. Neither the enumeration's correctness nor
+> Leibniz's universal-characteristic programme has been verified here.
+
+**Limits and evolution.** This contract neither proves Hegel's method nor supplies the standards of
+every external discipline. Report unresolved questions as such. When a user correction, conflicting
+sources, a rule-caused failure, or a new precedent exposes a gap, flag the proposed rule change to the
+author in Questions (once per distinct issue); do not silently turn a case verdict into policy.
+**Grounding, 2026-09-17 — add/regroup:** *SL* §§62, 1287–1288 and the §27 calculus investigation
+(EN `d8da0f6`, RU `b89ce77`) supply the warrant and the observed escapes. Future changes to this
+contract should name the source or review escape they address. Independent review also exposed
+the residual consensus-as-proof rule below and an example that named, but did not show, its inference.
+
 ## The critique loop
 
 1. **Author** drafts/edits an installment, runs the mechanical checker, submits.
@@ -136,19 +205,14 @@ parenthetical inside a quoted sentence, and three German glosses placed inside q
 one of them a word **not in Miller at all**. The cause is instructive — the facet checked whether
 the *words* were Hegel's and
 stopped there, while the generalist also checked the punctuation, the brackets, and the silent
-elisions. Widen the quotation verifier's brief accordingly: **a quotation is altered if anything
-inside the quotation marks is not in the source, including brackets, commas, and glosses, and if
-anything is dropped from the middle without an ellipsis.** This does not weaken the case for
-facets; it shows a facet is only as good as the definition of its facet.
+elisions. Widen the quotation verifier's brief to include quotation boundaries and editorial
+interventions, not merely word identity. This does not weaken the case for facets; it shows a facet
+is only as good as the definition of its facet.
 
-**Two settled conventions, so that reviewers stop spending findings on them.** First, **bold inside
-a quotation is the synopsis's own emphasis.** It is applied throughout the corpus to mark the
-load-bearing words of a cited passage, it is deliberate and uniform, and it makes no claim about
-emphasis in the source. It is not an alteration and should not be reported as one. Second, and
-conversely, **a German gloss belongs outside the quotation marks**, in the synopsis's own voice and
-in parentheses — `the **soul** (*Seele*)`, not `"the **soul** [*Seele*]"`. The glosses are ours, not
-the translator's; inside the quotation marks they are an alteration, and square brackets falsely
-imply the translator supplied them.
+**Quotation form has one source.** The current rules, including our bold emphasis and the narrow
+exception for Miller's square-bracketed glosses, live in
+[Quotation form](.github/copilot-instructions.md#quotation-form). Apply that policy, not a second
+definition reconstructed from the historical reports here.
 
 **Check a facet's scope before believing its negative.** The verifier's single NOT FOUND was an
 artifact of the page range *the prompt* assigned it: the quoted phrase is verbatim Miller, on a
@@ -647,11 +711,12 @@ would ever have ranked as urgent.
 - An optional **cold / no-context reviewer pass** (a reviewer given only the installment, no project
   framing) is worth running once per piece: it reliably catches scholarly-provenance slips, over-reach,
   and false friends that the project-anchored reviewers read past.
-- **Independent convergence is the certainty signal.** When both reviewers, given no shared
-  context, flag the *same span*, treat it as established and fix it rather than re-arguing it.
-  Every convergent finding so far has been genuine — including the verdicts to **cut**: on §25 both
-  independently returned "not publishable, cut both edits, use at most a forward pointer", in
-  near-identical words, and each had caught a decisive defect the other missed.
+- **Independent convergence is a priority signal, not a substitute for grounds.** When reviewers
+  independently flag the *same span*, check it promptly against the relevant source or corpus and
+  [Attribution and critique](#attribution-and-critique). Fix an established defect; hold an
+  unsupported or misconstrued finding with a reason, even if both reviewers agree. On §25 both
+  independently recommended cutting both edits, each catching a decisive defect the other missed;
+  the checked defects, not the agreement alone, warranted the cuts.
 - **Adjudicate a reviewer split against the primary source or against the corpus — never by
   preferring a reviewer.**
   When the pair disagrees about what Hegel (or a cited edition) actually says, go read it; one
@@ -665,10 +730,10 @@ would ever have ranked as urgent.
   *check*, not to arbitrate. The remedy may also be neither reviewer's: a proposed Russian
   hyphenated calque for *that-it-is* was rejected because its first word is a homonym of an
   interrogative, inverting *Dass-sein* into *Was-sein*.
-- **Verify a quotation before an argument leans on it.** Quote from the text, not from memory or
-  from a reviewer's paraphrase, and confirm that any emphasis in the quotation is the source's
-  own rather than silently supplied. A section *heading* is often the strongest available
-  warrant — check whether the point is already titled before reconstructing it.
+- **Verify a quotation before an argument leans on it.** Follow
+  [Verifying a quotation](.github/copilot-instructions.md#verifying-a-quotation) and
+  [Quotation form](.github/copilot-instructions.md#quotation-form), including consultation status.
+  A section *heading* can identify what Hegel claims; it does not by itself establish the claim.
 - Tier every finding by severity; mark each a **fix** or a **hold (rationale)**.
 - You are **review-only**: report; the author edits.
 

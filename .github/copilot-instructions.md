@@ -30,6 +30,10 @@ content is a preferred synonym. Run the mechanical gate before submitting:
 `synopsis-reviewer-gpt` custom agents in
 `.github/agents/` encode the review-only reviewer role (a two-vendor pair).
 
+For authoring as well as review, apply [Attribution and critique](../REVIEW.md#attribution-and-critique).
+That is the canonical contract for textual fidelity, methodological reconstruction, and criticism;
+do not substitute agreement with Hegel for it.
+
 ## Handling review feedback
 
 Apply genuine fixes (idiom, grammar, precision, consistency), but **hold** suggestions that
@@ -104,6 +108,14 @@ firm the recall.
 returns hits is not thereby verified, and a phrase the corpus already contains is only evidence
 that we wrote it before.
 
+**Name the consultation status.** A checked editorial note that attributes a claim to another
+work is not a direct inspection of that work. Cite the intermediary as the intermediary; a catalogue
+record verifies a locator, not an entry's contents. The §28 Kluge lookup exposed this distinction:
+a search response claimed to have inspected a scan whose supplied URL returned 404. Its purported
+quotation and inspection claim were discarded; the editorial attribution remained usable as such.
+In a verification report, name the edition and passage actually read, and distinguish that from
+second-hand attribution or an unchecked lead.
+
 **A failed match is not evidence of damage — probe the instrument and the source first, in that
 order.** Every quotation in this project that was "corrected" on the strength of a failed lookup
 was sound and the lookup was broken. Commit `f21ba3b` stripped two genuine Miller dashes because
@@ -138,17 +150,21 @@ as Hegel's.
 - **Math**: italic plain text (e.g. *y = x²*, *a · b = k*, *s ∝ t²*, *h*) — **not** LaTeX
   `$…$`.
 - **Cross-references**: cite earlier installments as `§13`, `§16`, etc.
-- **Quotations from Hegel are verified against the text** before an argument leans on them, and
-  carry no emphasis the source lacks. A section **heading** is often the strongest warrant
-  available — check whether Hegel has already *titled* the point before reconstructing it. Where a
-  reading is yours rather than his, mark it as a reading.
-- **What counts as an altered quotation.** Anything inside the quotation marks that is not in
-  Miller is an alteration — not only substituted words, but added commas, added glosses, and
-  material dropped from the middle without an ellipsis. Two specific traps, both of which have
-  reached a draft: Miller writes **"Notion"**, so `Concept` must never appear inside a quotation
-  even though our own prose says *Concept*; and Miller's own German glosses are in **square**
-  brackets (`[*Seele*]`, `[*begrifflos*]`, `[*das Eins*]`), so a **parenthesised** gloss inside
-  quotation marks is always ours and always wrong. Our prose uses `English (*German*)`; a quotation
+
+### Quotation form
+
+This is the canonical quotation-form policy for authors, `REVIEW.md`, and every reviewer prompt.
+Source checking is governed by [Verifying a quotation](#verifying-a-quotation).
+
+- **Our bold inside quotations is our emphasis**, marking load-bearing words, not a claim about
+  emphasis in the source. It is permitted and is not a textual alteration.
+- **What counts as an altered quotation.** Apart from the permitted adaptations in this section,
+  changes to the cited edition's wording or punctuation are alterations — not only substituted
+  words, but added commas, added glosses, and material dropped from the middle without an ellipsis.
+  Two specific traps, both of which have reached a draft: Miller writes **"Notion"**, so do not
+  substitute our prose's *Concept* for it inside his quotations; and Miller's own German glosses
+  are in **square** brackets (`[*Seele*]`, `[*begrifflos*]`, `[*das Eins*]`), so a **parenthesised**
+  gloss inside a Miller quotation is ours and wrong. Our prose uses `English (*German*)`; a quotation
   either reproduces Miller's bracket verbatim **or omits it silently, with no ellipsis** — the gloss
   is the translator's interpolation, not Hegel's words, so dropping it removes nothing of the
   sentence. That exception is narrow: it covers **square-bracketed glosses only**, and every other
@@ -170,6 +186,9 @@ as Hegel's.
   the defect class. Its one standing false positive is the **mention-quote** — `"Subjective
   Concept"` at §09:31 names our own section title rather than quoting a source, so the checker,
   finding no citation, matches it against the whole corpus and reports a mismatch.
+
+### Other conventions
+
 - Keep the dense, weighty register; do not loosen it for readability unless a sentence is
   genuinely over-literal.
 - Claims about physics are **categorial, not empirical**: the Logic supplies the *form*, not

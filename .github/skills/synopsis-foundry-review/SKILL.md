@@ -176,7 +176,7 @@ runs, killed on a false "dead deployment" diagnosis, before it was found.
 | Facet | Brief |
 | --- | --- |
 | `generalist` | **No brief at all** — the prompt is byte-identical to a run with no `--facet` |
-| `fidelity` | Is the transition Hegel's or the author's; quotation integrity; systematic order; retrofit ripple; over- *and* under-claiming |
+| `fidelity` | Textual fidelity and warranted critique under `REVIEW.md`; canonical quotation policy; systematic order; retrofit ripple; over- *and* under-claiming |
 | `readability` | Where a contemporary reader loses the thread. Constrained: may propose only additions and reorderings, never simplification |
 | `style` | Hedge accretion, dead verbs, cliché, rhythm, register breaks, corpus voice |
 | `translation` | Russian mirror against its English original: doctrinal drift, dropped emphasis, the one-word-for-two trap, canon terminology, quotation handling. Requires `--source-file` |
@@ -272,11 +272,19 @@ These are current capability boundaries, not permanent review-only invariants:
 
 - Reviews the Russian mirror through `--repo` + `--corpus-dir конспект` + `--source-file`
   (which embeds the English original verbatim as the standard) and the `translation` facet.
-  What it does **not** yet do is settle the corpus's open quotation-provenance question:
-  reviewers stall on whether quoted spans follow Столпнер or the English translator, and
-  no flag resolves it for them.
+  It does not automatically receive the primary editions or the shared English critique
+  contract in a Russian run. Follow the local `REVIEW.md` handoff for unavailable evidence;
+  knowing which edition governs a quotation is not verification of its words.
 - The reviewer contract verifies the gate outcome and output structure, but philosophical
   judgment remains model-produced and author-checked rather than mechanically provable.
+
+Policy gaps and corrections go to the author through `REVIEW.md`'s Questions and evolution
+procedure, not through independent rules added to facet briefs.
+
+**2026-09-17 — regroup:** the §27 calculus review exposed confusion between textual fidelity
+and assent, plus a duplicated quotation rule that rejected permitted emphasis. The live
+`REVIEW.md` contract now governs both; the translation facet also preserves its English-review
+handoff. Grounding and future rule changes are recorded in `REVIEW.md`.
 
 ## Verifying a change
 
