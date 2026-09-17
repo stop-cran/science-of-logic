@@ -198,6 +198,13 @@ turns on substance exercising *power* over its accidents without *Kraft*.
 | *Urteil* | judgment | §27, §28 |
 | *Ur-Teil* | original division | §09, §26, §27, §28 |
 | *Teilung* | division | §28 |
+| *Urteil des Daseins* | judgment of existence | §28 |
+| *Reflexionsurteil* | judgment of reflection | §28 |
+| *Urteil der Notwendigkeit* | judgment of necessity | §28 |
+| *Urteil des Begriffs* | judgment of the Concept | §28 |
+| *singulär / partikulär / universell* | singular / particular / universal (judgments of reflection) | §28 |
+| *Allheit* | allness | §28 |
+| *Kopula* | copula | §28 |
 
 *Merkmal* is the **mark** of the old logic — the external feature by which a
 class is picked out — and §27's argument is precisely that the Concept is *not*
@@ -209,9 +216,17 @@ the noun — never the verbal *ur-teilen* — and a mechanical rule in
 `tools/canon-denylist.json` enforces it. Our prose says **original division**;
 Miller says "original division [Teilung]" and Wallace "original partition", and
 §28 quotes each in its own words. The corpus does **not** treat the etymology as
-evidence — §28 says outright that the *Ur-Teil* reading is a philosophical
-re-reading rather than the word's historical derivation, and that Hegel's case
-does not rest on it.
+evidence. §28 reports the Russian editorial note's objection to the historical
+derivation, naming that note — not Kluge's entry or Schelling's passage — as the
+source actually inspected. The argument for judgment as original division does
+not depend on the philology.
+
+**Judgment of existence** follows Miller, but its German is *Urteil des Daseins*,
+not *Existenz*: the Russian mirror therefore says **суждение наличного бытия**.
+The reflection-judgment names *singulär / partikulär / universell* are distinct
+from the Concept's moments *Einzelnes / Besonderes / Allgemeines*, although
+English uses the same three words. **Allness** is the collected totality of
+individuals, not the Concept's concrete universality.
 
 ---
 
