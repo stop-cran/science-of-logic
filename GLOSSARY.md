@@ -203,8 +203,9 @@ turns on substance exercising *power* over its accidents without *Kraft*.
 | *Urteil der Notwendigkeit* | judgment of necessity | §28 |
 | *Urteil des Begriffs* | judgment of the Concept | §28 |
 | *singulär / partikulär / universell* | singular / particular / universal (judgments of reflection) | §28 |
-| *Allheit* | allness | §28 |
+| *Allheit* | allness | §28, §29 |
 | *Kopula* | copula | §28 |
+| *Schluß* | syllogism | §09, §29 |
 
 *Merkmal* is the **mark** of the old logic — the external feature by which a
 class is picked out — and §27's argument is precisely that the Concept is *not*
