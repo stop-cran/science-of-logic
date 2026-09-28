@@ -106,7 +106,7 @@ a generic "becomes".
 | *Exponent* | the exponent | §17 |
 | *Maß* | measure | §16, §17, §18 |
 | *reales Maß* | real measure | §18 |
-| *Regel* | rule | §18 |
+| *Regel* | rule | §18, §30 |
 | *Knotenlinie der Maßverhältnisse* | nodal line of measure-relations | §17, §18 |
 | *das Maßlose* | the measureless | §07, §17, §18, §19 |
 
@@ -175,7 +175,7 @@ to a different argument; inside the quantum chapters, *Einheit* is the unit.
 | *Akzidenzen* | accidents | §26 |
 | *Aktuosität* | actuosity | §26 |
 | *absolute Macht* | absolute power | §26 |
-| *Gewalt* | violence | §26, §27 |
+| *Gewalt* | violence | §26, §27, §30 |
 | *Kausalität* | causality | §24, §25, §26 |
 | *erlischt* | is extinguished | §26 |
 | *Wechselwirkung* | reciprocity | §03, §08, §24–§26 |
@@ -206,6 +206,12 @@ turns on substance exercising *power* over its accidents without *Kraft*.
 | *Allheit* | allness | §28, §29 |
 | *Kopula* | copula | §28 |
 | *Schluß* | syllogism | §09, §29 |
+| *Objektivität* | objectivity | §30 |
+| *Objekt* | object | §30 |
+| *Mechanismus* | mechanism | §30 |
+| *differenter Mechanismus* | differentiated mechanism | §09, §30 |
+| *Zentralität* | centrality | §30 |
+| *Gesetz* | law | §30 |
 
 *Merkmal* is the **mark** of the old logic — the external feature by which a
 class is picked out — and §27's argument is precisely that the Concept is *not*
@@ -228,6 +234,11 @@ The reflection-judgment names *singulär / partikulär / universell* are distinc
 from the Concept's moments *Einzelnes / Besonderes / Allgemeines*, although
 English uses the same three words. **Allness** is the collected totality of
 individuals, not the Concept's concrete universality.
+
+Wallace renders *differenter Mechanismus* as **Mechanism with Affinity**.
+The phrase names the development of centrality within mechanism, not the
+fully developed specific relation of chemism. §30 distinguishes the two and
+keeps Wallace's wording when quoting him.
 
 ---
 
