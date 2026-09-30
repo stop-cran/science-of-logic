@@ -84,7 +84,7 @@ experiences its contradictions", against §27:23, where the Concept is at work i
 as unaware of itself and unthinking"; §05's law covering "any complex system", against §03:113,
 "the direction is not a law"; §05's "precisely Hegel's claim against atomism", against §26:121,
 which "validates no emergentist thesis and refutes none"; §05's defective Understanding, against
-§27:87, where fixity is "a subjective impotence of reason"; and §09:66's "passes over into the
+§27:89, where stopping at fixity is "a subjective impotence of reason"; and §09:66's "passes over into the
 Object", against §09:9 seven lines above it — and against *Encyclopaedia* §161, which denies
 transition to this sphere outright, and §193, whose heading is *realisation*. **Before writing or
 repairing a claim about Hegel, grep the corpus for the sibling paragraph that already governs it**,

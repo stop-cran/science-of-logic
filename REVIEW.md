@@ -47,6 +47,18 @@ inferential step and retained achievement → bounded conclusion**. Use the exis
 Questions sections, not an extra gate receipt. State what was checked; an unavailable source or an
 unestablished premise is a limit to report, not something a reviewer may certify from memory.
 
+**Distinguish the questions a grounding claim answers.** A way of entering a standpoint is not
+by itself its justification; the beginning's grounding in the completed science is not the same
+question as the historical conditions under which philosophical thinking arises. Check which
+question the passage and its source answer before treating one answer as a substitute for another.
+Preserve their connection as well as their distinction: logical presuppositionlessness does not
+mean historically unconditioned thinking, nor does the bare logical beginning explain its emergence.
+**Grounding, 2026-09-30 — add:** §02's review retained immediate entry by resolve without making it
+replace phenomenological justification or completed systematic grounding (*SL* §§93–104); its
+historical clarification preserves Hegel's connection of history, system, experience, and the
+sciences (*Enc.* §§12–14). Apply the distinction where those questions arise, not as a new
+four-stage template that every argument must traverse.
+
 **Worked case — a provisional Question on §27, VIII.** This is a specimen for the existing Questions
 section, not the verdict future reviewers must reach:
 
