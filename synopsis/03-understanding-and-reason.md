@@ -136,6 +136,6 @@ We have now reached a point at which the contours of Hegel's contribution to the
 
 ## Coda: The Bridge to What Follows
 
-We have now traced (i) the historical itinerary by which thought arrives at the speculative standpoint, (ii) the immanent paradigm of the dialectical step, and (iii) the reconstruction of scientific procedure in light of the three moments of the logical.
+We have now traced (i) a reconstruction of the historical-logical problems motivating the speculative standpoint, (ii) the immanent paradigm of the dialectical step, and (iii) the reconstruction of scientific procedure in light of the three moments of the logical.
 
 The next installment will turn from method to **system**: the architectonic of Hegel's *Encyclopaedia of the Philosophical Sciences* — Logic, Philosophy of Nature, Philosophy of Spirit — as the demonstration that one and the same dialectical movement traverses the entire field of the knowable, from the most abstract category of pure thought to the most concrete totality of historical and absolute spirit. We will ask what it means for philosophy to be a *system*, why the system is **circular** rather than linear, and how its circularity answers the ancient problem of the *one and the many*.

@@ -108,7 +108,7 @@ These are not embarrassments to the dialectical tradition; they are its **next m
 
 ## VIII. The Circle Closes
 
-We began this synopsis with the contradiction at the heart of school-logic: a science of thought presented in a form utterly unlike thought. We have traced the historical itinerary — from pre-logical consciousness through old metaphysics, empiricism, and critical philosophy — by which thought arrived at the speculative standpoint. We have examined the immanent structure of the dialectical step, the place of Understanding and Reason in the conduct of any inquiry, the architectonic of the system, and the long afterlife of dialectic in the sciences after Hegel.
+We began this synopsis with Hegel's charge against school-logic: a science that teaches necessary connection leaves the connection of its own forms unexplained. We have reconstructed a historical-logical itinerary — from consciousness before explicit logic through old metaphysics, empiricism, and critical philosophy — of problems motivating the speculative standpoint. We have examined the immanent structure of the dialectical step, the place of Understanding and Reason in the conduct of any inquiry, the architectonic of the system, and the long afterlife of dialectic in the sciences after Hegel.
 
 What we have *not* done — what cannot be done in any synopsis — is the actual labor of speculative thought itself: the patient working-through of the categories in their own self-development, the willingness to follow the matter wherever its own logic carries us, the discipline of treating each fixed determination both as itself and as a moment of the more concrete whole. That labor is not the synopsis of a method; it is the method, in act.
 
@@ -122,9 +122,9 @@ The circle of this synopsis closes. Another circle — the actual study of the *
 
 ```
                           ┌────────────────────────────┐
-                          │ (01) The historical         │
+                          │ (01) Reconstructed          │
                           │      itinerary —           │
-                          │      pre-logical →          │
+                          │ before explicit logic →     │
                           │      metaphysics →          │
                           │      empiricism →           │
                           │      criticism →            │

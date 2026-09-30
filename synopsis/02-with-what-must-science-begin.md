@@ -116,6 +116,6 @@ Each new determination, in its turn, will reveal itself as one-sided and self-ne
 
 ## Coda: The Bridge to What Follows
 
-We now have both the *outer* itinerary (§01) and the *inner* paradigm (this installment): the historical-logical sequence by which thought arrives at the speculative standpoint, and the elementary form of the dialectical step by which speculative thought proceeds.
+We now have both the *outer* itinerary (§01) and the *inner* paradigm (this installment): a reconstruction of the historical-logical problems motivating the speculative standpoint, and the elementary form of the dialectical step by which speculative thought proceeds.
 
 The next installment will examine what this means for the actual practice of the empirical sciences. We will ask: what becomes of induction, of hypothesis, of mathematical formalism, of experiment, when the conduct of science is understood dialectically? How do **the understanding** (*Verstand*) and **reason** (*Vernunft*) stand to one another — not as two separate faculties, but as moments of one activity of thought, the one holding determinations fast, the other grasping them as moments of a whole? And how does Hegel's account explain, rather than displace, the genuine achievements of mathematical natural science from Galileo through Newton to his own day — and, by extension, beyond?
