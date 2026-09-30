@@ -10,7 +10,7 @@ A synopsis of G. W. F. Hegel's philosophy with primary attention to his method o
 
 3. **[Understanding and Reason](synopsis/03-understanding-and-reason.md)** — The three sides of the logical (*Verstand*, *Dialektik*, *Spekulation*); dialectical reconstruction of induction, hypothesis, experiment, and mathematical formalism; the history of physics read as a dialectical sequence, and the limits of that reading.
 
-4. **[From Method to System](synopsis/04-from-method-to-system.md)** — The architectonic of the *Encyclopaedia* (Logic, Nature, Spirit); the circle of circles; the resolution of the One and the Many; the relation of philosophy to the special sciences.
+4. **[From Method to System](synopsis/04-from-method-to-system.md)** — The architectonic of the *Encyclopaedia* (Logic, Nature, Spirit); the circle of circles and its burden of proof; the proposed resolution of the One and the Many; completion and the relation of philosophy to the special sciences.
 
 5. **[The Afterlife of Dialectic](synopsis/05-the-afterlife-of-dialectic.md)** — Marx and Engels; Darwin and evolutionary biology; systems theory and complexity; quantum mechanics; the long quarrel with the analytic-empiricist tradition; what remains as living truth, and what open questions remain.
 
