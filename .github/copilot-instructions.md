@@ -76,9 +76,9 @@ languages** — the mirror can introduce this defect into a line whose original 
 to catch the bad cases also fires on the verified ones, which must stay green.
 
 **Check the corpus before the claim — it is usually already settled there.** A finished installment
-binds every later one. This round produced **seven** collisions in which a line asserted something
-the corpus had already decided against: §09's life-restriction attributed to the *Logic*, against
-§27:27, which assigns it to the *Philosophy of Nature*; §09's praxis-grounding presented as Hegel's
+constrains later ones, but remains answerable to the primary text. This round produced **six**
+collisions in which a line asserted something the corpus had already decided against:
+§09's praxis-grounding presented as Hegel's
 own, against §06:33, which flags it as a materialist reconstruction; §05's "no subject who
 experiences its contradictions", against §27:23, where the Concept is at work in nature "as blind,
 as unaware of itself and unthinking"; §05's law covering "any complex system", against §03:113,
@@ -89,6 +89,13 @@ Object", against §09:9 seven lines above it — and against *Encyclopaedia* §1
 transition to this sphere outright, and §193, whose heading is *realisation*. **Before writing or
 repairing a claim about Hegel, grep the corpus for the sibling paragraph that already governs it**,
 and cite that sibling in the line.
+
+The earlier §09/§27 organic–inorganic boundary verdict itself required correction: *SL* §§79,
+1299, and 1788 state the distinction in the *Logic*, despite §1298's exclusion of concrete natural
+shapes from its subject matter. The repaired paragraphs distinguish Hegel's stated boundary from
+a modern challenge to it. Corpus consistency cannot certify an attribution against the source.
+Nor does a corrected attribution certify the methodological warrant for that boundary: apply
+the canonical distinction in [Attribution and critique](../REVIEW.md#attribution-and-critique).
 
 **When correcting a locus or an attribution, read the whole stretch first.** §27:59 had to be
 corrected **twice**: the Kant indictment in "On the Concept in General" does not end where either

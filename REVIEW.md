@@ -35,6 +35,21 @@ possible, but must name and defend its own standard rather than present it as th
 Likewise, a reconstruction that changes the method's grounding must justify that change, not treat
 the method as an intact recipe detachable from its grounding.
 
+**A textual boundary is not its own methodological warrant.** Distinguish a category's logical
+derivation, the author's account of its concrete realization, and the argument connecting them.
+Reconstruct the positive reason for a restriction before testing it; a general derivation neither
+proves that restriction nor licenses every proposed extension. Conversely, a scientific explanation
+can achieve something definite without establishing the author's stronger ontological claim.
+Preserve that achievement and state what further determination is still at issue.
+**Grounding, 2026-10-01 — add:** the §09/§27 correction properly located the organic/inorganic
+boundary in *SL* §§79, 1299, 1788; the author's follow-up exposed the risk of treating that textual
+settlement as critical closure. The operative question is whether the subjectivity derived through
+reciprocity warrants the exclusive organic realization, not whether Hegel states it or QFT resembles
+it. *Enc.* §§216–219 and *Philosophy of Nature* §§247–250 supply his positive case, including the
+limits he expressly sets to philosophical deduction. The
+[working essay](essays/2026-10-01-the-concept-in-nature.md) preserves the sources and open questions;
+it is a case study, not a verdict binding future reviewers.
+
 **Scope belongs to the claim.** Read restrictive purpose clauses and both favourable and hostile
 continuations. An exact quotation can still misrepresent the argument. Failure to derive categories
 does not by itself invalidate inferences within them; a conditional achievement does not establish
