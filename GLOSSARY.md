@@ -107,6 +107,7 @@ a generic "becomes".
 | *Maß* | measure | §16, §17, §18 |
 | *reales Maß* | real measure | §18 |
 | *Regel* | rule | §18, §30 |
+| *Wahlverwandtschaft* | elective affinity | §18 |
 | *Knotenlinie der Maßverhältnisse* | nodal line of measure-relations | §17, §18 |
 | *das Maßlose* | the measureless | §07, §17, §18, §19 |
 
