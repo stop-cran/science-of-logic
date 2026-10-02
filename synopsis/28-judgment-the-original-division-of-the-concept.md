@@ -90,7 +90,7 @@ The moments developed in §27 do not remain ready-made terms to which a relation
 
 A copula charged with content **is** a middle term. When the bare *is* of "this action is good" has been filled out into "this action, being of such and such a constitution, and such constitution being what makes actions good, is good", the copula has become a **reason**, and the judgment has become a syllogism. The chapter's destination is fixed in advance by §171's sentence, and the four classes are the stages of the filling.
 
-The corpus should note the formal resemblance to §22. There, the immediate relation of ground and grounded proved unstable until the ground was determined as **real** ground, then as **complete** ground, and finally determined itself as **conditioning mediation**, the connective acquiring content at each step. Here the same shape governs the copula. This is not repetition: Essence's relations were between a thing and its other, the Concept's are between the Concept's own moments. But the method is visibly the same instrument, which is part of what §13 claimed.
+The development offers a bounded comparison with §22. There, **formal** ground presented one content in two forms, **real** ground distinguished contents while leaving their connection externally determined, and **complete** ground mediated that connection through another relation which it still presupposed. The result was **conditioning mediation**, not a completed explanation. Here the copula likewise cannot remain an empty connection. But this comparison does not derive its development from ground's sequence: Essence's reflective relations and the Concept's own differentiation must each be followed in their particular form.
 
 ## V. Why the List Is a Ladder
 

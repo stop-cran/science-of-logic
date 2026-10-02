@@ -251,7 +251,6 @@ keeps Wallace's wording when quoting him.
 | *A cannot at the same time be A and not-A* | the law of contradiction (non-contradiction) | §21 |
 | either *A* or not-*A*, no third | the law of the excluded middle | §21 |
 | *nihil est sine ratione* | the principle of sufficient ground | §22 |
-| *virtus dormitiva* | the dormitive virtue (the pseudo-explanation) | §22 |
 | *ex-sistere* | immediacy sprung from ground | §23 |
 | *punctum saliens* | the leaping point | §28 |
 | *copula* | the copula | §28 |
