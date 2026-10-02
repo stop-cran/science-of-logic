@@ -127,6 +127,7 @@ to a different argument; inside the quantum chapters, *Einheit* is the unit.
 | *Reflexion* | reflection | §19, §20 |
 | *bestimmende Reflexion* | determining reflection | §20 |
 | *das Wesentliche* / *das Unwesentliche* | the essential / the unessential | §20 |
+| *Wesentlichkeit* | essentiality | §23, §24 |
 | *Reflexionsbestimmung* | determination of reflection | §20, §21 |
 | *Identität* | identity | §21 |
 | *Unterschied* | difference | §21 |
@@ -142,6 +143,7 @@ to a different argument; inside the quantum chapters, *Einheit* is the unit.
 | *Existenz* | existence | §21, §22, §23, §25 |
 | *Ding* | thing | §22, §23 |
 | *Eigenschaft* | property | §23 |
+| *Materien* | matters | §08, §23 |
 | *Ding-an-sich* | thing-in-itself | §23 |
 | *Erscheinung* | appearance | §08, §19–§24 |
 | *Gesetz der Erscheinung* | law of appearance | §24 |
@@ -251,7 +253,6 @@ keeps Wallace's wording when quoting him.
 | *A cannot at the same time be A and not-A* | the law of contradiction (non-contradiction) | §21 |
 | either *A* or not-*A*, no third | the law of the excluded middle | §21 |
 | *nihil est sine ratione* | the principle of sufficient ground | §22 |
-| *ex-sistere* | immediacy sprung from ground | §23 |
 | *punctum saliens* | the leaping point | §28 |
 | *copula* | the copula | §28 |
 
