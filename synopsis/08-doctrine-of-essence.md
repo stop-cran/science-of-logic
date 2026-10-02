@@ -24,7 +24,7 @@ The arc is: from essence taken purely in itself, through essence appearing in it
 
 Essence begins from Being's own last result. Measure's indifferent unity was forced to take difference into itself as **self-related negativity**; immediacy is now grasped as *posited*, and Being sublates itself (§07; §19). Hegel calls essence "past — but timelessly past — being" (*SL* §807): being returned into itself through its own negation. What seemed self-subsistent in immediacy now has its standing within this movement; the task is to develop the determinations of that reflection (§20).
 
-Essence initially seems to confront being as the essential confronting the unessential. But that opposition would leave both as immediate beings. Since Being has sublated itself, what remains is **show** (*Schein*), without independent standing; its reflected immediacy and negativity are essence's own determinations. Show is thus **essence's own show**, and its movement within essence is **reflection** — essence distinguishing itself from itself (§20).
+Essence initially seems to confront being as the essential confronting the unessential. But that opposition would leave both as immediate beings. Since Being has sublated itself, what remains is **shine** (*Schein*), without independent standing; its reflected immediacy and negativity are essence's own determinations. Shine is thus **essence's own shine**, and its movement within essence is **reflection** — essence distinguishing itself from itself (§20).
 
 ### The determinations of reflection: identity, difference, contradiction
 
