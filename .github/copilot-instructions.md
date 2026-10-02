@@ -186,8 +186,7 @@ Source checking is governed by [Verifying a quotation](#verifying-a-quotation).
   silent and needs no bracket — established practice throughout. Capitalisation **inside** a
   quotation is a different matter and is always an alteration: promoting a source's *subjective
   concept* to *Subjective Concept* puts our own terminological habit into Hegel's mouth.
-  Truncating a quotation at its **end** needs no ellipsis, and the corpus marks none — the single
-  trailing `…` in the corpus (§21) is a suspension in our own voice, not a dropped clause. Omission
+  Truncating a quotation at its **end** needs no ellipsis. Omission
   from the **middle** still needs its ellipsis, per the rule above. `sweep2.py` reports the edge
   cases as `CASE-INIT-UP` / `CASE-INIT-DOWN`, which are expected and need no action; `CASE-MID` is
   the defect class. Its one standing false positive is the **mention-quote** — `"Subjective

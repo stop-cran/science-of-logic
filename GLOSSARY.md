@@ -248,7 +248,7 @@ keeps Wallace's wording when quoting him.
 | Formula | Our prose | §§ |
 |---|---|---|
 | *A = A* | the law of identity | §21 |
-| *A is not not-A* | the law of contradiction | §21 |
+| *A cannot at the same time be A and not-A* | the law of contradiction (non-contradiction) | §21 |
 | either *A* or not-*A*, no third | the law of the excluded middle | §21 |
 | *nihil est sine ratione* | the principle of sufficient ground | §22 |
 | *virtus dormitiva* | the dormitive virtue (the pseudo-explanation) | §22 |
