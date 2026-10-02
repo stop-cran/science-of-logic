@@ -57,6 +57,17 @@ adequacy for that further task. Neither polemical severity nor later scientific 
 this distinction. Do not collapse validity under assumptions, adequacy of proof, and derivation of
 the assumptions into one question.
 
+**The categorial guardrail is not scientific immunity.** It limits what a logical category establishes
+about a concrete scientific object; it does not license redescribing Hegel's own physical argument as
+exclusively logical. Reconstruct the concrete claim and its premises, test the proposed application,
+and preserve any scientific achievement without treating it as proof of the category. A criticism of
+an assumed explanatory model does not refute a theory whose actual commitments differ from that model.
+**Grounding — §19 full review (add/clarify):** the former §19 made the centrifugal-force critique
+immune to mechanics, although *SL* §§798–799 predict consequences for orbital motion and deny that
+the assumed factors can explain its reversal. The repair retains the empirical concession in §797,
+distinguishes the assumed factor-model from Newtonian dynamics, and separately tests the quantitative
+inference in §§794–795. Neither logical nor scientific success settles the other question by itself.
+
 For findings of this kind, show **the target passage and scope → criterion, owner, and source →
 inferential step and retained achievement → bounded conclusion**. Use the existing Findings or
 Questions sections, not an extra gate receipt. State what was checked; an unavailable source or an
@@ -871,8 +882,9 @@ a Copilot CLI hook.
   already-committed installment or either README. If so, **propagate the fix backwards** and
   name the file/line. (History: ℏ→h, real-vs-realized, Engels-vs-Hegel attribution,
   отношение-степеней, home/seat→средоточие.)
-- **Categorial-not-empirical guardrail** present wherever a natural-science example appears: the
-  Logic supplies the *form*, not the constants — "it does not deduce them."
+- **Categorial-not-empirical guardrail** present wherever a natural-science example appears:
+  distinguish the logical claim from its scientific application, under
+  [Attribution and critique](#attribution-and-critique), not as immunity from scientific assessment.
 
 ## 3 — Fidelity to Hegel
 

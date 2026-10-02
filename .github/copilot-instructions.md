@@ -198,9 +198,10 @@ Source checking is governed by [Verifying a quotation](#verifying-a-quotation).
 
 - Keep the dense, weighty register; do not loosen it for readability unless a sentence is
   genuinely over-literal.
-- Claims about physics are **categorial, not empirical**: the Logic supplies the *form*, not
-  the constants. Keep the "categorial, not a piece of physics — it does not deduce them"
-  guardrail wherever natural-science examples appear.
+- Scientific illustrations need the **categorial-not-empirical guardrail**: a logical category
+  does not deduce a concrete law or its constants. Its scope, including the assessment of Hegel's
+  own physical claims, is governed by [Attribution and critique](../REVIEW.md#attribution-and-critique);
+  do not turn it into scientific immunity.
 - `README.md` carries a one-entry-per-installment index; **keep it parallel with the Russian
   README** (the two are mirrors of each other).
 - Terminology has a **single source of truth**: [`GLOSSARY.md`](../GLOSSARY.md) (German → our
