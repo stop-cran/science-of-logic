@@ -183,8 +183,9 @@ to a different argument; inside the quantum chapters, *Einheit* is the unit.
 | *erlischt* | is extinguished | §26 |
 | *Wechselwirkung* | reciprocity | §03, §08, §24–§26 |
 
-*Aktuosität* is Hegel's own coinage against Spinoza's inert substance, and
-**actuosity** keeps it strange on purpose. Do not soften it to "activity".
+*Aktuosität* names substance's immanent activity in this development; it does not
+imply that Spinoza denied immanent causation. **Actuosity** preserves the distinctive
+term. Do not soften it to "activity".
 *Gewalt* is **violence**, not "force" — *Kraft* is force, and the §26 argument
 turns on substance exercising *power* over its accidents without *Kraft*.
 
