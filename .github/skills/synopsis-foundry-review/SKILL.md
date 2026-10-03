@@ -141,7 +141,7 @@ az login                                             # Cognitive Services User o
 $env:SOL_FOUNDRY_RESOURCE = "<your-foundry-resource>"   # e.g. from user memory
 
 # Review §24 with §20–§23 as cross-ref context, both models, save clean copies:
-python foundry-review/review.py `
+python -u foundry-review/review.py `
     --target 'synopsis/24-*.md' `
     --context 'synopsis/20-*.md' 'synopsis/21-*.md' 'synopsis/22-*.md' 'synopsis/23-*.md' `
     --model grok-4.3 --model DeepSeek-V4-Pro `
@@ -223,7 +223,7 @@ az cognitiveservices account deployment list --subscription $sub `
     --name "<resource>" --resource-group "<resource-group>" -o table
 
 # 2. Run one report-only review with the preceding four installments as context.
-python foundry-review/review.py `
+python -u foundry-review/review.py `
     --target 'synopsis/25-*.md' `
     --context 'synopsis/21-*.md' 'synopsis/22-*.md' 'synopsis/23-*.md' 'synopsis/24-*.md' `
     --model DeepSeek-V4-Pro --resource "<resource>" `
@@ -286,6 +286,11 @@ and assent, plus a duplicated quotation rule that rejected permitted emphasis. T
 `REVIEW.md` contract now governs both; the translation facet also preserves its English-review
 handoff. Grounding and future rule changes are recorded in `REVIEW.md`.
 
+**2026-10-03 — regroup:** the audiobook retrospective found that executable examples
+still omitted `-u` despite the observed buffered-output failures documented above.
+Examples now follow that rule; authentication warm-ups suppress token output rather
+than exposing credentials in logs. No reviewer contract or model routing changed.
+
 ## Verifying a change
 
 - **Regression suite** — run
@@ -293,7 +298,7 @@ handoff. Grounding and future rule changes are recorded in `REVIEW.md`.
   covers the corpus sandbox, fail-closed inputs, gate-result enforcement, output contract,
   timeout retry, and diagnostic naming.
 - **Cheap smoke test** — one model, one context file:
-  `python foundry-review/review.py --target 'synopsis/24-*.md' --context 'synopsis/23-*.md' --model grok-4.3`.
+  `python -u foundry-review/review.py --target 'synopsis/24-*.md' --context 'synopsis/23-*.md' --model grok-4.3`.
   A healthy run reads the target, reads the sibling, greps the README, runs the gate, and
   returns a `REVIEW.md`-format verdict in a handful of turns. Grok may finish in roughly
   30–60 seconds; a full DeepSeek reasoning review can take 5–12 minutes even at 200 kTPM.
@@ -302,13 +307,14 @@ handoff. Grounding and future rule changes are recorded in `REVIEW.md`.
   also be rejected by `read_file` and `grep`. Allowed `synopsis/*.md` and `README.md`
   operations must still succeed.
 - **Fail-closed input check** —
-  `python foundry-review/review.py --target 'synopsis/99-nope-*.md' --model grok-4.3`
+  `python -u foundry-review/review.py --target 'synopsis/99-nope-*.md' --model grok-4.3`
   must exit before Azure authentication with a "matched no files" error.
 - **Contract check** — a mocked final response lacking a successful gate result (or a
   Blocker for a failed gate) or one of the five headings must be rejected or corrected,
   never persisted as a successful review. Numbered and unnumbered headings must both pass.
-- **Auth check** — `az account get-access-token --resource https://cognitiveservices.azure.com`
-  should return a token; a cold `az` on Windows can exceed the default 10 s credential
+- **Auth check** — `az account get-access-token --resource https://cognitiveservices.azure.com --output none`
+  should exit successfully without printing the token; never log or paste bearer tokens.
+  A cold `az` on Windows can exceed the default 10 s credential
   timeout, so the script sets `process_timeout=30`.
 
 ## Troubleshooting
@@ -335,7 +341,7 @@ handoff. Grounding and future rule changes are recorded in `REVIEW.md`.
   writes `--out-dir` reports before printing, so a console problem cannot discard a
   completed review.
 - **`AzureCliCredential … timeout`** — warm the CLI once with
-  `az account get-access-token --resource https://cognitiveservices.azure.com`; the script
+  `az account get-access-token --resource https://cognitiveservices.azure.com --output none`; the script
   already uses `process_timeout=30`.
 - **A reasoning model dumps its chain-of-thought before the review** (seen with
   `DeepSeek-V4-Pro`) — expected; `clean_final` trims everything before the `Verdict` heading.

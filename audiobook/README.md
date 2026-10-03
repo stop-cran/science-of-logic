@@ -32,6 +32,11 @@ External files are forbidden with `--chapters` or a chapter-bounded project, so 
 
 Read and follow the shared skill for authentication, probing, preview approval, resumption,
 and verification. Dependencies are declared in its `reference\requirements.txt`, not here.
+Its `reference\workflow.py` now records prepared plans and passage-selected previews,
+records the operator's human-listening and scope-approval declaration, and verifies
+complete albums without synthesis.
+Follow that shared command sequence rather than creating book-local helpers; keep
+the `*.run.json` and `*.verification.json` records under ignored `out\`.
 Existing MP3s have no new completion manifests and are not assumed current: choose another
 output directory or explicitly regenerate with `--force`. Audio and caches remain ignored.
 

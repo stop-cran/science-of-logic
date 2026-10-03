@@ -13,6 +13,8 @@ Its repository is https://github.com/stop-cran/book-skills.
 The shared skill and engine own preparation, probing, authentication, caching,
 completion manifests, metadata, preview approval, and error handling. Do not duplicate
 them here. `audiobook/synthesize.py` delegates to that engine without copying it.
+Use the shared `workflow.py` for durable plans, representative passage previews,
+approval records and final verification; keep its records in ignored output.
 
 This book owns its English voice, notation policy, and README selection. `--all`
 includes the README and all installments, including later ones; use the exact requested
