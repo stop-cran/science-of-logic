@@ -217,9 +217,9 @@ turns on substance exercising *power* over its accidents without *Kraft*.
 | *Zentralität* | centrality | §30 |
 | *Gesetz* | law | §30 |
 
-*Merkmal* is the **mark** of the old logic — the external feature by which a
-class is picked out — and §27's argument is precisely that the Concept is *not*
-a mark. Miller's "characteristic" would blunt the polemic.
+*Merkmal* is rendered **mark**, as in Miller. Hegel distinguishes its correct sense —
+the Concept's determinateness or simple content — from its usual sense as a feature
+for external noticing. §27's polemic concerns the **merely external** mark (*SL* §1338).
 
 *Urteil* is kept in German wherever the etymological reading is in play, because
 the English "judgment" carries none of it. The split is written **\*Ur-Teil\***,
