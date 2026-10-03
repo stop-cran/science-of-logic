@@ -1,5 +1,6 @@
 # Generated audio — never commit rendered audiobook files.
 out/
+tts-limits.json
 *.mp3
 *.wav
 *.txt

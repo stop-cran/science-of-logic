@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "allow_external_inputs": true,
+  "text_dir": "../synopsis",
+  "pattern": "[0-9][0-9]-*.md",
+  "out_dir": "out",
+  "language": "en",
+  "xml_lang": "en-US",
+  "voice": "en-US-Ethan:MAI-Voice-2",
+  "env_prefix": "SOL_TTS",
+  "metadata": {
+    "artist": "Roman Konstantinovskiy",
+    "album": "Hegel's Method and the Scientific Paradigm — A Synopsis",
+    "year": "2026",
+    "comment": "An AI-assisted, author-reviewed and independently reviewed synopsis, not Hegel's own text."
+  },
+  "narration": {
+    "notation": "scientific",
+    "roman_references": "part",
+    "tables": "skip",
+    "fenced_blocks": "diagram",
+    "strip_section_numbers": true
+  },
+  "additional_sources": [
+    {
+      "path": "../README.md",
+      "stem": "00-readme",
+      "intro_and_sections": ["How to Read"]
+    }
+  ]
+}
