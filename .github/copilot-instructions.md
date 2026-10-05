@@ -104,6 +104,20 @@ against the pre-edit sentence instead of against the full passage swaps one fals
 
 ## Verifying a quotation
 
+**Source-tool entry point.** Use the shared `source-consultation` skill in
+`book-skills\.github\skills\source-consultation\SKILL.md`
+([canonical skill](https://github.com/stop-cran/book-skills/blob/main/.github/skills/source-consultation/SKILL.md)).
+First read this book's ignored `.source-workbench.local.json` for the explicit
+`book_skills_root`, `workbench_root`, and `config` paths; otherwise ask for those paths
+or use explicitly supplied environment bindings documented by the skill. Do not scan
+the home directory, copy the runtime, or execute historical chapter-audit scripts.
+The routing JSON is not the CLI's TOML configuration. In Copilot CLI, `/add-dir` for the
+skill checkout exposes its skills; a link alone does not install them.
+Keep evidence and the separate consultation judgment in ignored `.source-consultations/`.
+This skill supplies the retrieval/preservation workflow; the attribution and quotation
+rules below remain authoritative. A confined reviewer unable to access the checkout
+must report that limitation, not silently widen its tool boundary or upload sources.
+
 **Draft from memory; never land from memory.** Recalling a passage is how most quotations here were
 first written, and the audit so far vindicates the practice — of the sixteen highest-confidence
 mismatches in a corpus-wide sweep, **every one was sound and not one was a misremembered

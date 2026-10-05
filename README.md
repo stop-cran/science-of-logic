@@ -2,6 +2,12 @@
 
 A synopsis of G. W. F. Hegel's philosophy with primary attention to his method of investigation and its contribution to the scientific paradigm. The synopsis is organized as a single dialectical circle: each installment grows out of the contradictions of the preceding one, and each section closes back upon itself. **Section I** establishes the method and its historical place; **Section II** is a first traversal of the *Logic* at the level of its bigger sub-spheres; **Section III** re-traverses the same circle at the resolution of the individual moves, redeeming Section II's compressions and unfolding the categories step by step.
 
+**Source consultation:** the shared
+[`source-consultation` skill](https://github.com/stop-cran/book-skills/blob/main/.github/skills/source-consultation/SKILL.md)
+provides edition-aware lookup, contextual comparison and private evidence records.
+Start with this book's [source-tool entry point](.github/copilot-instructions.md#verifying-a-quotation)
+for local bindings and attribution rules; retrieval alone does not verify a quotation.
+
 ## Section I — The Method and Its Place
 
 1. **[From School-Logic to Dialectic](synopsis/01-from-school-logic-to-dialectic.md)** — Hegel's challenge to traditional logic's content and method; a historical-logical reconstruction from consciousness before explicit logic through old metaphysics, empiricism, and critical philosophy toward the speculative standpoint.
