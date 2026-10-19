@@ -216,6 +216,7 @@ turns on substance exercising *power* over its accidents without *Kraft*.
 | *differenter Mechanismus* | differentiated mechanism | §09, §30 |
 | *Zentralität* | centrality | §30 |
 | *Gesetz* | law | §30 |
+| *Chemismus* | chemism | §31 |
 
 *Merkmal* is rendered **mark**, as in Miller. Hegel distinguishes its correct sense —
 the Concept's determinateness or simple content — from its usual sense as a feature
