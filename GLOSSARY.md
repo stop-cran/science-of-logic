@@ -217,6 +217,19 @@ turns on substance exercising *power* over its accidents without *Kraft*.
 | *Zentralität* | centrality | §30 |
 | *Gesetz* | law | §30 |
 | *Chemismus* | chemism | §31 |
+| *Teleologie* | teleology | §32 |
+| *Zweck* | end / purpose | §32 |
+| *äußere Zweckmäßigkeit* | external purposiveness | §32 |
+| *innere Zweckmäßigkeit* | internal purposiveness | §32 |
+| *subjektiver Zweck* | subjective end | §32 |
+| *Entschluss* | resolve | §32 |
+| *Mittel* | means | §32 |
+| *List der Vernunft* | cunning of reason | §32 |
+| *Idee* | Idea | §32 |
+
+**End** and **purpose** render the same *Zweck*: "end" here is a determining
+purpose, not merely the last event in a sequence. **Resolve** renders *Entschluss*
+in §32; Miller uses "resolution" at *SL* §1605 and "resolve" at §1625.
 
 *Merkmal* is rendered **mark**, as in Miller. Hegel distinguishes its correct sense —
 the Concept's determinateness or simple content — from its usual sense as a feature
