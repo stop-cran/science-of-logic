@@ -225,7 +225,17 @@ turns on substance exercising *power* over its accidents without *Kraft*.
 | *Entschluss* | resolve | §32 |
 | *Mittel* | means | §32 |
 | *List der Vernunft* | cunning of reason | §32 |
-| *Idee* | Idea | §32 |
+| *Idee* | Idea | §32, §33 |
+| *Leben* | Life | §33 |
+| *Organismus* | organism | §33 |
+| *Sensibilität* | sensibility | §33 |
+| *Irritabilität* | irritability | §33 |
+| *Reproduktion* | reproduction | §33 |
+| *Bedürfnis* | need | §33 |
+| *Schmerz* | pain | §33 |
+| *Trieb* | urge | §33 |
+| *Assimilation* | assimilation | §33 |
+| *Gattung* | genus | §33 |
 
 **End** and **purpose** render the same *Zweck*: "end" here is a determining
 purpose, not merely the last event in a sequence. **Resolve** renders *Entschluss*
